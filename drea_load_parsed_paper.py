@@ -11,21 +11,30 @@ from pandas.io.json import json_normalize
 with open('Abdellaoui_et_al_2018_parsed.json') as paper:
     paper_dictionnary = json.load(paper)
 
-paper_df = json_normalize(paper_dictionnary['sections'])
+paper_text = json_normalize(paper_dictionnary['sections'])
+paper_references = json_normalize(paper_dictionnary['references'])
+paper_authors = json_normalize(paper_dictionnary['authors'])
 
-print("sections:")
+print("Science-Parser ID:")
+print(paper_dictionnary["id"])
+
+print("Parsed Data:")
 print(paper_dictionnary.keys())
 
-print("df shape:")
-print(paper_df.shape)
+print("Titre:")
+print(paper_dictionnary["title"])
 
-print("df columns:")
-print(paper_df.columns)
+print("Année:")
+print(paper_dictionnary["year"])
 
-print("les en-têtes:")
-print(paper_df["heading"].unique())
+print("Abstract:")
+print(paper_dictionnary["abstractText"])
 
-print("Nombre d'en-têtes:")
-print(len(paper_df["heading"].unique()))
+print("Texte:")
+print(paper_text.head())
 
-print(paper_df.head(10))
+print("Références:")
+print(paper_references.head())
+
+print("Auteurs:")
+print(paper_authors.head())
