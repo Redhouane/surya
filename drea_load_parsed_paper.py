@@ -1,14 +1,30 @@
 #!/Users/redhouaneabdellaoui/anaconda/envs/DrEA/bin/python python
 # -*- coding: utf-8 -*-
 
+import glob
 import json
+import os
 from pandas.io.json import json_normalize
 
+
+# Fonction de concatenation des paths
+def _opj(path_1, path_2):
+    return os.path.join(path_1, path_2)
+
+
+# Variables globales
+PAPERS_DIRECTORY = '/Users/redhouaneabdellaoui/Documents/Red1/MyCoreTechs/DrEA/articles'
+PARSED_PAPERS_DIRECTORY = '/Users/redhouaneabdellaoui/Documents/Red1/MyCoreTechs/DrEA/parsed_articles'
+
+
+parsed_articles_list = glob.glob(_opj(PARSED_PAPERS_DIRECTORY, '*_parsed.json'))
+
+print(parsed_articles_list)
 
 # Chargemenet du contenu du json
 # https://www.kaggle.com/jboysen/quick-tutorial-flatten-nested-json-in-pandas
 
-with open('Abdellaoui_et_al_2018_parsed.json') as paper:
+with open(parsed_articles_list[0]) as paper:
     paper_dictionnary = json.load(paper)
 
 paper_text = json_normalize(paper_dictionnary['sections'])
