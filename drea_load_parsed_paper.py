@@ -12,19 +12,17 @@ def _opj(path_1, path_2):
     return os.path.join(path_1, path_2)
 
 
-# Variables globales
+# Repertoires de lecture des articles et d ecriture des versions parsee
 PAPERS_DIRECTORY = '/Users/redhouaneabdellaoui/Documents/Red1/MyCoreTechs/DrEA/articles'
 PARSED_PAPERS_DIRECTORY = '/Users/redhouaneabdellaoui/Documents/Red1/MyCoreTechs/DrEA/parsed_articles'
 
-
-parsed_articles_list = glob.glob(_opj(PARSED_PAPERS_DIRECTORY, '*_parsed.json'))
-
-print(parsed_articles_list)
+# Chargement de la liste d articles a parser
+articles_to_parse = glob.glob(_opj(PARSED_PAPERS_DIRECTORY, '*_parsed.json'))
 
 # Chargemenet du contenu du json
 # https://www.kaggle.com/jboysen/quick-tutorial-flatten-nested-json-in-pandas
 
-with open(parsed_articles_list[0]) as paper:
+with open(articles_to_parse[0]) as paper:
     paper_dictionnary = json.load(paper)
 
 paper_text = json_normalize(paper_dictionnary['sections'])
