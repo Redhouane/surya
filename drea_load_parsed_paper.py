@@ -19,9 +19,10 @@ PARSED_PAPERS_DIRECTORY = '/Users/redhouaneabdellaoui/Documents/Red1/MyCoreTechs
 # Chargement de la liste d articles a parser
 articles_to_parse = glob.glob(_opj(PARSED_PAPERS_DIRECTORY, '*_parsed.json'))
 
+print(articles_to_parse)    
+
 # Chargemenet du contenu du json
 # https://www.kaggle.com/jboysen/quick-tutorial-flatten-nested-json-in-pandas
-
 with open(articles_to_parse[0]) as paper:
     paper_dictionnary = json.load(paper)
 
