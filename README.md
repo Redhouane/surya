@@ -17,7 +17,8 @@ Interactive tool provided as Web GUI.
 
 Project Structure:
 
-Directory "Sources":                Source files
+Directory "Sources":
+Source files
 - drea_parse_paper.py
 - drea_load_parsed_paper.py
 - drea_summerize_text.py
