@@ -1,23 +1,19 @@
 #!/Users/redhouaneabdellaoui/anaconda/envs/DrEA/bin/python python
 # -*- coding: utf-8 -*-
 
+
+from DrEA_head.DrEA_context import *
+from DrEA_head.DrEA_basic_operations import _opj
+
 import glob
 import os
 
-
-# Fonction de concatenation des paths
-def _opj(path_1, path_2):
-    return os.path.join(path_1, path_2)
-
-
-PAPERS_DIRECTORY = '/Users/redhouaneabdellaoui/Documents/Red1/MyCoreTechs/DrEA/articles'
 
 # Parsind pdf article using science-parse
 # https://github.com/allenai/science-parse
 
 _PAPER_NAME_FILE = glob.glob(_opj(PAPERS_DIRECTORY, '*.pdf'))
 
-# import pdb; pdb.set_trace()
 
 def parse_paper(paper):
     print("Paper Parsing...")
@@ -27,4 +23,6 @@ def parse_paper(paper):
     # SPv2
     # os.system('curl -v --data-binary {0}.pdf "http://localhost:8081/v1/json/pdf" > {1}.json'.format(paper)
 
-[parse_paper(publi) for publi in _PAPER_NAME_FILE]
+parse_paper(_PAPER_NAME_FILE[0])
+
+# [parse_paper(publi) for publi in _PAPER_NAME_FILE]

@@ -1,20 +1,13 @@
 #!/Users/redhouaneabdellaoui/anaconda/envs/DrEA/bin/python python
 # -*- coding: utf-8 -*-
 
+from DrEA_head.DrEA_context import *
+from DrEA_head.DrEA_basic_operations import _opj
+
 import glob
 import json
-import os
 from pandas.io.json import json_normalize
 
-
-# Fonction de concatenation des paths
-def _opj(path_1, path_2):
-    return os.path.join(path_1, path_2)
-
-
-# Repertoires de lecture des articles et d ecriture des versions parsee
-PAPERS_DIRECTORY = '/Users/redhouaneabdellaoui/Documents/Red1/MyCoreTechs/DrEA/articles'
-PARSED_PAPERS_DIRECTORY = '/Users/redhouaneabdellaoui/Documents/Red1/MyCoreTechs/DrEA/parsed_articles'
 
 # Chargement de la liste d articles a parser
 articles_to_parse = glob.glob(_opj(PARSED_PAPERS_DIRECTORY, '*_parsed.json'))
