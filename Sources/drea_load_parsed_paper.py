@@ -1,7 +1,9 @@
 #!/Users/redhouaneabdellaoui/anaconda/envs/DrEA/bin/python python
 # -*- coding: utf-8 -*-
 
+
 from DrEA_head.DrEA_context import *
+from DrEA_head.DrEA_paper_class import *
 from DrEA_head.DrEA_basic_operations import _opj
 
 import glob
@@ -12,37 +14,42 @@ from pandas.io.json import json_normalize
 # Chargement de la liste d articles a parser
 articles_to_parse = glob.glob(_opj(PARSED_PAPERS_DIRECTORY, '*_parsed.json'))
 
-print(articles_to_parse)    
+def init_paper(articles_to_parse):
 
-# Chargemenet du contenu du json
-# https://www.kaggle.com/jboysen/quick-tutorial-flatten-nested-json-in-pandas
-with open(articles_to_parse[0]) as paper:
-    paper_dictionnary = json.load(paper)
+    # Creation of a paper object for collecting parsed data
+    my_paper = paper()
 
-paper_text = json_normalize(paper_dictionnary['sections'])
-paper_references = json_normalize(paper_dictionnary['references'])
-paper_authors = json_normalize(paper_dictionnary['authors'])
+    # Chargemenet du contenu du json
+    # https://www.kaggle.com/jboysen/quick-tutorial-flatten-nested-json-in-pandas
+    with open(articles_to_parse) as article:
+        paper_dictionnary = json.load(article)
 
-print("Science-Parser ID:")
-print(paper_dictionnary["id"])
+    my_paper.Title = paper_dictionnary["title"]
+    my_paper.Year = paper_dictionnary["year"]
+    my_paper.Abstract = paper_dictionnary["abstractText"]
+    my_paper.Text = json_normalize(paper_dictionnary['sections'])
+    my_paper.References = json_normalize(paper_dictionnary['references'])
+    my_paper.Authors = json_normalize(paper_dictionnary['authors'])
 
-print("Parsed Data:")
-print(paper_dictionnary.keys())
+    return(my_paper)
 
-print("Titre:")
-print(paper_dictionnary["title"])
 
-print("Année:")
-print(paper_dictionnary["year"])
+abdellaoui_et_all_2018 = init_paper(articles_to_parse[0])
 
-print("Abstract:")
-print(paper_dictionnary["abstractText"])
+print("Title :")
+print(abdellaoui_et_all_2018.Title)
 
-print("Texte:")
-print(paper_text.head())
+print("Year :")
+print(abdellaoui_et_all_2018.Year)
 
-print("Références:")
-print(paper_references.head())
+print("Abstract :")
+print(abdellaoui_et_all_2018.Abstract)
 
-print("Auteurs:")
-print(paper_authors.head())
+print("Text")
+print(abdellaoui_et_all_2018.Text)
+
+print("References :")
+print(abdellaoui_et_all_2018.References)
+
+print("Authors :")
+print(abdellaoui_et_all_2018.Authors)
