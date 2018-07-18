@@ -14,7 +14,7 @@ from pandas.io.json import json_normalize
 # Chargement de la liste d articles a parser
 articles_to_parse = glob.glob(_opj(PARSED_PAPERS_DIRECTORY, '*_parsed.json'))
 
-def init_paper(articles_to_parse):
+def read_paper(articles_to_parse):
 
     # Creation of a paper object for collecting parsed data
     my_paper = paper()
@@ -34,7 +34,7 @@ def init_paper(articles_to_parse):
     return(my_paper)
 
 
-abdellaoui_et_all_2018 = init_paper(articles_to_parse[0])
+abdellaoui_et_all_2018 = read_paper(articles_to_parse[0])
 
 print("Title :")
 print(abdellaoui_et_all_2018.Title)
