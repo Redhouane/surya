@@ -1,18 +1,21 @@
 #!/Users/redhouaneabdellaoui/anaconda/envs/DrEA/bin/python python
 # -*- coding: utf-8 -*-
 
-from pytextrank import json_iter, parse_doc, pretty_print
+
+import pytextrank
 import sys
 
 
-## Stage 1:
-##  * perform statistical parsing/tagging on a document in JSON format
-##
-## INPUTS: <stage0>
-## OUTPUT: JSON format `ParsedGraf(id, sha1, graf)`
+import os; os.system('which python')
 
-if __name__ == "__main__":
-    path_stage0 = sys.argv[1]
 
-    for graf in parse_doc(json_iter(path_stage0)):
-        print(pretty_print(graf._asdict()))
+path_stage0 = "../Tests/pytextrank_dat/mih.json"
+path_stage1 = "o1.json"
+
+with open(path_stage1, 'w') as f:
+    for graf in pytextrank.parse_doc(pytextrank.json_iter(path_stage0)):
+        f.write("%s\n" % pytextrank.pretty_print(graf._asdict()))
+        # to view output in this notebook
+        print(pytextrank.pretty_print(graf))
+
+

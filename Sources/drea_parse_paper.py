@@ -17,9 +17,8 @@ _PAPER_NAME_FILE = glob.glob(_opj(PAPERS_DIRECTORY, '*.pdf'))
 
 def parse_paper(paper):
     print("Paper Parsing...")
-    parsed_file_name = paper.split('.')[0] + "_parsed"
+    parsed_file_name = paper.split('.')[-2].split('/')[-1] + "_parsed"
     os.system('curl -v -H "Content-type: application/pdf" --data-binary @{0}.pdf "http://scienceparse.allenai.org/v1" > {1}.json'.format(paper, parsed_file_name))
-
     # SPv2
     # os.system('curl -v --data-binary {0}.pdf "http://localhost:8081/v1/json/pdf" > {1}.json'.format(paper)
 
