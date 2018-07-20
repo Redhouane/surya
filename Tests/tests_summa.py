@@ -1,7 +1,6 @@
 #!/Users/redhouaneabdellaoui/anaconda/envs/DrEA/bin/python python
 # -*- coding: utf-8 -*-
 
-
 from summa import summarizer, keywords
 
 text = """Automatic summarization is the process of reducing a text document with a
@@ -22,4 +21,3 @@ print(summarizer.summarize(text))
 
 print("Keywords :")
 print(keywords.keywords(text))
-
