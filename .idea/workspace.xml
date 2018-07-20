@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0bb1a5fc-c7f5-4db6-bf24-4518ca0e8f15" name="Default" comment="Creation of class paper as article's texts and metadata. Function &#10;read_paper for initiate a paper object from parsed json.">
-      <change afterPath="$PROJECT_DIR$/Tests/pytextrank_dat/ars.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/pytextrank_dat/lee.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/pytextrank_dat/mih.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/pytextrank_dat/orm.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/pytextrank_dat/suz.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/DrEA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DrEA.iml" afterDir="false" />
+    <list default="true" id="0bb1a5fc-c7f5-4db6-bf24-4518ca0e8f15" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sources/drea_parse_paper.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/drea_parse_paper.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sources/drea_summerize_text.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/drea_summerize_text.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sources/o1.json" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,12 +17,12 @@
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+        <leaf>
           <file leaf-file-name="drea_load_parsed_paper.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Sources/drea_load_parsed_paper.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
-                  <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+                <state relative-caret-position="225">
+                  <caret line="15" selection-start-line="15" selection-end-line="15" />
                   <folding>
                     <element signature="e#92#128#0" expanded="true" />
                   </folding>
@@ -39,12 +33,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+        <leaf>
           <file leaf-file-name="drea_summerize_text.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Sources/drea_summerize_text.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
-                  <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+                <state relative-caret-position="225">
+                  <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
                   <folding>
                     <element signature="e#92#109#0" expanded="true" />
                   </folding>
@@ -89,10 +83,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="107" />
-    <option name="y" value="46" />
-    <option name="width" value="2309" />
-    <option name="height" value="1294" />
+    <option name="x" value="208" />
+    <option name="y" value="45" />
+    <option name="width" value="2204" />
+    <option name="height" value="1299" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -112,23 +106,12 @@
             <path>
               <item name="DrEA" type="b2602c69:ProjectViewProjectNode" />
               <item name="DrEA" type="462c0819:PsiDirectoryNode" />
-              <item name="DrEA_head" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DrEA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DrEA" type="462c0819:PsiDirectoryNode" />
               <item name="Sources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DrEA" type="b2602c69:ProjectViewProjectNode" />
               <item name="DrEA" type="462c0819:PsiDirectoryNode" />
               <item name="Tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DrEA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DrEA" type="462c0819:PsiDirectoryNode" />
-              <item name="Tests" type="462c0819:PsiDirectoryNode" />
-              <item name="pytextrank_dat" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -139,7 +122,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -205,18 +188,33 @@
       <option name="project" value="LOCAL" />
       <updated>1531956978540</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="&quot;/Users/redhouaneabdellaoui/anaconda/envs/DrEA&quot; the efficient env &#10;with the right spacy version build from source.&#10;We have to select the right interpreter to import spacy and use &#10;pytextrank. For the pytextrank work we need to use Test data from &#10;&quot;/Tests/pytextrank_dat&quot;.">
+      <created>1532039122012</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1532039122012</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add the o1.json file generated by a pytextrank test. Need to be delete &#10;when the pytextrank job will be complete.">
+      <created>1532039400849</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1532039400849</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.13046876" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.13046876" />
       <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.360951" />
+      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.2427954" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.3299712" />
-      <window_info anchor="bottom" id="Python Console" order="0" />
+      <window_info anchor="bottom" id="Python Console" order="0" weight="0.3299712" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.3299712" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.3998559" />
@@ -236,7 +234,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add DrEA_head package for factoring code. Especially for functions &#10;and global variables used along sources." />
     <MESSAGE value="Creation of class paper as article's texts and metadata. Function &#10;read_paper for initiate a paper object from parsed json." />
-    <option name="LAST_COMMIT_MESSAGE" value="Creation of class paper as article's texts and metadata. Function &#10;read_paper for initiate a paper object from parsed json." />
+    <MESSAGE value="&quot;/Users/redhouaneabdellaoui/anaconda/envs/DrEA&quot; the efficient env &#10;with the right spacy version build from source.&#10;We have to select the right interpreter to import spacy and use &#10;pytextrank. For the pytextrank work we need to use Test data from &#10;&quot;/Tests/pytextrank_dat&quot;." />
+    <MESSAGE value="Add the o1.json file generated by a pytextrank test. Need to be delete &#10;when the pytextrank job will be complete." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add the o1.json file generated by a pytextrank test. Need to be delete &#10;when the pytextrank job will be complete." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -244,6 +244,26 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Sources/drea_load_parsed_paper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+          <folding>
+            <element signature="e#92#128#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/drea_summerize_text.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#92#109#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Sources/drea_load_parsed_paper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -292,9 +312,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" selection-start-line="4" selection-end-line="8" selection-end-column="9" />
-          <folding>
-            <element signature="e#92#128#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -366,16 +383,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="119" selection-start-line="20" selection-start-column="119" selection-end-line="20" selection-end-column="119" />
-          <folding>
-            <element signature="e#92#128#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sources/drea_load_parsed_paper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="e#92#128#0" expanded="true" />
           </folding>
@@ -385,14 +399,17 @@
     <entry file="file://$USER_HOME$/anaconda/envs/DrEA/lib/python3.6/site-packages/pytextrank/pytextrank.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <caret line="192" selection-start-line="192" selection-end-line="192" />
+          <folding>
+            <element signature="e#41#75#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sources/drea_summerize_text.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="225">
+          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
           <folding>
             <element signature="e#92#109#0" expanded="true" />
           </folding>
