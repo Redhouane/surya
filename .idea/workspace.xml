@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0bb1a5fc-c7f5-4db6-bf24-4518ca0e8f15" name="Default" comment="">
+    <list default="true" id="0bb1a5fc-c7f5-4db6-bf24-4518ca0e8f15" name="Default" comment="Summary of article available. Enrich the paper class with">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DrEA_head/DrEA_paper_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/DrEA_head/DrEA_paper_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sources/drea_load_parsed_paper.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Sources/drea_summerize_text.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/drea_summerize_text.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/tests_pyteaser.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/tests_pyteaser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/tests_pytextrank.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/tests_pytextrank.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,29 +31,23 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="drea_load_parsed_paper.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Sources/drea_load_parsed_paper.py">
+          <file leaf-file-name="drea_summerize_text.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Sources/drea_summerize_text.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="420">
-                  <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+                <state relative-caret-position="435">
+                  <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+                  <folding>
+                    <element signature="e#92#128#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="tests_pyteaser.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Tests/tests_pyteaser.py">
+          <file leaf-file-name="DrEA_paper_class.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/DrEA_head/DrEA_paper_class.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="60">
-                  <caret line="4" column="30" lean-forward="true" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="pyteaser.py" pinned="false" current-in-tab="false">
-            <entry file="file://$USER_HOME$/anaconda/envs/DrEA/lib/python3.6/site-packages/pyteaser-1.0-py3.6.egg/pyteaser.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="484">
-                  <caret line="66" column="4" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="4" />
+                <state relative-caret-position="750">
+                  <caret line="50" selection-start-line="50" selection-end-line="50" />
                 </state>
               </provider>
             </entry>
@@ -86,15 +80,16 @@
       <list>
         <option value="$PROJECT_DIR$/drea_summerize_text.py" />
         <option value="$PROJECT_DIR$/DrEA_head/DrEA_context.py" />
-        <option value="$PROJECT_DIR$/DrEA_head/DrEA_basic_operations.py" />
         <option value="$PROJECT_DIR$/DrEA_head/__init__.py" />
         <option value="$PROJECT_DIR$/DrEA_head/paper.py" />
-        <option value="$PROJECT_DIR$/Sources/drea_load_parsed_paper.py" />
         <option value="$PROJECT_DIR$/Sources/drea_parse_paper.py" />
         <option value="$PROJECT_DIR$/Tests/tests_summarization.py" />
-        <option value="$PROJECT_DIR$/Sources/drea_summerize_text.py" />
         <option value="$PROJECT_DIR$/Tests/tests_pytextrank.py" />
         <option value="$PROJECT_DIR$/Tests/tests_pyteaser.py" />
+        <option value="$PROJECT_DIR$/DrEA_head/DrEA_basic_operations.py" />
+        <option value="$PROJECT_DIR$/Sources/drea_summerize_text.py" />
+        <option value="$PROJECT_DIR$/Sources/drea_load_parsed_paper.py" />
+        <option value="$PROJECT_DIR$/DrEA_head/DrEA_paper_class.py" />
       </list>
     </option>
   </component>
@@ -118,6 +113,11 @@
             <path>
               <item name="DrEA" type="b2602c69:ProjectViewProjectNode" />
               <item name="DrEA" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DrEA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DrEA" type="462c0819:PsiDirectoryNode" />
+              <item name="DrEA_head" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DrEA" type="b2602c69:ProjectViewProjectNode" />
@@ -166,11 +166,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Sources" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/tests_pyteaser.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sources/drea_summerize_text.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -258,17 +258,24 @@
       <option name="project" value="LOCAL" />
       <updated>1532267930544</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Summary synthesized from a String containing the text to summarize and &#10;from another String containing the document title.">
+      <created>1532283868789</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1532283868789</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.13046876" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.12421875" />
       <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.22334294" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.20244958" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.3299712" />
       <window_info anchor="bottom" id="Python Console" order="0" weight="0.3299712" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
@@ -307,7 +314,8 @@
     <MESSAGE value="Remove useless file graph.dot generated by pytextrank first tests." />
     <MESSAGE value="Minors modifications. Exclusively tests to understand the pytextrank &#10;workflow." />
     <MESSAGE value="Add of PyTeaser python 3 compatible version test. The use of python 3 &#10;compatible version needed to be build from source. See repository :&#10;https://github.com/alanbuxton/PyTeaserPython3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add of PyTeaser python 3 compatible version test. The use of python 3 &#10;compatible version needed to be build from source. See repository :&#10;https://github.com/alanbuxton/PyTeaserPython3" />
+    <MESSAGE value="Summary synthesized from a String containing the text to summarize and &#10;from another String containing the document title." />
+    <option name="LAST_COMMIT_MESSAGE" value="Summary synthesized from a String containing the text to summarize and &#10;from another String containing the document title." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -470,20 +478,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DrEA_head/paper.py" />
-    <entry file="file://$PROJECT_DIR$/DrEA_head/DrEA_paper_class.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DrEA_head/DrEA_basic_operations.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DrEA_head/DrEA_context.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -524,24 +518,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Sources/drea_summerize_text.py">
+    <entry file="file://$PROJECT_DIR$/Tests/tests_pyteaser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Sources/drea_load_parsed_paper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/tests_pytextrank.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="36" />
         </state>
       </provider>
     </entry>
@@ -552,10 +532,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/tests_pyteaser.py">
+    <entry file="file://$PROJECT_DIR$/DrEA_head/DrEA_basic_operations.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="30" lean-forward="true" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+        <state relative-caret-position="255">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/drea_load_parsed_paper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#92#128#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/tests_pytextrank.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/drea_summerize_text.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="e#92#128#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DrEA_head/DrEA_paper_class.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
         </state>
       </provider>
     </entry>
