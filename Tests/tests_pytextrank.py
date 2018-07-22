@@ -30,10 +30,10 @@ with open(path_stage2, 'w') as f:
 
 # Stage 3
 import networkx as nx
-import pylab as plt
+# import pylab as plt
 
 nx.draw(graph, with_labels=True)
-plt.show()
+# plt.show()
 
 path_stage3 = "../Tests/pytextrank_dat/o3.json"
 

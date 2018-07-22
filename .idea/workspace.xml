@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bb1a5fc-c7f5-4db6-bf24-4518ca0e8f15" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Tests/tests_pyteaser.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sources/drea_summerize_text.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/drea_summerize_text.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/tests_pyteaser.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/tests_pyteaser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/tests_pytextrank.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/tests_pytextrank.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,8 +21,8 @@
           <file leaf-file-name="tests_pytextrank.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Tests/tests_pytextrank.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret selection-end-line="2" />
+                <state relative-caret-position="540">
+                  <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
                 </state>
               </provider>
             </entry>
@@ -30,11 +31,29 @@
       </split-first>
       <split-second>
         <leaf>
+          <file leaf-file-name="drea_load_parsed_paper.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Sources/drea_load_parsed_paper.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="420">
+                  <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="tests_pyteaser.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Tests/tests_pyteaser.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+                <state relative-caret-position="60">
+                  <caret line="4" column="30" lean-forward="true" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="pyteaser.py" pinned="false" current-in-tab="false">
+            <entry file="file://$USER_HOME$/anaconda/envs/DrEA/lib/python3.6/site-packages/pyteaser-1.0-py3.6.egg/pyteaser.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="484">
+                  <caret line="66" column="4" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="4" />
                 </state>
               </provider>
             </entry>
@@ -54,6 +73,8 @@
     <findStrings>
       <find>my_paper</find>
       <find>references</find>
+      <find>Summarize</find>
+      <find>summariz</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -230,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1532221159499</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add of PyTeaser python 3 compatible version test. The use of python 3 &#10;compatible version needed to be build from source. See repository :&#10;https://github.com/alanbuxton/PyTeaserPython3">
+      <created>1532267930544</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1532267930544</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -245,7 +273,7 @@
       <window_info anchor="bottom" id="Python Console" order="0" weight="0.3299712" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.36599424" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.3998559" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.31051874" />
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -278,7 +306,8 @@
     <MESSAGE value="Integration of tests_translation.py in Tests directory. &#10;Place tests_pytextrank in Tests folder. &#10;Add a Buffer directory for &#10;interactions between data and pytextrank." />
     <MESSAGE value="Remove useless file graph.dot generated by pytextrank first tests." />
     <MESSAGE value="Minors modifications. Exclusively tests to understand the pytextrank &#10;workflow." />
-    <option name="LAST_COMMIT_MESSAGE" value="Minors modifications. Exclusively tests to understand the pytextrank &#10;workflow." />
+    <MESSAGE value="Add of PyTeaser python 3 compatible version test. The use of python 3 &#10;compatible version needed to be build from source. See repository :&#10;https://github.com/alanbuxton/PyTeaserPython3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add of PyTeaser python 3 compatible version test. The use of python 3 &#10;compatible version needed to be build from source. See repository :&#10;https://github.com/alanbuxton/PyTeaserPython3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -477,13 +506,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Sources/drea_load_parsed_paper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="73" lean-forward="true" selection-start-line="30" selection-start-column="73" selection-end-line="30" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tests/tests_summarization.py" />
     <entry file="file://$PROJECT_DIR$/Tests/tests_translation.py">
       <provider selected="true" editor-type-id="text-editor" />
@@ -503,19 +525,37 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sources/drea_summerize_text.py">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/drea_load_parsed_paper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/tests_pytextrank.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="2" />
+        <state relative-caret-position="540">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/envs/DrEA/lib/python3.6/site-packages/pyteaser-1.0-py3.6.egg/pyteaser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="66" column="4" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/tests_pyteaser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        <state relative-caret-position="60">
+          <caret line="4" column="30" lean-forward="true" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
         </state>
       </provider>
     </entry>
