@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bb1a5fc-c7f5-4db6-bf24-4518ca0e8f15" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/DrEA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DrEA.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/tests_pyteaser.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sources/drea_summerize_text.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/drea_summerize_text.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/pytextrank_dat/o1.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/pytextrank_dat/o1.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,8 +20,8 @@
           <file leaf-file-name="tests_pytextrank.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Tests/tests_pytextrank.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="810">
-                  <caret line="54" column="42" lean-forward="true" selection-start-line="48" selection-end-line="58" />
+                <state>
+                  <caret selection-end-line="2" />
                 </state>
               </provider>
             </entry>
@@ -30,21 +29,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="drea_summerize_text.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Sources/drea_summerize_text.py">
+        <leaf>
+          <file leaf-file-name="tests_pyteaser.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/Tests/tests_pyteaser.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="795">
-                  <caret line="53" selection-start-line="53" selection-end-line="53" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="pytextrank.py" pinned="false" current-in-tab="false">
-            <entry file="file://$USER_HOME$/anaconda/envs/DrEA/lib/python3.6/site-packages/pytextrank/pytextrank.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="341">
-                  <caret line="703" column="4" selection-start-line="703" selection-start-column="4" selection-end-line="703" selection-end-column="4" />
+                <state relative-caret-position="165">
+                  <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
                 </state>
               </provider>
             </entry>
@@ -81,8 +71,9 @@
         <option value="$PROJECT_DIR$/Sources/drea_load_parsed_paper.py" />
         <option value="$PROJECT_DIR$/Sources/drea_parse_paper.py" />
         <option value="$PROJECT_DIR$/Tests/tests_summarization.py" />
-        <option value="$PROJECT_DIR$/Tests/tests_pytextrank.py" />
         <option value="$PROJECT_DIR$/Sources/drea_summerize_text.py" />
+        <option value="$PROJECT_DIR$/Tests/tests_pytextrank.py" />
+        <option value="$PROJECT_DIR$/Tests/tests_pyteaser.py" />
       </list>
     </option>
   </component>
@@ -154,11 +145,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Sources" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sources/drea_summerize_text.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/tests_pyteaser.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -232,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1532129199353</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Minors modifications. Exclusively tests to understand the pytextrank &#10;workflow.">
+      <created>1532221159499</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1532221159499</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -242,11 +240,11 @@
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.13046876" />
       <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.22838616" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.22334294" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.3299712" />
       <window_info anchor="bottom" id="Python Console" order="0" weight="0.3299712" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.3299712" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.36599424" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.3998559" />
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -279,7 +277,8 @@
     <MESSAGE value="Resolved previous envs problems. The choose of the right interpreter, &#10;uninstall and re install spacy. Install models.&#10;The pytextrank exemple run correctly." />
     <MESSAGE value="Integration of tests_translation.py in Tests directory. &#10;Place tests_pytextrank in Tests folder. &#10;Add a Buffer directory for &#10;interactions between data and pytextrank." />
     <MESSAGE value="Remove useless file graph.dot generated by pytextrank first tests." />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove useless file graph.dot generated by pytextrank first tests." />
+    <MESSAGE value="Minors modifications. Exclusively tests to understand the pytextrank &#10;workflow." />
+    <option name="LAST_COMMIT_MESSAGE" value="Minors modifications. Exclusively tests to understand the pytextrank &#10;workflow." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -287,6 +286,48 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Tests/tests_pytextrank.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/tests_pytextrank.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="37" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/drea_summerize_text.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/tests_pytextrank.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="37" lean-forward="true" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/drea_summerize_text.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/envs/DrEA/lib/python3.6/site-packages/pytextrank/pytextrank.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10365">
+          <caret line="703" column="4" selection-start-line="703" selection-start-column="4" selection-end-line="703" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Tests/tests_pytextrank.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="705">
@@ -449,22 +490,32 @@
     </entry>
     <entry file="file://$USER_HOME$/anaconda/envs/DrEA/lib/python3.6/site-packages/pytextrank/pytextrank.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="703" column="4" selection-start-line="703" selection-start-column="4" selection-end-line="703" selection-end-column="4" />
+        <state relative-caret-position="425">
+          <caret line="538" column="4" selection-start-line="538" selection-start-column="4" selection-end-line="538" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/tests_pytextrank.py">
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2018.1/python_stubs/-1089549890/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" column="42" lean-forward="true" selection-start-line="48" selection-end-line="58" />
+        <state relative-caret-position="337">
+          <caret line="4882" column="8" selection-start-line="4882" selection-start-column="8" selection-end-line="4882" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sources/drea_summerize_text.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/tests_pytextrank.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        <state>
+          <caret selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/tests_pyteaser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
         </state>
       </provider>
     </entry>
