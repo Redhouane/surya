@@ -5,7 +5,7 @@ import unittest2
 import drealib.paper as paper
 
 
-class TestDrEA(unittest2.TestCase):
+class TestDrEA(unittest2.TestCase): # TODO: Complete the setup for call unit test from Makefile
 
     def setUp(self):
         """

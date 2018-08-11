@@ -58,7 +58,7 @@ def parse_paper(paper_filename):
     :return: No value returned
     """
 
-    # TODO: The parser eed to upgraded. The Science-Parse 1.0 API not working anymore.
+    # TODO: Upgrade the parsing to SPv2 or to Apache Tika. The Science-Parse 1.0 API not working anymore.
     paper_to_parse = glob(os.path.join(PAPERS_DIRECTORY, paper_filename + ".pdf"))[0]
     print("Paper Parsing...")
     parsed_filename = paper_to_parse.split('.')[-2].split('/')[-1] + "_parsed"
