@@ -12,13 +12,13 @@ setuptools.setup(
     version="0.0.1",
     author="Redhouane Abdellaoui",
     author_email="redhouane.a@gmail.com",
-    description="Manipulating research articles",
-    long_description="This package allow to parse, summarize ",
+    description="Manipulating research articles.",
+    long_description="This package allow to parse, summarize and manipulate data from a collection of articles.",
     long_description_content_type="text/markdown",
-    url="https://github.com/pypa/sampleproject",
+    url="https://gitlab.com/Red1/DrEA.git",
     packages=setuptools.find_packages(),
     classifiers=(
         "Programming Language :: Python :: 3",
-        "Operating System :: OS Independent",
+        "Operating System :: MacOS/Linux",
     ),
 )
