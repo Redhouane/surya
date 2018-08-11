@@ -68,6 +68,7 @@ def parse_paper(paper_filename):
     # SPv2
     # os.system('curl -v --data-binary {0}.pdf "http://localhost:8081/v1/json/pdf" > {1}.json'.format(paper)
 
+
 def generate_summary(paper_object):
     """
     :param paper_object: An instance of class Paper
