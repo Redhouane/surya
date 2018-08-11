@@ -14,7 +14,6 @@ class TestDrEA(unittest2.TestCase):
 
         self.func = paper.Paper()
 
-
     def test_1(self):
         """
         Testing creation of class Paper instance
