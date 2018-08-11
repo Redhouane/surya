@@ -14,6 +14,7 @@ class TestDrEA(unittest2.TestCase):
 
         self.func = paper.Paper()
 
+
     def test_1(self):
         """
         Testing creation of class Paper instance
@@ -21,7 +22,7 @@ class TestDrEA(unittest2.TestCase):
 
         self.assertTrue(True)
 
-    def test_instance(self):
+    def test_2(self):
         """
         Testing initial values of Paper instance's attributes
         """
@@ -35,4 +36,4 @@ class TestDrEA(unittest2.TestCase):
 
 
 if __name__ == '__main__':
-    unittest2.main()
+    unittest2.main(verbosity=2)
