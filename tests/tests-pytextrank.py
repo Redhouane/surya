@@ -7,8 +7,8 @@ import pytextrank as ptr
 
 # Stage 1
 
-path_stage0 = "../Tests/pytextrank_dat/mih.json"
-path_stage1 = "../Tests/pytextrank_dat/o1.json"
+path_stage0 = "../tests/pytextrank_dat/mih.json"
+path_stage1 = "../tests/pytextrank_dat/o1.json"
 
 with open(path_stage1, 'w') as f:
     for graf in ptr.parse_doc(ptr.json_iter(path_stage0)):
@@ -17,7 +17,7 @@ with open(path_stage1, 'w') as f:
 
 
 # Stage 2
-path_stage2 = "../Tests/pytextrank_dat/o2.json"
+path_stage2 = "../tests/pytextrank_dat/o2.json"
 
 graph, ranks = ptr.text_rank(path_stage1)
 ptr.render_ranks(graph, ranks)
@@ -35,7 +35,7 @@ import networkx as nx
 nx.draw(graph, with_labels=True)
 # plt.show()
 
-path_stage3 = "../Tests/pytextrank_dat/o3.json"
+path_stage3 = "../tests/pytextrank_dat/o3.json"
 
 kernel = ptr.rank_kernel(path_stage2)
 

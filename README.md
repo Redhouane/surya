@@ -1,34 +1,36 @@
-DrEA Project
+DrEA Package
 
 Objective: 
-Conception of solution to help bibliographic researchs based on :
+Conception of python package providing solution to manipulate research articles :
 
 1/ Parsed data in each article submitted to the solution;
 
-2/ Summerize articles;
+2/ Summarize articles;
 
 3/ Advanced research inside tagged articles;
 
 Inputs: 
 Articles provided in a PDF format.
 
-Output: 
-Interactive tool provided as Web GUI.
-
 Project Structure:
 
-Directory "Sources":
-Source files
-- drea_parse_paper.py
-- drea_load_parsed_paper.py
-- drea_summerize_text.py
+"setup.py":
+Source file
 
-Directory "Tests":
-Some developement tests.
+"requirements.txt":
+List of external dependencies
 
-Directory "articles":
-Articles used for developement.
+"drealib/":
+package's modules sources.
 
-Directory "parsed_articles":
+"tests/":
+Development tests of the project.
+
+"articles/":
+Articles used for development.
+
+"parsed_articles/":
 Results Directory
-Buffer used to write Science-Parser results in json format.
+
+"buffer/":
+used to write Science-Parser results in json format.
