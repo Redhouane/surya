@@ -1,27 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0bb1a5fc-c7f5-4db6-bf24-4518ca0e8f15" name="Default" comment="Upgrade project's structure for better work space quality.">
-      <change afterPath="$PROJECT_DIR$/tests/test_advanced.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_basic.py" afterDir="false" />
+    <list default="true" id="0bb1a5fc-c7f5-4db6-bf24-4518ca0e8f15" name="Default" comment="Upgrade project's structure for better work space quality. &#10;Reorganization (part 1) test directory and setup.py.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drealib/paper.py" beforeDir="false" afterPath="$PROJECT_DIR$/drealib/paper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/graph.dot" beforeDir="false" afterPath="$PROJECT_DIR$/tests/notebooks/graph.dot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/notebooks/test-extractdata.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/tests/notebooks/test-extractdata.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/pytextrank_dat/ars.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/pytextrank_dat/lee.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/pytextrank_dat/mih.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/pytextrank_dat/o1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/pytextrank_dat/o2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/pytextrank_dat/o3.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/pytextrank_dat/orm.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/pytextrank_dat/suz.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/tests-pyteaser.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/tests-pytextrank.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/tests-summa.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/tests-translation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/notebooks/.ipynb_checkpoints/drea_extract_data-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/drea_extract_data-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/notebooks/graph.dot" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/graph.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/notebooks/test-extractdata.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/test-extractdata.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,11 +17,12 @@
     <session id="59628300">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -69,13 +54,13 @@
           <entry key="dummy" value="15" />
           <entry key="md" value="201" />
           <entry key="py" value="1329" />
-          <entry key="txt" value="88" />
+          <entry key="txt" value="173" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="201" />
-          <entry key="PLAIN_TEXT" value="186" />
+          <entry key="PLAIN_TEXT" value="271" />
           <entry key="Python" value="1478" />
         </counts>
       </usages-collector>
@@ -94,20 +79,20 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/tests/test_basic.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="30">
-                  <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+                  <caret line="2" selection-start-line="2" selection-end-line="2" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tests/test_advanced.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
-                  <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+                <state relative-caret-position="255">
+                  <caret line="17" column="38" lean-forward="true" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
                   <folding>
                     <element signature="e#91#120#0" expanded="true" />
                   </folding>
@@ -118,12 +103,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/drealib/paper.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="421">
-                  <caret line="61" column="73" lean-forward="true" selection-start-line="61" selection-start-column="73" selection-end-line="61" selection-end-column="73" />
+                <state relative-caret-position="873">
+                  <caret line="61" column="73" selection-start-line="61" selection-start-column="73" selection-end-line="61" selection-end-column="73" />
                   <folding>
                     <element signature="e#91#102#0" expanded="true" />
                   </folding>
@@ -213,12 +198,7 @@
             <path>
               <item name="DrEA" type="b2602c69:ProjectViewProjectNode" />
               <item name="DrEA" type="462c0819:PsiDirectoryNode" />
-              <item name="drealib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DrEA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DrEA" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="notebooks" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -250,6 +230,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/tests" />
       <recent name="$PROJECT_DIR$/tests/notebooks" />
     </key>
@@ -431,7 +412,14 @@
       <option name="project" value="LOCAL" />
       <updated>1532292958585</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Upgrade project's structure for better work space quality. &#10;Reorganization (part 1) test directory and setup.py.">
+      <created>1533984679960</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1533984679960</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView">
@@ -445,18 +433,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.11815675" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.11815675" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Python Console" order="0" sideWeight="0.49980307" visible="true" weight="0.329927" />
+      <window_info anchor="bottom" id="Python Console" order="0" sideWeight="0.49980307" weight="0.3618895" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.2029197" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50019693" side_tool="true" weight="0.329927" />
       <window_info anchor="bottom" id="Version Control" internal_type="SLIDING" order="3" type="SLIDING" weight="0.3298639" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.329927" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.22481751" />
+      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.22481751" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.310219" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -518,7 +505,8 @@
     <MESSAGE value="Summary synthesized from a String containing the text to summarize and &#10;from another String containing the document title." />
     <MESSAGE value="Summary of our own article available. Enrichment of paper class with a &#10;_get_paper_text method for extracting article's text to summarize." />
     <MESSAGE value="Upgrade project's structure for better work space quality." />
-    <option name="LAST_COMMIT_MESSAGE" value="Upgrade project's structure for better work space quality." />
+    <MESSAGE value="Upgrade project's structure for better work space quality. &#10;Reorganization (part 1) test directory and setup.py." />
+    <option name="LAST_COMMIT_MESSAGE" value="Upgrade project's structure for better work space quality. &#10;Reorganization (part 1) test directory and setup.py." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -621,7 +609,7 @@
     <entry file="file://$PROJECT_DIR$/Sources/drea_parse_paper.py" />
     <entry file="file://$PROJECT_DIR$/drea_parse_paper.py" />
     <entry file="file://$PROJECT_DIR$/drealib/context.py" />
-    <entry file="file://$PROJECT_DIR$/tests/notebooks/graph.dot">
+    <entry file="file://$PROJECT_DIR$/notebooks/graph.dot">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/jmir_parsed.json" />
@@ -633,51 +621,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/tests-summa.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="22" selection-start-column="22" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/tests-translation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/tests-pyteaser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/notebooks/test-extractdata.ipynb">
+    <entry file="file://$PROJECT_DIR$/tests/tests-summa.py" />
+    <entry file="file://$PROJECT_DIR$/tests/tests-translation.py" />
+    <entry file="file://$PROJECT_DIR$/tests/tests-pyteaser.py" />
+    <entry file="file://$PROJECT_DIR$/notebooks/test-extractdata.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
           <selected id="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/tests-pytextrank.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drealib/paper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="61" column="73" lean-forward="true" selection-start-line="61" selection-start-column="73" selection-end-line="61" selection-end-column="73" />
-          <folding>
-            <element signature="e#91#102#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/tests-pytextrank.py" />
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -695,34 +649,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="60" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_advanced.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#91#120#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/notebooks/tests-summa.py">
+    <entry file="file://$PROJECT_DIR$/notebooks/tests-summa.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/notebooks/tests-pytextrank.py">
+    <entry file="file://$PROJECT_DIR$/notebooks/tests-pytextrank.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="23" lean-forward="true" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/notebooks/tests-pyteaser.py">
+    <entry file="file://$PROJECT_DIR$/notebooks/tests-pyteaser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
@@ -732,7 +669,34 @@
     <entry file="file://$PROJECT_DIR$/tests/test_basic.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drealib/paper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="873">
+          <caret line="61" column="73" selection-start-line="61" selection-start-column="73" selection-end-line="61" selection-end-column="73" />
+          <folding>
+            <element signature="e#91#102#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="60" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_advanced.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="38" lean-forward="true" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+          <folding>
+            <element signature="e#91#120#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
