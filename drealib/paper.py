@@ -8,8 +8,8 @@ import os
 
 
 # Directories for reading/writing files
-PAPERS_DIRECTORY = 'articles/'
-BUFFER_DIRECTORY = 'buffer/'
+PAPERS_DIRECTORY = '../articles/'
+BUFFER_DIRECTORY = '../buffer/'
 
 
 class Paper:

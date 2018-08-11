@@ -2,21 +2,23 @@
 # -*- coding: utf-8 -*-
 
 
-import drealib.paper as paper
+import setuptools
 
-from glob import glob
-import os
+with open("README.md", "r") as fh:
+    long_description = fh.read()
 
-# Parsing article
-# paper.parse_paper("jmir")
-
-# Upload list of articles to parse
-red1_articles = glob(os.path.join(paper.BUFFER_DIRECTORY, '*_parsed.json'))
-
-# Initialization of paper object with article data and metadata
-# See paper class method _read_paper()
-
-abdellaoui_et_all_2018 = paper.Paper()
-abdellaoui_et_all_2018 = abdellaoui_et_all_2018.read_paper(red1_articles[0])
-
-print(paper.generate_summary(abdellaoui_et_all_2018))
+setuptools.setup(
+    name="DrEA",
+    version="0.0.1",
+    author="Redhouane Abdellaoui",
+    author_email="redhouane.a@gmail.com",
+    description="Manipulating research articles",
+    long_description="This package allow to parse, summarize ",
+    long_description_content_type="text/markdown",
+    url="https://github.com/pypa/sampleproject",
+    packages=setuptools.find_packages(),
+    classifiers=(
+        "Programming Language :: Python :: 3",
+        "Operating System :: OS Independent",
+    ),
+)
