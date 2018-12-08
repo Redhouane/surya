@@ -1,4 +1,4 @@
-#!/Users/redhouaneabdellaoui/anaconda/envs/DrEA/bin/python python
+#!/Users/redhouaneabdellaoui/anaconda/envs/surya/bin/python python
 # -*- coding: utf-8 -*-
 
 
@@ -8,14 +8,14 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="DrEA",
+    name="surya",
     version="0.0.1",
     author="Redhouane Abdellaoui",
     author_email="redhouane.a@gmail.com",
     description="Manipulating research articles.",
     long_description="This package allow to parse, summarize and manipulate data from a collection of articles.",
     long_description_content_type="text/markdown",
-    url="https://gitlab.com/Red1/DrEA.git",
+    url="https://gitlab.com/Red1/surya.git",
     packages=setuptools.find_packages(),
     classifiers=(
         "Programming Language :: Python :: 3",

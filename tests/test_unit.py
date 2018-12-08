@@ -1,11 +1,10 @@
-#!/Users/redhouaneabdellaoui/anaconda/envs/DrEA/bin/python python
 # -*- coding: utf-8 -*-
 
 import unittest2
 import drealib.paper as paper
 
 
-class TestDrEA(unittest2.TestCase): # TODO: Complete the setup for call unit test from Makefile
+class TestDrEA(unittest2.TestCase):  # TODO: Complete the setup for call unit test from Makefile
 
     def setUp(self):
         """

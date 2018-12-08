@@ -1,4 +1,3 @@
-#!/Users/redhouaneabdellaoui/anaconda/envs/DrEA/bin/python python
 # -*- coding: utf-8 -*-
 
 import json
@@ -31,12 +30,14 @@ class Paper:
         # https://www.kaggle.com/jboysen/quick-tutorial-flatten-nested-json-in-pandas
         with open(articles_to_process) as article:
             paper_dictionary = json.load(article)
+
         self.title = paper_dictionary["title"]
         self.year = paper_dictionary["year"]
         self.abstract = paper_dictionary["abstractText"]
         self.text = paper_dictionary['sections']
         self.references = paper_dictionary['references']
         self.authors = paper_dictionary['authors']
+
         return self
 
     def get_paper_text(self):
@@ -48,6 +49,7 @@ class Paper:
 
         for section in self.text:
             paper_text += section["text"]
+
         return paper_text
 
 
@@ -58,10 +60,16 @@ def parse_paper(paper_filename):
     :return: No value returned
     """
 
-    # TODO: Upgrade the parsing to SPv2 or to Apache Tika. The Science-Parse 1.0 API not working anymore.
+    # TODO: Upgrade the parsing to SPv2, Grobid or Apache Tika. The Science-Parse 1.0 API not working anymore.
     paper_to_parse = glob(os.path.join(PAPERS_DIRECTORY, paper_filename + ".pdf"))[0]
+
+    # TODO: Replace the following print by log
     print("Paper Parsing...")
+
+    # TODO: Replace the split with regex
     parsed_filename = paper_to_parse.split('.')[-2].split('/')[-1] + "_parsed"
+
+    # TODO: Modifiy the parser call
     os.system("""curl -v -H "Content-type: application/pdf" --data-binary @{0}
         "http://scienceparse.allenai.org/v1" > {1}.json""".format(paper_to_parse, parsed_filename))
 

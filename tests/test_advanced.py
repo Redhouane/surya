@@ -1,4 +1,3 @@
-#!/Users/redhouaneabdellaoui/anaconda/envs/DrEA/bin/python python
 # -*- coding: utf-8 -*-
 
 import drealib.paper as paper
