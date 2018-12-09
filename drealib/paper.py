@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
 
-import json
-from pyteaser import Summarize
 from glob import glob
+import json
 import os
+
+from sumy.parsers.plaintext import PlaintextParser
+from sumy.nlp.tokenizers import Tokenizer
+from sumy.summarizers.lsa import LsaSummarizer
 
 
 # Directories for reading/writing files
@@ -26,6 +29,7 @@ class Paper:
         :return: A paper object containing article's texts and metadata
         """
 
+        # TODO: PErform a better json read process
         # Loading Json's content
         # https://www.kaggle.com/jboysen/quick-tutorial-flatten-nested-json-in-pandas
         with open(articles_to_process) as article:
@@ -68,26 +72,28 @@ def parse_paper(paper_filename):
 
     # TODO: Replace the split with regex
     parsed_filename = paper_to_parse.split('.')[-2].split('/')[-1] + "_parsed"
-
-    # TODO: Modifiy the parser call
-    os.system("""curl -v -H "Content-type: application/pdf" --data-binary @{0}
-        "http://scienceparse.allenai.org/v1" > {1}.json""".format(paper_to_parse, parsed_filename))
-
-    # SPv2
-    # os.system('curl -v --data-binary {0}.pdf "http://localhost:8081/v1/json/pdf" > {1}.json'.format(paper)
+    os.system("""curl -v -H "Content-type: application/pdf" 
+    --data-binary @{0} 
+    "http://localhost:8080/v1" > {1}.json""".format(paper_to_parse, parsed_filename))
 
 
-def generate_summary(paper_object):
+def generate_summary(paper_object, lang='english', sentences_count=10):
     """
     :param paper_object: An instance of class Paper
+    :param lang: Language used to write the text to summarize
+    :param sentences_count: Sentences count to consider for the ouptuted summary
     :return: A string containing article's summary
     """
+    paper_text = paper_object.get_paper_text()
+    parser = PlaintextParser.from_string(paper_text, Tokenizer(lang))
+    summarizer = LsaSummarizer()
+    summary_sentences = summarizer(parser.document, sentences_count)
 
-    # Summary is constituted using key phrases concatenation
-    key_phrases = Summarize(paper_object.title,
-                            paper_object.get_paper_text())
+    summary = ''
+    for sentence in summary_sentences:
+        summary += str(sentence) + ' '
 
-    return '\n'.join(key_phrases)
+    return summary
 
 
 if __name__ == "__main__":

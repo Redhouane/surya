@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0bb1a5fc-c7f5-4db6-bf24-4518ca0e8f15" name="Default" comment="Add of sumy python summarization tool experimentation.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/articles/jmir_parsed.json" beforeDir="false" afterPath="$PROJECT_DIR$/articles/jmir_parsed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buffer/document.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/drealib/paper.py" beforeDir="false" afterPath="$PROJECT_DIR$/drealib/paper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_advanced.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_advanced.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trials/.py/experience-sumy.py" beforeDir="false" afterPath="$PROJECT_DIR$/trials/.py/experience-sumy.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,9 +16,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/surya$test_advanced.coverage" NAME="test_advanced Coverage Results" MODIFIED="1544224131058" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/surya$test_advanced.coverage" NAME="test_advanced Coverage Results" MODIFIED="1544386554335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/surya$grobid_client.coverage" NAME="grobid-client Coverage Results" MODIFIED="1544312853364" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grobid-client-python" />
-    <SUITE FILE_PATH="coverage/surya$experience_sumy.coverage" NAME="experience-sumy Coverage Results" MODIFIED="1544312889999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/trials/.py" />
+    <SUITE FILE_PATH="coverage/surya$experience_sumy.coverage" NAME="experience-sumy Coverage Results" MODIFIED="1544380449641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/trials/.py" />
     <SUITE FILE_PATH="coverage/DrEA$test_advanced.coverage" NAME="test_advanced Coverage Results" MODIFIED="1541120827839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/surya$test_unit.coverage" NAME="test_unit Coverage Results" MODIFIED="1544313583350" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
   </component>
@@ -27,10 +29,10 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/drealib/paper.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="655">
-                  <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
+                <state relative-caret-position="760">
+                  <caret line="75" column="19" selection-start-line="75" selection-start-column="19" selection-end-line="75" selection-end-column="19" />
                   <folding>
-                    <element signature="e#25#36#0" expanded="true" />
+                    <element signature="e#25#46#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -45,8 +47,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/trials/.py/experience-sumy.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="345">
-                      <caret line="23" selection-start-line="23" selection-end-line="23" />
+                    <state relative-caret-position="391">
+                      <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
                       <folding>
                         <element signature="e#25#34#0" expanded="true" />
                       </folding>
@@ -61,8 +63,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/tests/test_advanced.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="255">
-                      <caret line="17" column="59" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
+                    <state relative-caret-position="180">
+                      <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
                       <folding>
                         <element signature="e#25#54#0" expanded="true" />
                       </folding>
@@ -131,16 +133,16 @@
         <option value="$PROJECT_DIR$/trials/.py/tests-unittest2.py" />
         <option value="$PROJECT_DIR$/tests/test_unit.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/tests/test_advanced.py" />
         <option value="$PROJECT_DIR$/tests/test_unit.py" />
-        <option value="$PROJECT_DIR$/buffer/document.txt" />
-        <option value="$PROJECT_DIR$/drealib/paper.py" />
-        <option value="$PROJECT_DIR$/trials/.py/experience-sumy.py" />
         <option value="$PROJECT_DIR$/trials/.ipynb/grobid-experience.ipynb" />
         <option value="$PROJECT_DIR$/grobid-client-python/test-grobid.py" />
         <option value="$PROJECT_DIR$/tests/test-grobid.py" />
         <option value="$PROJECT_DIR$/grobid-client-python/grobid-client.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/buffer/document.txt" />
+        <option value="$PROJECT_DIR$/trials/.py/experience-sumy.py" />
+        <option value="$PROJECT_DIR$/drealib/paper.py" />
+        <option value="$PROJECT_DIR$/tests/test_advanced.py" />
       </list>
     </option>
   </component>
@@ -148,8 +150,8 @@
     <option name="path" value="$PROJECT_DIR$/Makefile" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="262" />
-    <option name="y" value="164" />
+    <option name="x" value="161" />
+    <option name="y" value="97" />
     <option name="width" value="2279" />
     <option name="height" value="1253" />
   </component>
@@ -172,6 +174,11 @@
               <item name="surya" type="b2602c69:ProjectViewProjectNode" />
               <item name="surya" type="462c0819:PsiDirectoryNode" />
               <item name="articles" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="surya" type="b2602c69:ProjectViewProjectNode" />
+              <item name="surya" type="462c0819:PsiDirectoryNode" />
+              <item name="buffer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="surya" type="b2602c69:ProjectViewProjectNode" />
@@ -224,14 +231,14 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/articles" />
       <recent name="$PROJECT_DIR$/tests" />
       <recent name="$PROJECT_DIR$/trials/.py" />
       <recent name="$PROJECT_DIR$/trials/.ipynb" />
       <recent name="$PROJECT_DIR$/notebooks/py" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -247,7 +254,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test_unit">
+  <component name="RunManager" selected="Python.test_advanced">
     <configuration name="experience-sumy" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="surya" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -369,7 +376,7 @@
       <workItem from="1544222578332" duration="5838000" />
       <workItem from="1544295489582" duration="8630000" />
       <workItem from="1544321461979" duration="203000" />
-      <workItem from="1544369451558" duration="728000" />
+      <workItem from="1544369451558" duration="10814000" />
     </task>
     <task id="LOCAL-00001" summary="Add DrEA_head package for factoring code. Especially for functions &#10;and global variables used along sources.">
       <created>1531948973226</created>
@@ -497,11 +504,25 @@
       <option name="project" value="LOCAL" />
       <updated>1544228550419</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Rewrite the Readme.md">
+      <created>1544373262645</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1544373262645</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Readme.md corrections">
+      <created>1544373706210</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1544373706210</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18598000" />
+    <option name="totallyTimeSpent" value="28684000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -524,8 +545,8 @@
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50079554" side_tool="true" weight="0.26468286" />
       <window_info anchor="bottom" id="Version Control" internal_type="SLIDING" order="3" type="SLIDING" weight="0.3298639" />
       <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" weight="0.32972974" />
-      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49920446" weight="0.26468286" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.32967892" />
+      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49920446" weight="0.28582615" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.3101018" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -613,10 +634,24 @@
     <MESSAGE value="Add verbosity to unit tests." />
     <MESSAGE value="PEP-8 regularization." />
     <MESSAGE value="Add of sumy python summarization tool experimentation." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add of sumy python summarization tool experimentation." />
+    <MESSAGE value="Rewrite the Readme.md" />
+    <MESSAGE value="Readme.md corrections" />
+    <option name="LAST_COMMIT_MESSAGE" value="Readme.md corrections" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/drealib/paper.py</url>
+          <line>95</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/drealib/paper.py</url>
+          <line>74</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -627,7 +662,69 @@
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
+    <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>for sentence in summary_sentences:
+    print(str(sentence))</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>for sentence in summary_sentences:
+    summary += str(sentence)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>summary = ''
+
+for sentence in summary_sentences:
+    summary += str(sentence)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>str(summary_sentences[0])</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>summary_sentences[0].__class__</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>summary_sentences[0].__Class__</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>summary_sentences[0]._text</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>summary_sentences[0]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>summary_sentences</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+    </expressions>
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>abdellaoui_et_all_2018_summary.__class__</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>paper.generate_summary(abdellaoui_et_all_2018)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>os.getcwd()</expression-string>
         <language-id>Python</language-id>
@@ -663,20 +760,9 @@
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>red1_articles</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>glob(os.path.join(context.BUFFER_DIRECTORY, '*_parsed.json'))</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/drea_summerize_text.py" />
     <entry file="file://$PROJECT_DIR$/drea_load_parsed_paper.py" />
     <entry file="file://$PROJECT_DIR$/Sources/_parsed.json" />
     <entry file="file://$PROJECT_DIR$/Tests/tests_summarization.py" />
@@ -743,13 +829,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buffer/Abdellaoui_et_al_2018_parsed.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="4567" lean-forward="true" selection-start-line="11" selection-start-column="4567" selection-end-line="11" selection-end-column="4567" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/drealib/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -765,13 +844,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grobid-client-python/LICENSE" />
-    <entry file="file://$PROJECT_DIR$/buffer/document.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="529" selection-start-line="1" selection-start-column="519" selection-end-line="1" selection-end-column="529" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/trials/.ipynb/grobid-experience.ipynb" />
     <entry file="file://$PROJECT_DIR$/grobid-client-python/.gitignore" />
     <entry file="file://$PROJECT_DIR$/grobid-client-python/client.py" />
@@ -798,42 +870,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="420">
+            <caret line="28" column="36" lean-forward="true" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buffer/document.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/trials/.py/experience-sumy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="391">
+          <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
           <folding>
             <element signature="e#25#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_advanced.py">
+    <entry file="file://$PROJECT_DIR$/buffer/Abdellaoui_et_al_2018_parsed.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="59" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
+        <state relative-caret-position="165">
+          <caret line="11" column="4567" lean-forward="true" selection-start-line="11" selection-start-column="4567" selection-end-line="11" selection-end-column="4567" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/articles/jmir_parsed.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drealib/paper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="75" column="19" selection-start-line="75" selection-start-column="19" selection-end-line="75" selection-end-column="19" />
           <folding>
-            <element signature="e#25#54#0" expanded="true" />
+            <element signature="e#25#46#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="735">
-            <caret line="49" selection-start-line="49" selection-end-line="49" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/articles/jmir_parsed.json">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/drealib/paper.py">
+    <entry file="file://$PROJECT_DIR$/tests/test_advanced.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="655">
-          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
+        <state relative-caret-position="180">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
           <folding>
-            <element signature="e#25#36#0" expanded="true" />
+            <element signature="e#25#54#0" expanded="true" />
           </folding>
         </state>
       </provider>

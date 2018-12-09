@@ -1,7 +1,324 @@
-<html>
-<head><title>504 Gateway Time-out</title></head>
-<body bgcolor="white">
-<center><h1>504 Gateway Time-out</h1></center>
-<hr><center>nginx/1.4.6 (Ubuntu)</center>
-</body>
-</html>
+{
+  "sections": [{
+    "text": "Background: Medication nonadherence is a major impediment to the management of many health conditions. A better understanding of the factors underlying noncompliance to treatment may help health professionals to address it. Patients use peer-to-peer virtual communities and social media to share their experiences regarding their treatments and diseases. Using topic models makes it possible to model themes present in a collection of posts, thus to identify cases of noncompliance. Objective: The aim of this study was to detect messages describing patients’ noncompliant behaviors associated with a drug of interest. Thus, the objective was the clustering of posts featuring a homogeneous vocabulary related to nonadherent attitudes. Methods: We focused on escitalopram and aripiprazole used to treat depression and psychotic conditions, respectively. We implemented a probabilistic topic model to identify the topics that occurred in a corpus of messages mentioning these drugs, posted from 2004 to 2013 on three of the most popular French forums. Data were collected using a Web crawler designed by Kappa Santé as part of the Detec’t project to analyze social media for drug safety. Several topics were related to noncompliance to treatment. Results: Starting from a corpus of 3650 posts related to an antidepressant drug (escitalopram) and 2164 posts related to an antipsychotic drug (aripiprazole), the use of latent Dirichlet allocation allowed us to model several themes, including interruptions of treatment and changes in dosage. The topic model approach detected cases of noncompliance behaviors with a recall of 98.5% (272/276) and a precision of 32.6% (272/844). Conclusions: Topic models enabled us to explore patients’ discussions on community websites and to identify posts related with noncompliant behaviors. After a manual review of the messages in the noncompliance topics, we found that noncompliance to treatment was present in 6.17% (276/4469) of the posts.\n(J Med Internet Res 2018;20(3):e85) doi:10.2196/jmir.9222"
+  }, {
+    "heading": "KEYWORDS",
+    "text": "medication adherence; compliance; infodemiology; social media; text mining; depression; psychosis; peer-to-peer support; virtual community\nJ Med Internet Res 2018 | vol. 20 | iss. 3 | e85 | p.1http://www.jmir.org/2018/3/e85/ (page number not for citation purposes)\nXSL•FO RenderX"
+  }, {
+    "heading": "Introduction",
+    "text": ""
+  }, {
+    "heading": "Background",
+    "text": "A report published by the World Health Organization (WHO) in 2003 highlighted that noncompliance (or nonadherence) to long-term treatment was a worldwide problem detrimental to the overall effectiveness of the health system [1]. Compliance is defined in this report as the degree of correspondence between a patient’s behavior (taking medications, following hygiene rules, and diet) and the recommendations made by a health care professional (HCP). Noncompliance with these recommendations has an impact on patients’ quality of life (QoL), outcomes, and health costs.\nThe WHO identified several causes of nonadherence to therapies, including the characteristics of the health system, the patient’s disease, and the course of treatment. For patients with depression, observance is linked to the frequency of administration of a drug and to concomitant therapy. For patients suffering from cancer, the fear of adverse effects (AEs) related to the treatment has negative impact on adherence. For diabetic patients, adherence may vary with age, sex, and the relationship with the physician. Several meta-analyses showed that current methods of improving medication adherence for chronic diseases were mostly complex and not very effective [2,3]. The Cochrane group concluded that (1) means to measure adherence more systematically and objectively and (2) innovations to assist patients to follow medication prescriptions for long-term medical disorders were major points to be considered in that field. Considering social media as platforms where patients can discuss about their treatments and share testimonies, they could be a new data source to measure adherence to treatment.\nThe use of social media allows large groups of people to create and share information, opinions, and experiences about health conditions and medications through discussions [4]. Social media provide pharmacovigilance experts with a relevant source of information [5]. The example of benfluorex [6] illustrated how social media could be valuable sources for experts. Methods to identify messages with adverse events mentions have been developed (eg, [7]).\nSocial media holds a lot of promise in improving communication and patient engagement [8]. Horvath et al [9] and Taggart et al [10] showed that information sharing and socializing with others were the criteria most often cited when HIV patients describe an ideal social network. Wang et al [11] modeled the discussions and interests of users of a forum for pregnant women using a topic model and showed that the women were sharing their experiences, fears, and concerns about medications. Stellefson et al [12] reviewed Web 2.0 interventions proposing a program of self-management to patients older than 50 years for their chronic disease. Patients highlighted the benefit of interacting with other patients. For example, sharing information through social networks enabled patients to communicate better with HCPs. Patients often use social media to discuss drug side effects and adherence to therapies. Mao et al [13] studied the messages from breast cancer patients treated by aromatase inhibitors. A total of 18.17% (4589/25,256) of the posts mentioned at least one adverse effect, and almost 12.8%\n(110/862) of the individuals mentioned discontinuing aromatase inhibitors. Chary et al [14] studied correlations between geographic distribution of prescription opioid misuse estimated from social media and the National Survey on Drug Usage and Health (NSDUH). They concluded that mentions of drug misuse on Twitter correlated strongly with the NSDUH estimates of opioid misuse.\nSocial media may even impact treatment adherence. In the study by Horvath et al [15], the results of a Web-based survey for HIV patients showed that 52.6% (164/312) of the participants were considered noncompliant. The meta-analysis published by Taggart et al [10] identified 2 studies on HIV populations that demonstrated a link between the use of social media and the improvement of compliance to treatment among users. Moreover, Mao et al [13] showed that breast cancer patients offer practical strategies to deal with drug side effects and provide support to each other. For example, 28.10% (7097/25,256) of the posts mentioned some method for addressing their aromatase inhibitor-related arthralgia, including exercising and pharmaceuticals, whether prescribed or over the counter.\nAnalysis of a huge number of narratives requires automated text mining techniques [5]. These techniques have been used to extract information from electronic health records. For example, Topaz et al [16] mined clinical narratives to identify heart failure patients who did not comply with their treatment. As for health records, detection of nonadherence behaviors in social media also requires text mining techniques.\nTopic models could be used to discover hidden semantic structures in large sets of messages from social media. They could provide deeper exploration of nonadherence behaviors. This exploration is based on patient testimonies of their own decisions about drugs in real life."
+  }, {
+    "heading": "Objective",
+    "text": "Our objective was to evaluate a topic model approach to identify messages describing noncompliant behaviors regarding medications. Topics correspond to clusters of words that represent the themes addressed by the patients. The distributions of these themes in a corpus of messages are expected to enable the targeted extraction of posts corresponding to noncompliance behaviors. We focused on two noncompliant behaviors: (1) dose change and (2) treatment cessation."
+  }, {
+    "heading": "Prior Work",
+    "text": "Topic modeling is a text mining method designed for exploring the main topics that occur in a set of documents. With topic models, words that often occur together in text are grouped into different topics. On the basis of these topics, topic models provide a tool for unsupervised classification of massive collections of documents. Latent Dirichlet allocation (LDA) was developed by Blei et al as “...a generative probabilistic model for collections of discrete data such as text corpora...” [17].\nTopic modeling algorithms have been used to analyze the thematic composition of text corpora extracted from social media in a variety of domains such as politics [18]. Several authors\nJ Med Internet Res 2018 | vol. 20 | iss. 3 | e85 | p.2http://www.jmir.org/2018/3/e85/ (page number not for citation purposes)\nXSL•FO RenderX\nexplored tweets content using LDA to identify health topics, including tobacco use [19], seasonal influenza and allergies [15], and childhood obesity [20]. Sullivan et al analyzed users’ comments from amazon to build a scoring system for food supplements [21].\nPatient forums have been also explored using LDA. Yang et al [7] analyzed 1500 messages from patient forums to detect adverse drug reactions. The distributions of the themes obtained by applying the LDA model to this corpus made it possible to use similarity measurements for the annotated corpus compared with new messages. The authors proposed a message classifier based on these measurements. Noticeably, all the studies described above used messages in English.\nWith the objective of analyzing patients’ QoL in breast cancer, Tapi Nzali et al [22] investigated posts from Facebook groups and a public French breast cancer forum using LDA modeling. They analyzed messages in French.\nSeveral algorithms may be applied to use topic models. The original version of LDA modeling proposed by Blei et al [17] has been widely used (eg, [7,19,20,22,23]). Paul and Dredze developed extensions of the LDA model [15,24,25]. To establish their Ailment Topic Aspect Model (ATAM), they added several components to associate a term with a theme (eg, a disease), or consider it as not relevant. Then, based on 144 million tweets, they estimated general themes and disease-specific themes such as influenza, cancer, and dental problems. The semantic coherence of the topics obtained by ATAM was better for 61% (11/18) of the estimated topics compared with the LDA [25].\nIn this study, we investigate the use of LDA to analyze the themes in patient posts and identify noncompliance cases. To the best of our knowledge, this is the first study aiming at identifying forum posts related to nonadherence behaviors."
+  }, {
+    "heading": "Methods",
+    "text": "A summary of the approach presented in this study is provided in Figure 1."
+  }, {
+    "heading": "Materials",
+    "text": "The data was extracted from the Detec’t database [26], a database developed by Kappa Santé [27] that collects messages from several French forums using a Web crawler. Detec’t extracts messages from forums based on a named entity recognition module using a drug lexicon made by Kappa Santé and a fuzzy matching algorithm. The lexicon was based on Racine Pharma and the Anatomical Therapeutic Chemical (ATC) classification system [28]. Racine Pharma is an extensive source of drug names that covers all medications available on the French market, including brand names and active ingredients. Racine Pharma entries are mapped to the ATC.\nMore precisely, we extracted two corpora from Detec’t: the first one corresponding to the messages related to escitalopram, an antidepressant drug, the other one related to aripiprazole, an antipsychotic drug. Rationale for choosing these drugs is that nonadherence cases are more likely to be found in chronic diseases and is a major concern in psychiatric disease management [29]. Moreover, these drugs belong to two different\ntherapeutic classes: escitalopram is in a class of antidepressants called selective serotonin reuptake inhibitors; aripiprazole belongs to the so-called atypical second generation antipsychotics and acts as a partial dopamine agonist.\nAll messages extracted from Detec’t database in this study were posted from 2004 to 2013 on three of the most popular French forums (doctissimo, atoute, and santé médecine). The metadata accompanying each message that form the corpus were as follows: (1) an identifier, (2) the date of publication on the forum, and (3) the forum from which the message was extracted. Messages were extracted based on the respective brand names: Seroplex and Abilify of the drugs. Posts were selected based on the presence of the drug name in the message."
+  }, {
+    "heading": "Methods Used",
+    "text": ""
+  }, {
+    "heading": "Preliminary Data Processing",
+    "text": ""
+  }, {
+    "heading": "Preprocessing",
+    "text": "The aim of the preprocessing step is the data cleaning to reduce noise and incoherence [30]. Preprocessing was done in six steps:\n1. Considering that the R software (The R Project for Statistical Computing, Vienna) discriminates between lowercase and uppercase words, all messages were converted to lower case text. 2. The punctuation and stop words were removed. 3. We removed all instances of the drug name that was used\nto build the corpus (eg, seroplex). As it was present in each message, it was overrepresented and does not carry any further information. 4. Spaces were removed whenever needed to create tokens. 5. The stemming of words was carried out using Porter’s\nalgorithm [31,32]. 6. We decided to keep unigrams and bigrams. This made it\npossible to retain frequent contiguous sequences of two items, such as effets secondaires (AEs)."
+  }, {
+    "heading": "Standardization of Dosage Mentions",
+    "text": "As variations in representing dosage in posts are possible (eg, milligram or mg), we replaced it by a standard expression in the messages: we identified dosage mentions (eg, 10 mg) by searching each sequence of numbers followed by a dosage unit. Then, we replaced the dosage mention by a neutral string of characters dosemilligrams."
+  }, {
+    "heading": "Model Estimation",
+    "text": ""
+  }, {
+    "heading": "Document-Term Matrix Weighting",
+    "text": "The document-term matrix (DTM) describes the frequency of terms that occur in the collection of posts: rows correspond to posts (documents), and columns correspond to terms. If a term occurs in a particular post, then the matrix entry corresponding to that row and column is 1, if not it is 0. The sparsity corresponds to the frequency of zero-valued elements in the matrix.\nA maximum sparsity threshold, above which the token was removed, was determined empirically. The total sparsity of the matrix was calculated for an interval of sparsity thresholds applied to the columns. These values ranged from 99.95% to\nJ Med Internet Res 2018 | vol. 20 | iss. 3 | e85 | p.3http://www.jmir.org/2018/3/e85/ (page number not for citation purposes)\nXSL•FO RenderX\n80% and decremented by 0.025%. We included tokens corresponding to a DTM sparsity of at least 97%. Then, to avoid overrepresentation of frequent tokens, we applied a weighting to our DTM based on the term-frequency-inversedocument-frequency approach [33]. One DTM was generated for each corpus (escitalopram and aripiprazole, respectively) and used as input of the topic modeling. To remove the tokens that corresponded to spelling errors or abbreviations and consider only words frequently used by patients, we removed infrequent tokens based on DTM sparsity.\nFigure 1. Summary diagram.\nJ Med Internet Res 2018 | vol. 20 | iss. 3 | e85 | p.4http://www.jmir.org/2018/3/e85/ (page number not for citation purposes)\nXSL•FO RenderX"
+  }, {
+    "heading": "Latent Dirichlet Allocation Modeling",
+    "text": "In this study, we decided to work with LDA algorithm. The model was described as follows by Blei and Lafferty [34]:\nIn LDA, the observed data are the words of each document and the hidden variables represent the latent topical structure, i.e., the topics themselves and how each document exhibits them...The interaction between the observed documents and hidden topic structure is manifest in the probabilistic generative process associated with LDA.\nA document is a mixture of topics; that is, it corresponds to a probability distribution over all topics in the corpus. In other terms, when a patient writes a message, she or he decides to talk about a certain number of topics. When she or he talks about a topic in a message, she or he takes words with a certain probability from the set of terms that correspond to that topic. Assuming that model, each message contains several topics among all the identified topics, and the probability distribution shows how prominent the identified topics are in this message.\nFrom a technical standpoint, rationale for choosing LDA was threefold:\n• Compared with other types of topic modeling (latent semantic analysis, LSA; nonnegative matrix factorization, NMF; or singular value decomposition applied in the context of LSA), LDA methods are more suited in domains where data is in semantic units, such as words. • LDA provides better interpretability of topics than other types of topic modeling (such as NMF). • LDA also provides a better semantic coherence of estimated topics than LSA [35].\nMore precisely, we applied topic modeling with LDA algorithm developed by Blei et al [17,34]. The LDA model was estimated using the maximum a posteriori (MAP) algorithm described by Taddy [36,37]. MAP algorithm is a variant of expectation-maximization (EM) algorithm with a lower calculation cost and more stable results than the algorithms commonly used for estimates (Gibbs sampling, variational EM). At each iteration, instead of approximating the maximization of marginal likelihood, a combined estimate of the parameters is calculated by block-diagonalization of the Hessian matrix. This leads to an exact estimate of the distribution of topics, rather than an approximation. The number of topics was selected using the log Bayes factor [36]. Log Bayes factor is a ratio of likelihood used for model comparisons. By computing it against a one-topic model for several numbers of topics, it allows to select the most appropriate number. The output is twofold: (1) the probabilities of appearance associated with vocabulary terms in each of the topics and (2) the distribution thereof in the messages.\nWith the aim of optimizing interpretability and semantic coherence of topics, we considered a message significantly associated to a topic when at least 25% of the tokens it contained were associated to this topic. The 25% threshold was set empirically."
+  }, {
+    "heading": "Evaluation",
+    "text": "The aim of the evaluation step was to assess the number of messages correctly identified by our approach. Manual evaluation was performed in two steps:\n1. We reviewed manually all messages related to the topics of interest (dosage variation and treatment interruption) in the two corpora (Escitalopram and Aripiprazole). A message is considered correctly classified if it describes a noncompliant behavior corresponding to the recognized topic. The evaluation of our classification was measured by the ratio of correctly classified messages for each topic of interest. Two annotators (RA and PF) participated to the review. To measure interannotator agreement (IAA), the two annotators evaluated a random selection of 20% of posts from each set of messages identified by the noncompliance topics. The IAA was calculated using Cohen kappa coefficient [38]. 2. To estimate sensitivity or recall of our method, we randomly extracted 20% of the messages related to topics other than noncompliance (345/1723 messages for aripiprazole and 650/3246 for escitalopram). We manually classified them in two categories: messages with noncompliance behaviors and without."
+  }, {
+    "heading": "Software",
+    "text": "Analyses were performed using the R software. For the preprocessing of the corpus, the packages tm [39], SnowballC, and slam were used. Topic models were estimated using the following packages: topicmodels [40] and MAPTPX."
+  }, {
+    "heading": "Results",
+    "text": ""
+  }, {
+    "heading": "Datasets Characteristics",
+    "text": "Table 1 shows the number of messages in each corpus.\nThe preliminary preprocessing of escitalopram corpus returned a DTM of 3650 messages and 155,883 tokens (unigrams and bigrams). Setting the sparsity threshold at 99.35% (3626.275/3650), we obtained a DTM of 3649 messages and 1497 tokens. One message was removed because the terms it contained were particularly misspelled.\nThe processing of the aripiprazole corpus yielded a DTM of 2164 messages and 81,371 tokens. On the basis of a sparsity threshold of 99.25% (2147.77/2164), we obtained a DTM of 2164 messages and 1062 terms.\nThe tokens that appeared least frequently in the corpora were removed (Table 2).\nDosage Variations and Treatment Discontinuation"
+  }, {
+    "heading": "Model Estimation",
+    "text": "The log Bayes factor topic selection method returned a total of 13 topics for the escitalopram corpus, as shown in Figure 2. The same approach led us to identify 11 topics for the aripiprazole corpus.\nWe obtained a total of 2691 messages evoking escitalopram and belonging to 13 topics. The 958 remaining messages were below the threshold regarding the association between terms\nJ Med Internet Res 2018 | vol. 20 | iss. 3 | e85 | p.5http://www.jmir.org/2018/3/e85/ (page number not for citation purposes)\nXSL•FO RenderX\nand topics, which was set at 25%. The average number of topics per message was 1.22 and the median 1.\nFor the aripiprazole data, we obtained a total of 1778 messages mentioning the drug and distributed among 11 topics. The 396 remaining messages were below the threshold for association\nbetween message terms and topics. The average number of topics per message was 1.31 and the median 1.\nTopics Interpretation As a topic must be interpretable with the first terms obtained (ranked by their probability of appearance) [34], topics found were labeled manually based on the first 15 words."
+  }, {
+    "heading": "Escitalopram Topics",
+    "text": "The list of topics and the distribution of messages in topics regarding escitalopram are displayed in Multimedia Appendix 1. This result is expressed as frequencies and proportions of messages (in relation to the 3649 escitalopram messages) associated with each theme. A message is associated with a topic if it contains at least 25% of terms for which the corresponding latent variability describes an association with the topic in question.\nWe noticed the emergence of a class containing messages describing user’s experiences with the drug in a general way (topic 7) and how it affects their condition (topic 6). Topics 3 and 8 related to the day-to-day feeling of patients and the activities they have. Topic 2 was linked to the drug prescription by HCPs and topic 5 to panic attacks and anxiety. Topics 9, 10, and 12 focused on messages about AEs experienced or feared by users, along with the drug’s effects overall. Topic 13 was related to the duration of the treatment.\nTopics 1 was labeled as general themes. It describes themes associated with discussions between individuals and corresponds to poorly informative vocabulary. Such a collection of words provided no information of interest for our study. Nevertheless, it was widely used in messages, which explains the relatively high proportion of messages associated to this topic.\nMessages about problems with treatment discontinuation and dosage variations were respectively included in topics 4 and 11. The intersection of the two noncompliance topics corresponded to 7 messages."
+  }, {
+    "heading": "Aripiprazole Topics",
+    "text": "The topics obtained by reproducing the modeling steps with the aripiprazole corpus are described in Multimedia Appendix 1.\nAmong the topics estimated for the aripiprazole corpus, we found the description of the patient's experience (topic 4) of his or her treatment. Three topics described the effects thereof (topics 3, 4, and 8), and one related to its duration (topic 9). Two topics focused on the patients’ relationships with HCPs (topic 5) and other individuals (topic 6). Topic 7 described\nJ Med Internet Res 2018 | vol. 20 | iss. 3 | e85 | p.6http://www.jmir.org/2018/3/e85/ (page number not for citation purposes)\nXSL•FO RenderX\ntreatment interruption. Dosage variations were described in topic 1. The intersection of the two noncompliance topics (7 and 1) corresponded to 6 messages. As for escitalopram, two topics were composed of noninformative words (general themes). Multimedia Appendix 2 shows the identified topics in the two corpora."
+  }, {
+    "heading": "Evaluation of the Approach",
+    "text": "IAA rate was measured on 20% (169/844) of the messages identified by the noncompliance topics using Cohen kappa coefficient. We obtained a kappa of 0.90 (152/169).\nPrecision, %Number of correctly classified messages, nNumber of messages, nIdentified behavior\n31.856176Dosage variations\n23.462265Treatment cessation\nWe calculated the ratio of messages corresponding to a case of noncompliance associated with each topic of interest. The results are displayed in Tables 3 and 4. Globally, the precision score for noncompliance was 32.6% (272/844). We obtained the lowest score (23.4%, 62/265) for the aripiprazole discontinuation topic and the highest score (46.3%, 100/216) for escitalopram discontinuation.\nThe analysis of 20% (345/1723 for aripiprazole, 650/3246 for escitalopram) of the messages related to other topics than noncompliance revealed only four messages describing a nonadherence behavior and not detected by our approach. The four false negative messages were all about stopping aripiprazole. Regarding the different subsets, we obtained a 94% (62/66) recall score for the aripiprazole cessation topic and 100% for the other ones. Globally, the estimated recall score was 98.5% (272/276).\nWe present below a detailed analysis of the results for the aripiprazole corpus.\nDosage Variations Topics modeling identified 176 messages as dosage variations messages. Manual review revealed that only 56 (31.8%, 56/176) messages contained a true noncompliance declaration (2.6% of the 2164 posts initially in the corpus).\nAmong the 120 remaining messages, 68 (56.7%, 68/120) were discussions between patients comparing their dosages for aripiprazole. A total of 13 messages (10.8%, 13/120) contained information regarding the dosages of other prescribed drugs in addition to aripiprazole. The most cited drugs were amisulpride and olanzapine. Eight posts (6.7%, 8/120) were questions about aripiprazole’s dosages, seven messages (5.8%, 7/120) evoked dosages modification, six posts (5.0%, 6/120) reported a dosage modification in agreement with the physician, and four messages (3.3%, 4/120) were advices.\nEight messages (6.7%, 8/120) did not contain dosage mentions but only variation words such as increase or decrease, usually accompanying dosage references.\nThe remaining six posts (5.0%, 6/120) mentioned variations that were planned or could occur in the future. For example:\n[...] take 5 mg also for the moment the psy wants to increase the dose to 10 mg at the next appointment [...]\nIn all the noncompliance cases (56 cases), the patient decreased the dose because of adverse drug reactions (ADRs). The most frequent ADRs mentioned in these posts were insomnia, asthenia, and libido problems."
+  }, {
+    "heading": "Treatment Cessation",
+    "text": "We identified 62 messages corresponding to noncompliance behaviors out of the 265 posts related to the treatment cessation topic (23.4%, 62/265). In other terms, 2.86% (62/2164) of the 2164 posts in the corpus are messages from patients taking aripiprazole who decided to stop their treatment.\nAmong the 203 remaining posts, thirteen posts (6.4%, 13/203) corresponded to the interruption of aripiprazole but were not cases of noncompliance: either aripiprazole was stopped to start another treatment, or the treatment cessation was decided by the physician.\nA total of 89 posts (43.9%, 89/203) were written by patients who were prescribed this treatment in the past.\nIn 55 messages (27.1%, 55/203), the patient mentioned that she or he was reluctant to continue the treatment, mainly (74.6%, 151/203) because of ADRs. The most cited symptoms were insomnia, tiredness, libido problems, and nausea.\nIn 23 (11.3%, 23/203) posts, the patient was given more than one drug, and the post described the interruption of one of the other drugs (eg, in fourteen cases it was olanzapine that was stopped).\nEighteen posts were assigned erroneously to the treatment cessation topic because they contained terms like stop, although not reporting discontinuation of aripiprazole. These included 11 messages (5.4%, 11/203), where interruption was not related to any health topic such as in “[...] I’m stopped, like frozen,\nJ Med Internet Res 2018 | vol. 20 | iss. 3 | e85 | p.7http://www.jmir.org/2018/3/e85/ (page number not for citation purposes)\nXSL•FO RenderX\n[...],” five messages corresponding to cessation of alcohol, narcotics, or smoking (and not aripiprazole; 2.5%, 5/203), and two posts (<1%, 1/203) where the patient stopped her or his diet or other activities.\nThe five remaining messages (2.5%, 5/203) were requests for advices mentioning a possible treatment cessation."
+  }, {
+    "heading": "Discussion",
+    "text": ""
+  }, {
+    "heading": "Principal Findings",
+    "text": "Our study shows that topic models are useful to identify subsets of messages reporting noncompliance behaviors.\nThe topic models approach detected cases of noncompliance behaviors with averages recall and precision scores of 98.5% (272/276) and 32.6% (272/844), respectively. We concluded that the topic modeling presented in our study was a valuable sensitive method to detect noncompliance. However, it lacks specificity. We identified several situations leading to false positives: (1) two experiencers in the same message (eg, Peter takes 100 mg, whereas John takes 200 mg); (2) events in different time slots (eg, the patient reports that the doctor wants to increase or decrease the dose at the next appointment); and (3) the action concerns something else than the drug (eg, another medication and smoking cessation). Moreover, in several false positives, cessation or modification was prescribed by the physician."
+  }, {
+    "heading": "Clinical Significance",
+    "text": "We focused on escitalopram and aripiprazole used to treat depression and psychotic conditions, respectively."
+  }, {
+    "heading": "Escitalopram",
+    "text": "Almost one million individuals (2% of the overall population) initiated an antidepressant in France in 2011 [41]. Patients’ adherence to antidepressant therapy must be evaluated. The reasons behind patient nonadherence to antidepressants include patient factors (eg, concerns about side effects and fears of addiction), as well as poor follow-up by the clinician and lack of sufficient patient education [42]. Better understanding of the patients’ concerns about these medications can be achieved by exploring the messages in social media. We retrieved 2691 messages about escitalopram, among which 154 (5.71%, 154/2691) were noncompliance messages (Table 3). AEs were the most commonly cited reason for discontinuation and dose reduction. The more common side effects for escitalopram included nausea, weakness, dizziness, sleeping disorders, and sexual problems."
+  }, {
+    "heading": "Aripiprazole",
+    "text": "In a recently published review [43], a positive attitude toward medication at baseline in combination with good psychosocial function was the best predictor of objectively measured mean adherence over a 12-month period in patients with schizophrenia. AEs such as patient-reported cognitive impairment resulting from antipsychotic medication were predictors of nonadherence. Common side effects of aripiprazole also include weight gain, nausea, vomiting, changes in appetite, dizziness, drowsiness, feeling tired, and insomnia, among others.\nIn our corpus, patients reported that such AEs were reasons for stopping the treatment or changing the dose.\nAlmost 7% (6.86%, 122/1778) of the posts in the aripiprazole corpus corresponded to noncompliance behaviors. All decisions to change the dose by the patient corresponded to decreasing the dose because of AEs. This result suggests that text mining methods must extract ADR information along with noncompliance annotation.\nWe calculated the rate of messages describing an effective noncompliance behavior. These rates were measured on messages corresponding to topics identified on the aripiprazole corpus. This evaluation resulted in 31.8% (56/176) for dosage variations and 23.4% (62/265) for treatment discontinuation.\nUsing topic models seems to be insufficient for identifying noncompliance cases on social media without a manual review step. However, this lexical approach produced only four false negatives and enabled us to reduce the corpus by focusing on messages that had a high probability to contain descriptions of targeted noncompliance behaviors."
+  }, {
+    "heading": "Limitations",
+    "text": "Our study focused on two drugs from two distinct classes. Both drugs are used to treat psychiatric disorders. A review currently including 50 clinical studies and 9476 participants taking antipsychotic drugs revealed an overall attrition from the included studies of 49% [44]. Consequently, our results regarding the noncompliance rate and the reasons for not being compliant cannot be extrapolated to other patient profiles. Further studies on other therapeutic classes must be conducted.\nManual review was required to distinguish between true and false positives in each dataset. The vocabulary used to describe dosage modifications or treatment interruptions in messages is commonly employed for characterizing other kinds of general variations or cessations (diet, smoking, etc). Topic models demonstrated their ability to identify potential noncompliance messages (average recall 98.5%, 272/276). Syntactic and semantic methods could be developed to recognize the experiencers, the temporal features, and the object concerned by the action in the sentences. Such methods could be applied to the datasets identified by the topic models to reduce the number of false positives and improve the precision score.\nAnother limitation of our work is the empirical determination of the thresholds used in our method. The thresholds concern the reduction in the size of the DTM and the significance of the association of messages to topics:\n1. The choice of a sparsity threshold under 97% for DTM does not guarantee the best compromise between the calculation cost and the preservation of information for all the corpora we used. 2. The threshold for association between message words and topics, which was set at 25%, led to 23.23% (1354/5813) of messages not related to any topic.\nSuch empirical approach in the application of these methods is frequently reported in the literature; for example, Prier et al [19] set a suitable number of topics for their corpus by testing thresholds set every 50 topics.\nJ Med Internet Res 2018 | vol. 20 | iss. 3 | e85 | p.8http://www.jmir.org/2018/3/e85/ (page number not for citation purposes)\nXSL•FO RenderX"
+  }, {
+    "heading": "Comparison With Other Work",
+    "text": "Our study, to our knowledge, is the first one aiming at analyzing noncompliance behaviors from social media messages.\nMost of the studies [18,21,22,25] used topic models to automatically label sets of tweets. Only 2 studies [7,22] focused on medical themes and messages from Web forums. Both used the same LDA model. Tapi Nzali et al [22] used the same R package [40]. However, their study design was different: they evaluated the correspondence between identified topics and QoL questionnaires, whereas our study aimed at detecting nonadherence behaviors.\nYang et al reported higher precision rates in their study [7]. Nevertheless, the aim of their study was detection of ADRs, not noncompliance practices.\nOur approach could benefit from a more sophisticated model. The Structural Topic Model, developed by Wang et al [11],\nenables the modeling of correlations between topics and transitions made within messages. The additional components would enable the identification of relations between noncompliant practices and information, such as ADRs. We could therefore determine potential causes of nonadherence to treatment for each kind of drug."
+  }, {
+    "heading": "Conclusions",
+    "text": "Topic distributions in messages are a way to classify posts and detect noncompliance behaviors. The topic modeling approach achieved very high recall (98.5%, 272/276). Manual review of the messages in the noncompliance topics showed that almost 6.17% (276/4469) of the posts written by patients taking aripiprazole or escitalopram revealed noncompliance to treatment (half of them stopping their treatment). These findings indicate that social media mining may contribute to better understand noncompliance attitudes."
+  }, {
+    "heading": "Conflicts of Interest",
+    "text": "None declared."
+  }, {
+    "heading": "Multimedia Appendix 1",
+    "text": "Exhaustive description of identified topics for each medication.\n[XLSX File (Microsoft Excel File), 12KB - jmir_v20i3e85_app1.xlsx ]"
+  }, {
+    "heading": "Multimedia Appendix 2",
+    "text": "Topics found in each corpus ranked by the number of messages.\n[XLSX File (Microsoft Excel File), 31KB - jmir_v20i3e85_app2.xlsx ]"
+  }, {
+    "heading": "Abbreviations",
+    "text": "ADR: adverse drug reaction AE: adverse effect ATAM: Ailment Topic Aspect Model ATC: Anatomical Therapeutic Chemical DTM: document-term matrix EM: expectation-maximization HCP: health care professional IAA: inter-annotator agreement LDA: latent Dirichlet allocation LSA: latent semantic analysis MAP: maximum a posteriori NMF: nonnegative matrix factorization NSDUH: National Survey on Drug Usage and Health QoL: quality of life WHO: World Health Organization\nEdited by G Eysenbach; submitted 22.10.17; peer-reviewed by E Chavarria, C Bousquet, A Keepanasseril; comments to author 16.11.17; revised version received 27.12.17; accepted 13.01.18; published 14.03.18\nPlease cite as: Abdellaoui R, Foulquié P, Texier N, Faviez C, Burgun A, Schück S Detection of Cases of Noncompliance to Drug Treatment in Patient Forum Posts: Topic Model Approach J Med Internet Res 2018;20(3):e85 URL: http://www.jmir.org/2018/3/e85/ doi:10.2196/jmir.9222 PMID:29540337\n©Redhouane Abdellaoui, Pierre Foulquié, Nathalie Texier, Carole Faviez, Anita Burgun, Stéphane Schück. Originally published in the Journal of Medical Internet Research (http://www.jmir.org), 14.03.2018. This is an open-access article distributed under the terms of the Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/), which permits unrestricted use, distribution, and reproduction in any medium, provided the original work, first published in the Journal of Medical Internet\nJ Med Internet Res 2018 | vol. 20 | iss. 3 | e85 | p.11http://www.jmir.org/2018/3/e85/ (page number not for citation purposes)\nXSL•FO RenderX\nResearch, is properly cited. The complete bibliographic information, a link to the original publication on http://www.jmir.org/, as well as this copyright and license information must be included.\nJ Med Internet Res 2018 | vol. 20 | iss. 3 | e85 | p.12http://www.jmir.org/2018/3/e85/ (page number not for citation purposes)\nXSL•FO RenderX"
+  }],
+  "year": 2018,
+  "references": [{
+    "title": "Interventions for helping patients to follow prescriptions for medications",
+    "authors": ["RB Haynes", "H McDonald", "AX Garg", "P. Montague"],
+    "venue": "Cochrane Database Syst Rev 2002(2):CD000011. [doi: 10.1002/14651858.CD000011]",
+    "year": 2076
+  }, {
+    "title": "Interventions for enhancing medication adherence",
+    "authors": ["R Nieuwlaat", "N Wilczynski", "T Navarro", "N Hobson", "R Jeffery", "A Keepanasseril"],
+    "venue": "Cochrane Database Syst Rev 2014;11:CD000011. [doi: 10.1002/14651858.CD000011.pub4]",
+    "year": 2014
+  }, {
+    "title": "Adverse drug reaction identification and extraction in social media: a scoping review",
+    "authors": ["J Lardon", "R Abdellaoui", "F Bellet", "H Asfari", "J Souvignet", "N Texier"],
+    "venue": "J Med Internet Res 2015 Jul 10;17(7):e171 [FREE Full text] [doi: 10.2196/jmir.4304] [Medline:",
+    "year": 2015
+  }, {
+    "title": "Analysis of patients' narratives posted on social media websites on benfluorex's (Mediator® ) withdrawal in France",
+    "authors": ["M Abou Taam", "C Rossard", "L Cantaloube", "N Bouscaren", "G Roche", "L Pochard"],
+    "venue": "J Clin Pharm Ther",
+    "year": 2014
+  }, {
+    "title": "Filtering big data from social media--Building an early warning system for adverse drug reactions",
+    "authors": ["M Yang", "M Kiang", "W. Shang"],
+    "venue": "J Biomed Inform",
+    "year": 2015
+  }, {
+    "title": "Empowering patients through social media: the benefits and challenges",
+    "authors": ["M Househ", "E Borycki", "A. Kushniruk"],
+    "venue": "Health Informatics J 2014 Mar;20(1):50-58",
+    "year": 2014
+  }, {
+    "title": "Technology use and reasons to participate in social networking health websites among people living with HIV in the US",
+    "authors": ["KJ Horvath", "GP Danilenko", "ML Williams", "J Simoni", "KR Amico", "JM Oakes"],
+    "venue": "AIDS Behav",
+    "year": 2012
+  }, {
+    "title": "Social media and HIV: a systematic review of uses of social media in HIV communication",
+    "authors": ["T Taggart", "ME Grewe", "DF Conserve", "C Gliwa", "IM. Roman"],
+    "venue": "J Med Internet Res",
+    "year": 2015
+  }, {
+    "title": "On mining latent topics from healthcare chat logs",
+    "authors": ["T Wang", "Z Huang", "C. Gan"],
+    "venue": "J Biomed Inform",
+    "year": 2016
+  }, {
+    "title": "Web 2.0 chronic disease self-management for older adults: a systematic review",
+    "authors": ["M Stellefson", "B Chaney", "AE Barry", "E Chavarria", "B Tennant", "K Walsh-Childers"],
+    "venue": "J Med Internet Res",
+    "year": 2013
+  }, {
+    "title": "Online discussion of drug side effects and discontinuation among breast cancer survivors",
+    "authors": ["JJ Mao", "A Chung", "A Benton", "S Hill", "L Ungar", "CE Leonard"],
+    "venue": "Pharmacoepidemiol Drug Saf",
+    "year": 2013
+  }, {
+    "title": "Epidemiology from tweets: estimating misuse of prescription opioids in the USA from social media",
+    "authors": ["M Chary", "N Genes", "C Giraud-Carrier", "C Hanson", "LS Nelson", "AF. Manini"],
+    "venue": "J Med Toxicol",
+    "year": 2017
+  }, {
+    "title": "A model for mining public health topics from Twitter URL: https://pdfs. semanticscholar.org/41cb/ae26fe87307e6878e87b0a08056206a5c4c1.pdf [accessed 2018-02-21] [WebCite Cache ID 6xPFXCK8k",
+    "authors": ["Paul M", "Dredze M. Semanticscholar"],
+    "year": 2011
+  }, {
+    "title": "Mining clinicians' electronic documentation to identify heart failure patients with ineffective self-management: a pilot text-mining study",
+    "authors": ["M Topaz", "K Radhakrishnan", "V Lei", "L. Zhou"],
+    "venue": "Stud Health Technol Inform 2016;225:856-857",
+    "year": 2016
+  }, {
+    "title": "Latent dirichlet allocation",
+    "authors": ["DM Blei", "AY Ng", "MI. Jordan"],
+    "venue": "J Mach Learn Res",
+    "year": 2003
+  }, {
+    "title": "Identifying topics in microblogs using Wikipedia. PLoS One 2016 Mar 18;11(3):e0151885 [FREE Full text] [doi: 10.1371/journal.pone.0151885] [Medline",
+    "authors": ["A Yıldırım", "S Üsküdarlı", "A. Özgür"],
+    "year": 2016
+  }, {
+    "title": "Identifying health-related topics on Twitter",
+    "authors": ["KW Prier", "MS Smith", "C Giraud-Carrier", "CL. Hanson"],
+    "venue": "SBP",
+    "year": 2011
+  }, {
+    "title": "What are we 'tweeting' about obesity? Mapping tweets with Topic Modeling and Geographic Information System",
+    "authors": ["DD Ghosh", "R. Guha"],
+    "venue": "Cartogr Geogr Inf Sci",
+    "year": 2013
+  }, {
+    "title": "Finding potentially unsafe nutritional supplements from user reviews with topic modeling",
+    "authors": ["R Sullivan", "A Sarker", "K O'Connor", "A Goodin", "M Karlsrud", "G. Gonzalez"],
+    "venue": "Pac Symp Biocomput 2016;21:528-539 [FREE Full text]",
+    "year": 2016
+  }, {
+    "title": "What patients can tell us: topic analysis for social media on breast cancer",
+    "authors": ["MD Tapi Nzali", "S Bringay", "C Lavergne", "C Mollevi", "T. Opitz"],
+    "venue": "JMIR Med Inform 2017 Jul 31;5(3):e23 [FREE Full text] [doi: 10.2196/medinform.7779] [Medline:",
+    "year": 2017
+  }, {
+    "title": "Identifying topics in microblogs using Wikipedia. PLoS One 2016;11(3):e0151885 [FREE Full text] [doi: 10.1371/journal.pone.0151885] [Medline",
+    "authors": ["A Yıldırım", "S Üsküdarlı", "A. Özgür"],
+    "year": 2016
+  }, {
+    "title": "You Are What You Tweet: Analyzing Twitter for Public Health",
+    "authors": ["MJ Paul", "M. Dredze"],
+    "venue": "Presented at: Fifth International AAAI Conference on Weblogs and Social Media; July 17–21,",
+    "year": 2011
+  }, {
+    "title": "Discovering health topics in social media using topic models. PLoS One 2014 Aug 01;9(8):e103408 [FREE Full text] [doi: 10.1371/journal.pone.0103408] [Medline",
+    "authors": ["MJ Paul", "M. Dredze"],
+    "year": 2014
+  }, {
+    "title": "Filtering entities to optimize identification of adverse drug reaction from social media: how can the number of words between entities in the messages help? JMIR Public Health Surveill 2017 Jun 22;3(2):e36 [FREE Full text] [doi: 10.2196/publichealth.6577] [Medline",
+    "authors": ["R Abdellaoui", "S Schück", "N Texier", "A. Burgun"],
+    "year": 2017
+  }, {
+    "title": "The adverse drug reactions from patient reports in social media project: five major challenges to overcome to operationalize analysis and efficiently support pharmacovigilance process",
+    "authors": ["C Bousquet", "B Dahamna", "S Guillemin-Lanne", "SJ Darmoni", "C Faviez", "C Huot"],
+    "venue": "JMIR Res Protoc",
+    "year": 2017
+  }, {
+    "title": "Frequency of and reasons for medication non-fulfillment and non-persistence among American adults with chronic disease",
+    "authors": ["McHorney CA", "Spain CV"],
+    "year": 2008
+  }, {
+    "title": "Clinical data mining: a review",
+    "authors": ["J Iavindrasana", "G Cohen", "A Depeursinge", "H Müller", "R Meyer", "A. Geissbuhler"],
+    "venue": "Yearb Med Inform 2009:121-133",
+    "year": 1985
+  }, {
+    "title": "An algorithm for suffix stripping URL: https://www.cs.toronto.edu/~frank/csc2501/ Readings/R2_Porter/Porter-1980.pdf [accessed 2018-02-21] [WebCite Cache ID 6xPGZzLyA",
+    "authors": ["Porter MF"],
+    "venue": "Cs.toronto.edu",
+    "year": 1980
+  }, {
+    "title": "Light Stemming Approaches for the French, Portuguese, German Hungarian Languages",
+    "authors": ["J. Savoy"],
+    "venue": "Proceedings of the 2006 ACM symposium on Applied computing. USA: ACM;",
+    "year": 2006
+  }, {
+    "title": "Introduction to Modern Information Retrieval",
+    "authors": ["Salton G", "Mcgill MJ"],
+    "venue": "New York: McGraw-Hill,",
+    "year": 1986
+  }, {
+    "title": "Topic models URL: http://www.cs.columbia.edu/~blei/papers/BleiLafferty2009. pdf [accessed 2018-02-21] [WebCite Cache ID 6xPHPCaI4",
+    "authors": ["Blei DM", "Lafferty JD"],
+    "venue": "CS Columbia",
+    "year": 2009
+  }, {
+    "title": "Exploring topic coherence over many models and many topics",
+    "authors": ["K Stevens", "P Kegelmeyer", "D Andrzejewski", "D. Buttler"],
+    "venue": "Proceedings of the 2012 Joint Conference on Empirical Methods in Natural Language Processing and Computational Natural Language Learning",
+    "year": 2012
+  }, {
+    "title": "On Estimation and Selection for Topic Models",
+    "authors": ["Taddy MA"],
+    "venue": "Proceedings of the 15th International Conference on Artificial Intelligence and Statistics. 2012 Presented at: AISTATS,",
+    "year": 2012
+  }, {
+    "title": "LDAvis: A method for visualizing and interpreting topics",
+    "authors": ["Sievert C", "Shirley KE"],
+    "venue": "Proceedings of the Workshop on Interactive Language Learning, Visualization, and Interfaces. 2014 Presented at: Workshop on Interactive Language Learning, Visualization, and Interfaces; June",
+    "year": 2014
+  }, {
+    "title": "A coefficient of agreement for nominal scales",
+    "authors": ["J. Cohen"],
+    "venue": "Educ Psychol Meas 1960 Apr 01;20(1):37-46",
+    "year": 2000
+  }, {
+    "title": "Text mining infrastructure in R",
+    "authors": ["I Feinerer", "K Hornik", "D. Meyer"],
+    "venue": "J Stat Softw",
+    "year": 2008
+  }, {
+    "title": "Topicmodels: an R package for fitting topic models",
+    "authors": ["B Grün", "K. Hornik"],
+    "venue": "J Stat Softw 2011 May 09;40(13):1-30",
+    "year": 2011
+  }, {
+    "title": "Cohort of one million patients initiating antidepressant treatment in France: 12-month follow-up",
+    "authors": ["JP Fagot", "A Cuerq", "S Samson", "A. Fagot-Campagna"],
+    "venue": "Int J Clin Pract 2016 Sep;70(9):744-751. [doi: 10.1111/ijcp.12850]",
+    "year": 2016
+  }, {
+    "title": "Antidepressant adherence: are patients taking their medications",
+    "authors": ["Sansone RA", "Sansone LA"],
+    "venue": "Innov Clin Neurosci",
+    "year": 2012
+  }, {
+    "title": "Why do psychiatric patients stop antipsychotic medication? A systematic review of reasons for nonadherence to medication in patients with serious mental illness. Patient Prefer Adherence 2017;11:449-468 [FREE Full text] [doi: 10.2147/PPA.S124658] [Medline",
+    "authors": ["DI Velligan", "M Sajatovic", "A Hatch", "P Kramata", "JP. Docherty"],
+    "year": 2017
+  }],
+  "id": "SP:7bf5545d35c387204afef386611ce228f0df7194",
+  "authors": [{
+    "name": "Redhouane Abdellaoui",
+    "affiliations": []
+  }, {
+    "name": "Nathalie Texier",
+    "affiliations": []
+  }, {
+    "name": "PharmD; Carole Faviez",
+    "affiliations": []
+  }, {
+    "name": "Anita Burgun",
+    "affiliations": []
+  }, {
+    "name": "Stéphane Schück",
+    "affiliations": []
+  }],
+  "abstractText": "Background: Medication nonadherence is a major impediment to the management of many health conditions. A better understanding of the factors underlying noncompliance to treatment may help health professionals to address it. Patients use peer-to-peer virtual communities and social media to share their experiences regarding their treatments and diseases. Using topic models makes it possible to model themes present in a collection of posts, thus to identify cases of noncompliance. Objective: The aim of this study was to detect messages describing patients’ noncompliant behaviors associated with a drug of interest. Thus, the objective was the clustering of posts featuring a homogeneous vocabulary related to nonadherent attitudes. Methods: We focused on escitalopram and aripiprazole used to treat depression and psychotic conditions, respectively. We implemented a probabilistic topic model to identify the topics that occurred in a corpus of messages mentioning these drugs, posted from 2004 to 2013 on three of the most popular French forums. Data were collected using a Web crawler designed by Kappa Santé as part of the Detec’t project to analyze social media for drug safety. Several topics were related to noncompliance to treatment. Results: Starting from a corpus of 3650 posts related to an antidepressant drug (escitalopram) and 2164 posts related to an antipsychotic drug (aripiprazole), the use of latent Dirichlet allocation allowed us to model several themes, including interruptions of treatment and changes in dosage. The topic model approach detected cases of noncompliance behaviors with a recall of 98.5% (272/276) and a precision of 32.6% (272/844). Conclusions: Topic models enabled us to explore patients’ discussions on community websites and to identify posts related with noncompliant behaviors. After a manual review of the messages in the noncompliance topics, we found that noncompliance to treatment was present in 6.17% (276/4469) of the posts. (J Med Internet Res 2018;20(3):e85) doi:10.2196/jmir.9222",
+  "title": "Detection of Cases of Noncompliance to Drug Treatment in Patient Forum Posts: Topic Model Approach"
+}
