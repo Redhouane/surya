@@ -6,7 +6,7 @@ from glob import glob
 import os
 
 # Parsing article
-paper.parse_paper("jmir")
+print(paper.parse_paper("web_based_signal"))
 
 # Upload list of articles to parse
 articles = glob(os.path.join(paper.BUFFER_DIRECTORY, '*_parsed.json'))

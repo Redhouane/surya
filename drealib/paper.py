@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 
 from glob import glob
+import logging
 import json
 import os
+import requests
 
 from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
@@ -29,7 +31,7 @@ class Paper:
         :return: A paper object containing article's texts and metadata
         """
 
-        # TODO: PErform a better json read process
+        # TODO: Perform a better json read process
         # Loading Json's content
         # https://www.kaggle.com/jboysen/quick-tutorial-flatten-nested-json-in-pandas
         with open(articles_to_process) as article:
@@ -64,17 +66,17 @@ def parse_paper(paper_filename):
     :return: No value returned
     """
 
-    # TODO: Upgrade the parsing to SPv2, Grobid or Apache Tika. The Science-Parse 1.0 API not working anymore.
     paper_to_parse = glob(os.path.join(PAPERS_DIRECTORY, paper_filename + ".pdf"))[0]
 
-    # TODO: Replace the following print by log
-    print("Paper Parsing...")
+    logging.info("Papers Parsing...")
+    headers = {'Content-type': 'application/pdf', }
+    data = open(paper_to_parse, 'rb').read()
+    response = requests.post('http://localhost:8080/v1', headers=headers, data=data)
 
-    # TODO: Replace the split with regex
-    parsed_filename = paper_to_parse.split('.')[-2].split('/')[-1] + "_parsed"
-    os.system("""curl -v -H "Content-type: application/pdf" 
-    --data-binary @{0} 
-    "http://localhost:8080/v1" > {1}.json""".format(paper_to_parse, parsed_filename))
+    if response.status_code == 200:
+        return response.json()
+    else:
+        return logging.info("Bad response from science parse tool")
 
 
 def generate_summary(paper_object, lang='english', sentences_count=10):
