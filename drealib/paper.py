@@ -15,6 +15,13 @@ from sumy.summarizers.lsa import LsaSummarizer
 PAPERS_DIRECTORY = '../articles/'
 BUFFER_DIRECTORY = '../buffer/'
 
+# logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.INFO,
+                    filename='surya.log',
+                    filemode='a',
+                    datefmt='%d-%m-%Y %H:%M:%S',
+                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+
 
 class Paper:
     def __init__(self):
@@ -27,7 +34,7 @@ class Paper:
 
     def read_paper(self, articles_to_process):
         """
-        :param articles_to_process: List of paths to articles (in json format) parsed using Science-Parser
+        :param articles_to_process: List of paths to articles (in json format) parsed using Science-Parse
         :return: A paper object containing article's texts and metadata
         """
 
@@ -76,7 +83,7 @@ def parse_paper(paper_filename):
     if response.status_code == 200:
         return response.json()
     else:
-        return logging.info("Bad response from science parse tool")
+        logging.info("Bad response from science parse tool")
 
 
 def generate_summary(paper_object, lang='english', sentences_count=10):
@@ -93,7 +100,7 @@ def generate_summary(paper_object, lang='english', sentences_count=10):
 
     summary = ''
     for sentence in summary_sentences:
-        summary += str(sentence) + ' '
+        summary += str(sentence) + ' '  # TODO: Create a class 'utils.py' with useful methods such as 'multi_str_concat'
 
     return summary
 

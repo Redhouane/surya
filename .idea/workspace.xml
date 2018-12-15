@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0bb1a5fc-c7f5-4db6-bf24-4518ca0e8f15" name="Default" comment="WIP - Replace PyTeaser summerization by LSA summarization from sumy package.">
-      <change afterPath="$PROJECT_DIR$/articles/web_based_signal.pdf" afterDir="false" />
+    <list default="true" id="0bb1a5fc-c7f5-4db6-bf24-4518ca0e8f15" name="Default" comment="Fix the API call, replace &quot;pyteaser&quot; by &quot;sumy&quot; and add of logging">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/drealib/paper.py" beforeDir="false" afterPath="$PROJECT_DIR$/drealib/paper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_advanced.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_advanced.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trials/.py/experience-sumy.py" beforeDir="false" afterPath="$PROJECT_DIR$/trials/.py/experience-sumy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trials/.py/graph.dot" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,11 +14,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/surya$test_advanced.coverage" NAME="test_advanced Coverage Results" MODIFIED="1544829384122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/surya$test_advanced.coverage" NAME="test_advanced Coverage Results" MODIFIED="1544912692354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/surya$grobid_client.coverage" NAME="grobid-client Coverage Results" MODIFIED="1544312853364" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grobid-client-python" />
     <SUITE FILE_PATH="coverage/surya$experience_sumy.coverage" NAME="experience-sumy Coverage Results" MODIFIED="1544380449641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/trials/.py" />
     <SUITE FILE_PATH="coverage/DrEA$test_advanced.coverage" NAME="test_advanced Coverage Results" MODIFIED="1541120827839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/surya$test_unit.coverage" NAME="test_unit Coverage Results" MODIFIED="1544313583350" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/surya$test_unit.coverage" NAME="test_unit Coverage Results" MODIFIED="1544830797412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
   </component>
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.5">
@@ -29,8 +27,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/drealib/paper.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="775">
-                  <caret line="78" column="65" selection-start-line="78" selection-start-column="65" selection-end-line="78" selection-end-column="65" />
+                <state relative-caret-position="385">
+                  <caret line="53" column="19" lean-forward="true" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
                   <folding>
                     <element signature="e#25#46#0" expanded="true" />
                   </folding>
@@ -63,11 +61,20 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/tests/test_advanced.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="330">
-                      <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+                    <state relative-caret-position="195">
+                      <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
                       <folding>
                         <element signature="e#25#54#0" expanded="true" />
                       </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/tests/test_unit.py">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="45">
+                      <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
                     </state>
                   </provider>
                 </entry>
@@ -139,9 +146,9 @@
         <option value="$PROJECT_DIR$/grobid-client-python/grobid-client.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/buffer/document.txt" />
-        <option value="$PROJECT_DIR$/tests/test_advanced.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/trials/.py/experience-sumy.py" />
+        <option value="$PROJECT_DIR$/tests/test_advanced.py" />
         <option value="$PROJECT_DIR$/drealib/paper.py" />
       </list>
     </option>
@@ -152,8 +159,8 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="161" />
     <option name="y" value="97" />
-    <option name="width" value="2269" />
-    <option name="height" value="1260" />
+    <option name="width" value="2259" />
+    <option name="height" value="1267" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -163,6 +170,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -195,17 +203,10 @@
               <item name="surya" type="462c0819:PsiDirectoryNode" />
               <item name="trials" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="surya" type="b2602c69:ProjectViewProjectNode" />
-              <item name="surya" type="462c0819:PsiDirectoryNode" />
-              <item name="trials" type="462c0819:PsiDirectoryNode" />
-              <item name=".py" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -379,7 +380,9 @@
       <workItem from="1544321461979" duration="203000" />
       <workItem from="1544369451558" duration="10970000" />
       <workItem from="1544739220661" duration="2388000" />
-      <workItem from="1544814230534" duration="7325000" />
+      <workItem from="1544814230534" duration="10385000" />
+      <workItem from="1544832455107" duration="1585000" />
+      <workItem from="1544901990972" duration="1400000" />
     </task>
     <task id="LOCAL-00001" summary="Add DrEA_head package for factoring code. Especially for functions &#10;and global variables used along sources.">
       <created>1531948973226</created>
@@ -528,11 +531,18 @@
       <option name="project" value="LOCAL" />
       <updated>1544386768885</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Fix the API call, replace &quot;pyteaser&quot; by &quot;sumy&quot; and add of logging">
+      <created>1544829508319</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1544829508319</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38553000" />
+    <option name="totallyTimeSpent" value="44598000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -548,15 +558,15 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.13524264" />
-      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="2" weight="0.13762927" />
       <window_info anchor="bottom" id="Python Console" order="0" sideWeight="0.49980307" weight="0.36128527" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.24823806" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50079554" side_tool="true" weight="0.26468286" />
       <window_info anchor="bottom" id="Version Control" internal_type="SLIDING" order="3" type="SLIDING" weight="0.3298639" />
       <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" weight="0.32967892" />
-      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49920446" weight="0.32419735" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.32498044" />
+      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49920446" weight="0.36570087" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.3101018" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -647,7 +657,8 @@
     <MESSAGE value="Rewrite the Readme.md" />
     <MESSAGE value="Readme.md corrections" />
     <MESSAGE value="WIP - Replace PyTeaser summerization by LSA summarization from sumy package." />
-    <option name="LAST_COMMIT_MESSAGE" value="WIP - Replace PyTeaser summerization by LSA summarization from sumy package." />
+    <MESSAGE value="Fix the API call, replace &quot;pyteaser&quot; by &quot;sumy&quot; and add of logging" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix the API call, replace &quot;pyteaser&quot; by &quot;sumy&quot; and add of logging" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -767,7 +778,6 @@ for sentence in summary_sentences:
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Sources/_parsed.json" />
     <entry file="file://$PROJECT_DIR$/Tests/tests_summarization.py" />
     <entry file="file://$USER_HOME$/anaconda/envs/DrEA/lib/python3.6/site-packages/pytextrank/pytextrank.py" />
     <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2018.1/python_stubs/-1089549890/builtins.py" />
@@ -779,9 +789,7 @@ for sentence in summary_sentences:
     <entry file="file://$PROJECT_DIR$/Sources/drea_parse_paper.py" />
     <entry file="file://$PROJECT_DIR$/drea_parse_paper.py" />
     <entry file="file://$PROJECT_DIR$/drealib/context.py" />
-    <entry file="file://$PROJECT_DIR$/trials/.py/graph.dot">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/trials/.py/graph.dot" />
     <entry file="file://$PROJECT_DIR$/jmir_parsed.json" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.mk" />
     <entry file="file://$PROJECT_DIR$/tests/tests-summa.py" />
@@ -859,13 +867,6 @@ for sentence in summary_sentences:
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/test-grobid.py" />
     <entry file="file://$PROJECT_DIR$/grobid-client-python/grobid-client.py" />
-    <entry file="file://$PROJECT_DIR$/tests/test_unit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -888,19 +889,7 @@ for sentence in summary_sentences:
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buffer/test.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_advanced.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#25#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/buffer/test.json" />
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -918,12 +907,37 @@ for sentence in summary_sentences:
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_unit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/surya.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/drealib/paper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="78" column="65" selection-start-line="78" selection-start-column="65" selection-end-line="78" selection-end-column="65" />
+        <state relative-caret-position="385">
+          <caret line="53" column="19" lean-forward="true" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
           <folding>
             <element signature="e#25#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_advanced.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+          <folding>
+            <element signature="e#25#54#0" expanded="true" />
           </folding>
         </state>
       </provider>
