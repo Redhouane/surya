@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0bb1a5fc-c7f5-4db6-bf24-4518ca0e8f15" name="Default" comment="WIP - Implement getters for the paper class. Until the get_section_text method">
+    <list default="true" id="0bb1a5fc-c7f5-4db6-bf24-4518ca0e8f15" name="Default" comment="Add section's texts getters. As list of st instances and as str concatenating section's contents">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/drealib/paper.py" beforeDir="false" afterPath="$PROJECT_DIR$/drealib/paper.py" afterDir="false" />
     </list>
@@ -12,11 +12,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/surya$test_advanced.coverage" NAME="test_advanced Coverage Results" MODIFIED="1544997952800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/surya$test_advanced.coverage" NAME="test_advanced Coverage Results" MODIFIED="1544998889890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/surya$grobid_client.coverage" NAME="grobid-client Coverage Results" MODIFIED="1544312853364" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grobid-client-python" />
     <SUITE FILE_PATH="coverage/surya$experience_sumy.coverage" NAME="experience-sumy Coverage Results" MODIFIED="1544380449641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/trials/.py" />
     <SUITE FILE_PATH="coverage/DrEA$test_advanced.coverage" NAME="test_advanced Coverage Results" MODIFIED="1541120827839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/surya$test_unit.coverage" NAME="test_unit Coverage Results" MODIFIED="1544997961290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/surya$test_unit.coverage" NAME="test_unit Coverage Results" MODIFIED="1544998056082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
   </component>
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.5">
@@ -25,8 +25,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/drealib/paper.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="469">
-                  <caret line="176" column="70" selection-start-line="176" selection-start-column="70" selection-end-line="176" selection-end-column="70" />
+                <state relative-caret-position="595">
+                  <caret line="123" column="96" selection-start-line="123" selection-start-column="96" selection-end-line="123" selection-end-column="96" />
                   <folding>
                     <element signature="e#25#46#0" expanded="true" />
                   </folding>
@@ -68,8 +68,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/tests/test_unit.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="490">
-                      <caret line="47" column="14" lean-forward="true" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
+                    <state relative-caret-position="340">
+                      <caret line="34" column="11" lean-forward="true" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
                       <folding>
                         <element signature="e#25#53#0" expanded="true" />
                       </folding>
@@ -258,7 +258,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test_unit">
+  <component name="RunManager" selected="Python.test_advanced">
     <configuration name="experience-sumy" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="surya" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -385,7 +385,7 @@
       <workItem from="1544814230534" duration="10385000" />
       <workItem from="1544832455107" duration="1585000" />
       <workItem from="1544901990972" duration="10910000" />
-      <workItem from="1544966820673" duration="22111000" />
+      <workItem from="1544966820673" duration="23070000" />
     </task>
     <task id="LOCAL-00001" summary="Add DrEA_head package for factoring code. Especially for functions &#10;and global variables used along sources.">
       <created>1531948973226</created>
@@ -583,11 +583,18 @@
       <option name="project" value="LOCAL" />
       <updated>1544983280173</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Add section's texts getters. As list of st instances and as str concatenating section's contents">
+      <created>1544998029146</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1544998029146</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76219000" />
+    <option name="totallyTimeSpent" value="77178000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -682,7 +689,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add the o1.json file generated by a pytextrank test. Need to be delete &#10;when the pytextrank job will be complete." />
     <MESSAGE value="Resolved previous envs problems. The choose of the right interpreter, &#10;uninstall and re install spacy. Install models.&#10;The pytextrank exemple run correctly." />
     <MESSAGE value="Integration of tests_translation.py in Tests directory. &#10;Place tests_pytextrank in Tests folder. &#10;Add a Buffer directory for &#10;interactions between data and pytextrank." />
     <MESSAGE value="Remove useless file graph.dot generated by pytextrank first tests." />
@@ -707,7 +713,8 @@
     <MESSAGE value="Prepare a test for summary generation" />
     <MESSAGE value="logging the SP AI call's exception and work on case of connexion failure" />
     <MESSAGE value="WIP - Implement getters for the paper class. Until the get_section_text method" />
-    <option name="LAST_COMMIT_MESSAGE" value="WIP - Implement getters for the paper class. Until the get_section_text method" />
+    <MESSAGE value="Add section's texts getters. As list of st instances and as str concatenating section's contents" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add section's texts getters. As list of st instances and as str concatenating section's contents" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -715,7 +722,7 @@
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/tests/test_advanced.py</url>
           <line>10</line>
-          <option name="timeStamp" value="32" />
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -784,6 +791,36 @@
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
+        <expression-string>paper.get_abbreviations()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>paper.get_text()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>paper.get_keywords()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>self.get_text()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>paper.get</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>all_sections_names</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>paper.get_sections_texts_as_str(['Objective', 'Methods'])</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
@@ -795,36 +832,6 @@
       </expression>
       <expression>
         <expression-string>paper.get_sections_texts_as_str([])</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>paper.get_sections_texts_as_str()</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>paper.get_sections_texts()</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>paper.get_sections_texts(['Objective', 'Methods'])</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>paper.get_sections_texts([])</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>paper.get_sections_texts([None, &quot;Objective&quot;])</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>paper.get_sections_texts([None])</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -960,8 +967,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/test_unit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="47" column="14" lean-forward="true" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
+        <state relative-caret-position="340">
+          <caret line="34" column="11" lean-forward="true" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
           <folding>
             <element signature="e#25#53#0" expanded="true" />
           </folding>
@@ -977,8 +984,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/drealib/paper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="176" column="70" selection-start-line="176" selection-start-column="70" selection-end-line="176" selection-end-column="70" />
+        <state relative-caret-position="595">
+          <caret line="123" column="96" selection-start-line="123" selection-start-column="96" selection-end-line="123" selection-end-column="96" />
           <folding>
             <element signature="e#25#46#0" expanded="true" />
           </folding>

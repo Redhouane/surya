@@ -109,21 +109,19 @@ class Paper:
         """
         return ''
 
-    @staticmethod
-    def get_keywords():
+    def get_keywords(self):
         """
         This method get the paper's keywords
         :return: A list instance corresponding to the paper's keywords
         """
-        return ''
+        return list(filter(lambda l: l.get('heading') == "KEYWORDS", self.get_text())).pop().get('text').split(';')
 
-    @staticmethod
-    def get_abbreviations():
+    def get_abbreviations(self):
         """
         This method get the paper's abbreviations
         :return: A json instance corresponding to the paper's abbreviations
         """
-        return ''
+        return list(filter(lambda l: l.get('heading') == "Abbreviations", self.get_text())).pop()
 
     @staticmethod
     def get_coi():  # coi is an acronym for "Conflicts of Interest"
