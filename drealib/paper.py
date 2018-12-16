@@ -11,7 +11,7 @@ from sumy.summarizers.lsa import LsaSummarizer
 
 
 # Directories for reading/writing files
-PAPERS_DIRECTORY = '../sample_articles/'
+_ARTICLES_DIRECTORY = '../sample_articles/'
 
 # logging.basicConfig(level=logging.INFO)
 logging.basicConfig(level=logging.INFO,
@@ -49,7 +49,7 @@ def parse_paper(paper_filename):
     :param paper_filename: Name of article to parse available in "articles" directory
     :return: No value returned
     """
-    paper_to_parse = glob(os.path.join(PAPERS_DIRECTORY, paper_filename + ".pdf"))[0]
+    paper_to_parse = glob(os.path.join(_ARTICLES_DIRECTORY, paper_filename + ".pdf"))[0]
 
     logging.info("Papers Parsing...")
     headers = {'Content-type': 'application/pdf', }
