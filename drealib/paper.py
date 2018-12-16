@@ -54,12 +54,15 @@ def parse_paper(paper_filename):
     logging.info("Papers Parsing...")
     headers = {'Content-type': 'application/pdf', }
     data = open(paper_to_parse, 'rb').read()
-    response = requests.post('http://localhost:8080/v1', headers=headers, data=data)
 
-    if response.status_code == 200:
-        return response.json()
-    else:
-        logging.info("Bad response from science parse tool")
+    try:
+        parsed_paper = requests.post('http://localhost:8080/v1', headers=headers, data=data).json()
+    except:
+        # At this step, any connection exception involves the same treatment
+        logging.exception("Bad response from science parse tool")
+        parsed_paper = {}
+
+    return parsed_paper
 
 
 def get_article_as_paper(parsed_paper):
