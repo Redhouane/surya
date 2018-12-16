@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0bb1a5fc-c7f5-4db6-bf24-4518ca0e8f15" name="Default" comment="Fix the API call, replace &quot;pyteaser&quot; by &quot;sumy&quot; and add of logging">
+    <list default="true" id="0bb1a5fc-c7f5-4db6-bf24-4518ca0e8f15" name="Default" comment="Logging into surya.log file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/articles/drug_saf.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/articles/drug_saf_parsed.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/articles/jbi.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/articles/jbi_parsed.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/articles/jmir.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/articles/jmir_parsed.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/articles/plos.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/articles/plos_parsed.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/articles/web_based_signal.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/buffer/Abdellaoui_et_al_2018_parsed.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/drealib/paper.py" beforeDir="false" afterPath="$PROJECT_DIR$/drealib/paper.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_advanced.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_advanced.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trials/.py/graph.dot" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +23,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/surya$test_advanced.coverage" NAME="test_advanced Coverage Results" MODIFIED="1544912692354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/surya$test_advanced.coverage" NAME="test_advanced Coverage Results" MODIFIED="1544919870558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/surya$grobid_client.coverage" NAME="grobid-client Coverage Results" MODIFIED="1544312853364" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grobid-client-python" />
     <SUITE FILE_PATH="coverage/surya$experience_sumy.coverage" NAME="experience-sumy Coverage Results" MODIFIED="1544380449641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/trials/.py" />
     <SUITE FILE_PATH="coverage/DrEA$test_advanced.coverage" NAME="test_advanced Coverage Results" MODIFIED="1541120827839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
@@ -27,11 +36,20 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/drealib/paper.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="385">
-                  <caret line="53" column="19" lean-forward="true" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
+                <state relative-caret-position="245">
+                  <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
                   <folding>
                     <element signature="e#25#46#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/trials/.ipynb/test-extractdata.ipynb">
+              <provider selected="true" editor-type-id="ipnb-editor">
+                <state>
+                  <selected id="3" />
                 </state>
               </provider>
             </entry>
@@ -61,11 +79,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/tests/test_advanced.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="195">
-                      <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
-                      <folding>
-                        <element signature="e#25#54#0" expanded="true" />
-                      </folding>
+                    <state relative-caret-position="120">
+                      <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
                     </state>
                   </provider>
                 </entry>
@@ -181,16 +196,6 @@
             <path>
               <item name="surya" type="b2602c69:ProjectViewProjectNode" />
               <item name="surya" type="462c0819:PsiDirectoryNode" />
-              <item name="articles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="surya" type="b2602c69:ProjectViewProjectNode" />
-              <item name="surya" type="462c0819:PsiDirectoryNode" />
-              <item name="buffer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="surya" type="b2602c69:ProjectViewProjectNode" />
-              <item name="surya" type="462c0819:PsiDirectoryNode" />
               <item name="drealib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -202,6 +207,12 @@
               <item name="surya" type="b2602c69:ProjectViewProjectNode" />
               <item name="surya" type="462c0819:PsiDirectoryNode" />
               <item name="trials" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="surya" type="b2602c69:ProjectViewProjectNode" />
+              <item name="surya" type="462c0819:PsiDirectoryNode" />
+              <item name="trials" type="462c0819:PsiDirectoryNode" />
+              <item name=".ipynb" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -382,7 +393,7 @@
       <workItem from="1544739220661" duration="2388000" />
       <workItem from="1544814230534" duration="10385000" />
       <workItem from="1544832455107" duration="1585000" />
-      <workItem from="1544901990972" duration="1400000" />
+      <workItem from="1544901990972" duration="9233000" />
     </task>
     <task id="LOCAL-00001" summary="Add DrEA_head package for factoring code. Especially for functions &#10;and global variables used along sources.">
       <created>1531948973226</created>
@@ -538,11 +549,18 @@
       <option name="project" value="LOCAL" />
       <updated>1544829508319</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Logging into surya.log file">
+      <created>1544912910181</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1544912910181</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44598000" />
+    <option name="totallyTimeSpent" value="52431000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -559,7 +577,7 @@
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="2" weight="0.13762927" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.13762927" />
       <window_info anchor="bottom" id="Python Console" order="0" sideWeight="0.49980307" weight="0.36128527" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.24823806" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50079554" side_tool="true" weight="0.26468286" />
@@ -567,7 +585,7 @@
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32498044" />
       <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49920446" weight="0.36570087" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.3101018" />
+      <window_info active="true" anchor="bottom" id="Debug" order="7" visible="true" weight="0.3101018" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" weight="0.32792792" />
@@ -658,10 +676,28 @@
     <MESSAGE value="Readme.md corrections" />
     <MESSAGE value="WIP - Replace PyTeaser summerization by LSA summarization from sumy package." />
     <MESSAGE value="Fix the API call, replace &quot;pyteaser&quot; by &quot;sumy&quot; and add of logging" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix the API call, replace &quot;pyteaser&quot; by &quot;sumy&quot; and add of logging" />
+    <MESSAGE value="Logging into surya.log file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Logging into surya.log file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_advanced.py</url>
+          <line>10</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/drealib/paper.py</url>
+          <line>89</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/drealib/paper.py</url>
+          <line>39</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -673,6 +709,12 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>for section in self.text:
+    paper_text += section[&quot;text&quot;]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>for sentence in summary_sentences:
     print(str(sentence))</expression-string>
@@ -718,60 +760,62 @@ for sentence in summary_sentences:
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
+    </expressions>
+    <expressions id="setValue">
       <expression>
-        <expression-string>summary_sentences</expression-string>
+        <expression-string>&lt;class 'dict'&gt;: {'name': 'Ling Zhang', 'affiliations': []}</expression-string>
         <language-id>Python</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>requests.post('http://localhost:8080/v1', headers=headers, data=data)</expression-string>
+        <expression-string>self.text[3]['heading']</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>response._content</expression-string>
+        <expression-string>self.text[3]['text']</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>abdellaoui_et_all_2018_summary.__class__</expression-string>
+        <expression-string>self.text[2]['text']</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>paper.generate_summary(abdellaoui_et_all_2018)</expression-string>
+        <expression-string>self.text[2]['heading']</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>os.getcwd()</expression-string>
+        <expression-string>self.text[2]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>glob(os.path.join(paper.BUFFER_DIRECTORY, 'Abdellaoui_et_al_2018_parsed.json'))</expression-string>
+        <expression-string>self.text[1]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>os.path.join(paper.BUFFER_DIRECTORY, 'Abdellaoui_et_al_2018_parsed.json')</expression-string>
+        <expression-string>self.text[1]['heading']</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>os.path.join(paper.BUFFER_DIRECTORY, '*_parsed.json')</expression-string>
+        <expression-string>self.text</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>BUFFER_DIRECTORY</expression-string>
+        <expression-string>self.text['heading']</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>paper.BUFFER_DIRECTORY</expression-string>
+        <expression-string>self.text[1]['text']</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -840,13 +884,6 @@ for sentence in summary_sentences:
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/trials/.ipynb/test-extractdata.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grobid-client-python/LICENSE" />
     <entry file="file://$PROJECT_DIR$/trials/.ipynb/grobid-experience.ipynb" />
     <entry file="file://$PROJECT_DIR$/grobid-client-python/.gitignore" />
@@ -878,9 +915,6 @@ for sentence in summary_sentences:
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/buffer/document.txt" />
-    <entry file="file://$PROJECT_DIR$/articles/jmir_parsed.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/jmir_parsed.json" />
     <entry file="file://$PROJECT_DIR$/buffer/Abdellaoui_et_al_2018_parsed.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -907,13 +941,6 @@ for sentence in summary_sentences:
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_unit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/surya.log">
       <provider selected="true" editor-type-id="LogFileEditorProvider">
         <state relative-caret-position="45">
@@ -922,22 +949,36 @@ for sentence in summary_sentences:
       </provider>
       <provider editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/drealib/paper.py">
+    <entry file="file://$PROJECT_DIR$/articles/jmir_parsed.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_unit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="53" column="19" lean-forward="true" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
-          <folding>
-            <element signature="e#25#46#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="45">
+          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/test_advanced.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+        <state relative-caret-position="120">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trials/.ipynb/test-extractdata.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drealib/paper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
           <folding>
-            <element signature="e#25#54#0" expanded="true" />
+            <element signature="e#25#46#0" expanded="true" />
           </folding>
         </state>
       </provider>
