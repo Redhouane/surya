@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0bb1a5fc-c7f5-4db6-bf24-4518ca0e8f15" name="Default" comment="Prepare a test for summary generation">
-      <change beforePath="$PROJECT_DIR$/.idea/surya.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/surya.iml" afterDir="false" />
+    <list default="true" id="0bb1a5fc-c7f5-4db6-bf24-4518ca0e8f15" name="Default" comment="WIP - Implement getters for the paper class. Until the get_section_text method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/drealib/paper.py" beforeDir="false" afterPath="$PROJECT_DIR$/drealib/paper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_advanced.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_advanced.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_unit.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_unit.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,11 +12,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/surya$test_advanced.coverage" NAME="test_advanced Coverage Results" MODIFIED="1544972299787" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/surya$test_advanced.coverage" NAME="test_advanced Coverage Results" MODIFIED="1544997952800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/surya$grobid_client.coverage" NAME="grobid-client Coverage Results" MODIFIED="1544312853364" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grobid-client-python" />
     <SUITE FILE_PATH="coverage/surya$experience_sumy.coverage" NAME="experience-sumy Coverage Results" MODIFIED="1544380449641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/trials/.py" />
     <SUITE FILE_PATH="coverage/DrEA$test_advanced.coverage" NAME="test_advanced Coverage Results" MODIFIED="1541120827839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/surya$test_unit.coverage" NAME="test_unit Coverage Results" MODIFIED="1544972690764" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/surya$test_unit.coverage" NAME="test_unit Coverage Results" MODIFIED="1544997961290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
   </component>
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.5">
@@ -28,20 +25,11 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/drealib/paper.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="475">
-                  <caret line="58" column="59" selection-start-line="58" selection-start-column="59" selection-end-line="58" selection-end-column="59" />
+                <state relative-caret-position="469">
+                  <caret line="176" column="70" selection-start-line="176" selection-start-column="70" selection-end-line="176" selection-end-column="70" />
                   <folding>
                     <element signature="e#25#46#0" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tests/surya.log">
-              <provider selected="true" editor-type-id="LogFileEditorProvider">
-                <state relative-caret-position="-5379">
-                  <caret line="61" column="40" lean-forward="true" selection-start-line="61" selection-end-line="62" />
                 </state>
               </provider>
             </entry>
@@ -68,7 +56,7 @@
                 <entry file="file://$PROJECT_DIR$/tests/test_advanced.py">
                   <provider selected="true" editor-type-id="text-editor">
                     <state relative-caret-position="150">
-                      <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="21" />
+                      <caret line="10" selection-start-line="10" selection-end-line="10" />
                     </state>
                   </provider>
                 </entry>
@@ -80,11 +68,20 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/tests/test_unit.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="-220">
-                      <caret line="16" column="39" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="39" />
+                    <state relative-caret-position="490">
+                      <caret line="47" column="14" lean-forward="true" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
                       <folding>
                         <element signature="e#25#53#0" expanded="true" />
                       </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/tests/surya.log">
+                  <provider selected="true" editor-type-id="LogFileEditorProvider">
+                    <state relative-caret-position="-9">
+                      <caret line="183" column="3" lean-forward="true" selection-start-line="183" selection-start-column="3" selection-end-line="183" selection-end-column="3" />
                     </state>
                   </provider>
                 </entry>
@@ -156,9 +153,9 @@
         <option value="$PROJECT_DIR$/buffer/document.txt" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/trials/.py/experience-sumy.py" />
+        <option value="$PROJECT_DIR$/tests/test_unit.py" />
+        <option value="$PROJECT_DIR$/tests/test_unit.py" />
         <option value="$PROJECT_DIR$/tests/test_advanced.py" />
-        <option value="$PROJECT_DIR$/tests/test_unit.py" />
-        <option value="$PROJECT_DIR$/tests/test_unit.py" />
         <option value="$PROJECT_DIR$/drealib/paper.py" />
       </list>
     </option>
@@ -388,7 +385,7 @@
       <workItem from="1544814230534" duration="10385000" />
       <workItem from="1544832455107" duration="1585000" />
       <workItem from="1544901990972" duration="10910000" />
-      <workItem from="1544966820673" duration="5367000" />
+      <workItem from="1544966820673" duration="22111000" />
     </task>
     <task id="LOCAL-00001" summary="Add DrEA_head package for factoring code. Especially for functions &#10;and global variables used along sources.">
       <created>1531948973226</created>
@@ -572,11 +569,25 @@
       <option name="project" value="LOCAL" />
       <updated>1544922616486</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="logging the SP AI call's exception and work on case of connexion failure">
+      <created>1544972977126</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1544972977126</updated>
+    </task>
+    <task id="LOCAL-00028" summary="WIP - Implement getters for the paper class. Until the get_section_text method">
+      <created>1544983280173</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1544983280173</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59475000" />
+    <option name="totallyTimeSpent" value="76219000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -593,15 +604,15 @@
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="2" weight="0.13365155" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.13365155" />
       <window_info anchor="bottom" id="Python Console" order="0" sideWeight="0.49980307" weight="0.36128527" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.24823806" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50079554" side_tool="true" weight="0.26468286" />
       <window_info anchor="bottom" id="Version Control" internal_type="SLIDING" order="3" type="SLIDING" weight="0.3298639" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32498044" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.49920446" visible="true" weight="0.30148786" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.3101018" />
+      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49920446" weight="0.30148786" />
+      <window_info active="true" anchor="bottom" id="Debug" order="7" visible="true" weight="0.3101018" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" weight="0.32792792" />
@@ -671,8 +682,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Creation of class paper as article's texts and metadata. Function &#10;read_paper for initiate a paper object from parsed json." />
-    <MESSAGE value="&quot;/Users/redhouaneabdellaoui/anaconda/envs/DrEA&quot; the efficient env &#10;with the right spacy version build from source.&#10;We have to select the right interpreter to import spacy and use &#10;pytextrank. For the pytextrank work we need to use Test data from &#10;&quot;/Tests/pytextrank_dat&quot;." />
     <MESSAGE value="Add the o1.json file generated by a pytextrank test. Need to be delete &#10;when the pytextrank job will be complete." />
     <MESSAGE value="Resolved previous envs problems. The choose of the right interpreter, &#10;uninstall and re install spacy. Install models.&#10;The pytextrank exemple run correctly." />
     <MESSAGE value="Integration of tests_translation.py in Tests directory. &#10;Place tests_pytextrank in Tests folder. &#10;Add a Buffer directory for &#10;interactions between data and pytextrank." />
@@ -696,10 +705,19 @@
     <MESSAGE value="Refacto of surya code. Renaming function and generate summary from parsed dictionaries, not even from json files." />
     <MESSAGE value="Refacto of project's structure" />
     <MESSAGE value="Prepare a test for summary generation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Prepare a test for summary generation" />
+    <MESSAGE value="logging the SP AI call's exception and work on case of connexion failure" />
+    <MESSAGE value="WIP - Implement getters for the paper class. Until the get_section_text method" />
+    <option name="LAST_COMMIT_MESSAGE" value="WIP - Implement getters for the paper class. Until the get_section_text method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_advanced.py</url>
+          <line>10</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -712,53 +730,47 @@
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
       <expression>
-        <expression-string>bool(parsed_paper)</expression-string>
+        <expression-string>paper.get_section_text(['Objective', 'Introduction'])</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>not parsed_paper</expression-string>
+        <expression-string>paper.get_section_text('Objective')</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>type(parsed_paper)</expression-string>
+        <expression-string>[].pop()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>for section in self.text:
-    paper_text += section[&quot;text&quot;]</expression-string>
+        <expression-string>[]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>for sentence in summary_sentences:
-    print(str(sentence))</expression-string>
+        <expression-string>paper.get_section_text('Methods')</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>for sentence in summary_sentences:
-    summary += str(sentence)</expression-string>
+        <expression-string>paper.get_section_text()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>summary = ''
-
-for sentence in summary_sentences:
-    summary += str(sentence)</expression-string>
+        <expression-string>paper.get_section_text('objective')</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>str(summary_sentences[0])</expression-string>
+        <expression-string>paper.get_section_text('Objective').pop().get('text')</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>summary_sentences[0].__class__</expression-string>
+        <expression-string>paper.get_section_text('Objective').pop()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
@@ -772,59 +784,53 @@ for sentence in summary_sentences:
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>self.text[3]['heading']</expression-string>
+        <expression-string>paper.get_sections_texts_as_str(['Objective', 'Methods'])</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>self.text[3]['text']</expression-string>
+        <expression-string>paper.get_sections_texts_as_str(['Objective'])</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>self.text[2]['text']</expression-string>
+        <expression-string>paper.get_sections_texts_as_str([])</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>self.text[2]['heading']</expression-string>
+        <expression-string>paper.get_sections_texts_as_str()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>self.text[2]</expression-string>
+        <expression-string>paper.get_sections_texts()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>self.text[1]</expression-string>
+        <expression-string>paper.get_sections_texts(['Objective', 'Methods'])</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>self.text[1]['heading']</expression-string>
+        <expression-string>paper.get_sections_texts([])</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>self.text</expression-string>
+        <expression-string>paper.get_sections_texts([None, &quot;Objective&quot;])</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>self.text['heading']</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>self.text[1]['text']</expression-string>
+        <expression-string>paper.get_sections_texts([None])</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Tests/tests_summarization.py" />
     <entry file="file://$USER_HOME$/anaconda/envs/DrEA/lib/python3.6/site-packages/pytextrank/pytextrank.py" />
     <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2018.1/python_stubs/-1089549890/builtins.py" />
     <entry file="file://$USER_HOME$/anaconda/envs/DrEA/lib/python3.6/site-packages/pyteaser-1.0-py3.6.egg/pyteaser.py" />
@@ -937,35 +943,42 @@ for sentence in summary_sentences:
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_advanced.py">
+    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/python_stubs/966020380/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="21" />
+        <state relative-caret-position="284">
+          <caret line="3023" column="6" selection-start-line="3023" selection-start-column="6" selection-end-line="3023" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/surya.log">
       <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="-5379">
-          <caret line="61" column="40" lean-forward="true" selection-start-line="61" selection-end-line="62" />
+        <state relative-caret-position="-9">
+          <caret line="183" column="3" lean-forward="true" selection-start-line="183" selection-start-column="3" selection-end-line="183" selection-end-column="3" />
         </state>
       </provider>
       <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/test_unit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-220">
-          <caret line="16" column="39" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="39" />
+        <state relative-caret-position="490">
+          <caret line="47" column="14" lean-forward="true" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
           <folding>
             <element signature="e#25#53#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_advanced.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/drealib/paper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="58" column="59" selection-start-line="58" selection-start-column="59" selection-end-line="58" selection-end-column="59" />
+        <state relative-caret-position="469">
+          <caret line="176" column="70" selection-start-line="176" selection-start-column="70" selection-end-line="176" selection-end-column="70" />
           <folding>
             <element signature="e#25#46#0" expanded="true" />
           </folding>

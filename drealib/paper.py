@@ -77,13 +77,29 @@ class Paper:
         """
         return self.references
 
-    def get_section_text(self, section_name=None):  # "None" correspond to the case when a dict has no 'heading'
+    def get_sections_texts_list(self, sections_names=None):  # "None" correspond to case when a dict has no 'heading'
         """
-        This method get the text corresponding to a given section of the paper's text
-        :param section_name: The name of the desired section
-        :return: A str instance corresponding to the paper's section name content
+        This method get a list of texts corresponding to a given list of paper's sections
+        :param sections_names: A list of desired sections names
+        :return: A list of str instances corresponding to the paper's sections names contents
         """
-        return list(filter(lambda l: l.get('heading') == section_name, self.get_text())).pop().get('text')
+        paper = self.get_text()
+
+        if sections_names is None or len(sections_names) == 0:
+            all_sections_names = list(map(lambda l: l.get('heading'), paper))
+            all_sections = list(filter(lambda l: l.get('heading') in all_sections_names, paper))
+            return list(map(lambda l: l.get('text'), all_sections))
+        else:
+            sections_list = list(filter(lambda l: l.get('heading') in sections_names, paper))
+            return list(map(lambda l: l.get('text'), sections_list))
+
+    def get_sections_texts_as_str(self, sections_names=None):
+        """
+        This method get the text corresponding to a given list of paper's sections
+        :param sections_names: A list of desired sections names
+        :return: A str instance corresponding to the concatenated paper's sections names contents
+        """
+        return ' '.join(self.get_sections_texts_list(sections_names))
 
     @staticmethod
     def get_doi():
@@ -116,18 +132,6 @@ class Paper:
         :return: A str instance corresponding to the paper's "Conflicts of Interest"
         """
         return ''
-
-    def get_entire_text(self):
-        """
-        This method get text from article's sections et return all the text in one single String value.
-        :return: A str instance containing article's plain text
-        """
-        paper_text: str = ""
-
-        for section in self.text:
-            paper_text += section["text"]
-
-        return paper_text
 
 
 def parse_paper(paper_filename):
@@ -167,14 +171,15 @@ def get_article_as_paper(parsed_paper):
     return paper
 
 
-def summarize_paper(paper_object, lang='english', sentences_count=10):
+def summarize_paper(paper_object, sections_to_summarize=None, lang='english', sentences_count=10):
     """
     :param paper_object: An instance of class Paper
+    :param sections_to_summarize: List of section's names to summarize
     :param lang: Language used to write the text to summarize
     :param sentences_count: Sentences count to consider for the outputted summary
     :return: A string containing article's summary
     """
-    paper_text = paper_object.get_entire_text()
+    paper_text = paper_object.get_sections_texts_as_str(sections_to_summarize)
     parser = PlaintextParser.from_string(paper_text, Tokenizer(lang))
     summarizer = LsaSummarizer()
     summary_sentences = summarizer(parser.document, sentences_count)
