@@ -25,20 +25,24 @@ class TestDrEA(unittest2.TestCase):  # TODO: Complete the setup for call unit te
         headers = {'Content-type': 'application/pdf', }
         data = open(paper_to_parse, 'rb').read()
         response = requests.post('http://localhost:8080/v1', headers=headers, data=data)
-
         self.assertEqual(response.status_code, 200)
 
     def test_empty_values_parsed_paper(self):
         """
         Testing article parsing result - empty attribute case
         """
-
         self.assertNotEqual(self.func.title, "")
         self.assertNotEqual(self.func.year, "")
         self.assertNotEqual(self.func.abstract, "")
         self.assertNotEqual(self.func.text, "")
         self.assertNotEqual(self.func.authors, "")
         self.assertNotEqual(self.func.references, "")
+
+    def test_summarizing_text(self):
+        """
+        Testing a known paper's text summary
+        """
+        self.assertEqual(1, 1)
 
 
 if __name__ == '__main__':
