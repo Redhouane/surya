@@ -107,7 +107,7 @@ class Paper:
         This method get the paper's doi identifier
         :return: A str instance corresponding to the paper's doi
         """
-        return ''
+        return ''  # TODO: Add a pattern recognition based on a regex
 
     def get_keywords(self):
         """
@@ -129,7 +129,7 @@ class Paper:
         This method get the paper's "Conflicts of Interest" declaration
         :return: A str instance corresponding to the paper's "Conflicts of Interest"
         """
-        return ''
+        return ''  # TODO: Add a pattern recognition based on a regex
 
 
 def parse_paper(paper_filename):
