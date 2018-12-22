@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0bb1a5fc-c7f5-4db6-bf24-4518ca0e8f15" name="Default" comment="Add section's texts getters. As list of st instances and as str concatenating section's contents">
+    <list default="true" id="0bb1a5fc-c7f5-4db6-bf24-4518ca0e8f15" name="Default" comment="WIP - Summarizing a selected part from the paper">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drealib/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/drealib/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/drealib/paper.py" beforeDir="false" afterPath="$PROJECT_DIR$/drealib/paper.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_advanced.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_advanced.py" afterDir="false" />
     </list>
@@ -13,11 +15,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/surya$test_advanced.coverage" NAME="test_advanced Coverage Results" MODIFIED="1545081755646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/surya$test_advanced.coverage" NAME="test_advanced Coverage Results" MODIFIED="1545499751681" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/surya$grobid_client.coverage" NAME="grobid-client Coverage Results" MODIFIED="1544312853364" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grobid-client-python" />
     <SUITE FILE_PATH="coverage/surya$experience_sumy.coverage" NAME="experience-sumy Coverage Results" MODIFIED="1544380449641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/trials/.py" />
     <SUITE FILE_PATH="coverage/DrEA$test_advanced.coverage" NAME="test_advanced Coverage Results" MODIFIED="1541120827839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/surya$test_unit.coverage" NAME="test_unit Coverage Results" MODIFIED="1545081355941" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/surya$test_unit.coverage" NAME="test_unit Coverage Results" MODIFIED="1545498891675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
   </component>
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.5">
@@ -26,8 +28,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/drealib/paper.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1110">
-                  <caret line="131" column="59" selection-start-line="131" selection-start-column="59" selection-end-line="131" selection-end-column="59" />
+                <state relative-caret-position="128">
+                  <caret line="92" selection-start-line="92" selection-end-line="92" />
                   <folding>
                     <element signature="e#25#46#0" expanded="true" />
                   </folding>
@@ -41,6 +43,15 @@
         <splitter split-orientation="vertical" split-proportion="0.3641347">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/drealib/__init__.py">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state>
+                      <caret column="15" selection-start-column="15" selection-end-column="15" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/tests/test_advanced.py">
                   <provider selected="true" editor-type-id="text-editor">
@@ -50,18 +61,36 @@
                   </provider>
                 </entry>
               </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/requirements.txt">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state>
+                      <caret column="8" selection-start-column="8" selection-end-column="8" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
             </leaf>
           </split-first>
           <split-second>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file pinned="false" current-in-tab="true">
+              <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/tests/test_unit.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="295">
+                    <state relative-caret-position="510">
                       <caret line="34" column="11" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
                       <folding>
                         <element signature="e#25#53#0" expanded="true" />
                       </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/tests/surya.log">
+                  <provider selected="true" editor-type-id="LogFileEditorProvider">
+                    <state relative-caret-position="60">
+                      <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
                     </state>
                   </provider>
                 </entry>
@@ -114,7 +143,6 @@
         <option value="$PROJECT_DIR$/Sources/setup.py" />
         <option value="$PROJECT_DIR$/drea_parse_paper.py" />
         <option value="$PROJECT_DIR$/drealib/context.py" />
-        <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/tests/notebooks/test-extractdata.ipynb" />
         <option value="$PROJECT_DIR$/tests/notebooks/test_basic.py" />
         <option value="$PROJECT_DIR$/tests/notebooks/tests-pytextrank.py" />
@@ -135,7 +163,9 @@
         <option value="$PROJECT_DIR$/trials/.py/experience-sumy.py" />
         <option value="$PROJECT_DIR$/tests/test_unit.py" />
         <option value="$PROJECT_DIR$/tests/test_unit.py" />
+        <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/tests/test_advanced.py" />
+        <option value="$PROJECT_DIR$/drealib/__init__.py" />
         <option value="$PROJECT_DIR$/drealib/paper.py" />
       </list>
     </option>
@@ -146,8 +176,8 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="162" />
     <option name="y" value="97" />
-    <option name="width" value="2259" />
-    <option name="height" value="1267" />
+    <option name="width" value="2249" />
+    <option name="height" value="1274" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -157,7 +187,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -178,17 +207,13 @@
             <path>
               <item name="surya" type="b2602c69:ProjectViewProjectNode" />
               <item name="surya" type="462c0819:PsiDirectoryNode" />
-              <item name="sample_articles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="surya" type="b2602c69:ProjectViewProjectNode" />
-              <item name="surya" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -239,50 +264,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.test_advanced">
-    <configuration name="experience-sumy" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="surya" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/trials/.py" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/trials/experience-sumy.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="grobid-client" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="surya" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/grobid-client-python" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/grobid-client-python/grobid-client.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="test_advanced" type="PythonConfigurationType" factoryName="Python">
       <module name="surya" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -330,15 +311,7 @@
     <list>
       <item itemvalue="Python.test_advanced" />
       <item itemvalue="Python.test_unit" />
-      <item itemvalue="Python.experience-sumy" />
-      <item itemvalue="Python.grobid-client" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.experience-sumy" />
-        <item itemvalue="Python.grobid-client" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -366,7 +339,9 @@
       <workItem from="1544832455107" duration="1585000" />
       <workItem from="1544901990972" duration="10910000" />
       <workItem from="1544966820673" duration="23070000" />
-      <workItem from="1545246413622" duration="230000" />
+      <workItem from="1545246413622" duration="3058000" />
+      <workItem from="1545424726308" duration="602000" />
+      <workItem from="1545491869723" duration="3653000" />
     </task>
     <task id="LOCAL-00001" summary="Add DrEA_head package for factoring code. Especially for functions &#10;and global variables used along sources.">
       <created>1531948973226</created>
@@ -571,11 +546,18 @@
       <option name="project" value="LOCAL" />
       <updated>1544998029146</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="WIP - Summarizing a selected part from the paper">
+      <created>1545246725996</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1545246725996</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77961000" />
+    <option name="totallyTimeSpent" value="85044000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -592,15 +574,15 @@
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.13484487" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.118138425" />
       <window_info anchor="bottom" id="Python Console" order="0" sideWeight="0.49980307" weight="0.36128527" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.2192639" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50079554" side_tool="true" weight="0.26468286" />
       <window_info anchor="bottom" id="Version Control" internal_type="SLIDING" order="3" type="SLIDING" weight="0.3298639" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32498044" />
-      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49920446" weight="0.30148786" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.3501326" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.49920446" visible="true" weight="0.30070478" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.35003915" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" weight="0.32792792" />
@@ -670,7 +652,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Resolved previous envs problems. The choose of the right interpreter, &#10;uninstall and re install spacy. Install models.&#10;The pytextrank exemple run correctly." />
     <MESSAGE value="Integration of tests_translation.py in Tests directory. &#10;Place tests_pytextrank in Tests folder. &#10;Add a Buffer directory for &#10;interactions between data and pytextrank." />
     <MESSAGE value="Remove useless file graph.dot generated by pytextrank first tests." />
     <MESSAGE value="Minors modifications. Exclusively tests to understand the pytextrank &#10;workflow." />
@@ -695,15 +676,16 @@
     <MESSAGE value="logging the SP AI call's exception and work on case of connexion failure" />
     <MESSAGE value="WIP - Implement getters for the paper class. Until the get_section_text method" />
     <MESSAGE value="Add section's texts getters. As list of st instances and as str concatenating section's contents" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add section's texts getters. As list of st instances and as str concatenating section's contents" />
+    <MESSAGE value="WIP - Summarizing a selected part from the paper" />
+    <option name="LAST_COMMIT_MESSAGE" value="WIP - Summarizing a selected part from the paper" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tests/test_advanced.py</url>
-          <line>10</line>
-          <option name="timeStamp" value="37" />
+          <url>file://$PROJECT_DIR$/drealib/paper.py</url>
+          <line>149</line>
+          <option name="timeStamp" value="43" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -777,6 +759,11 @@
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
+        <expression-string>requests.post('http://localhost:8080/v1', headers=headers, data=data).json()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>paper.get_abbreviations()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
@@ -813,11 +800,6 @@
       </expression>
       <expression>
         <expression-string>paper.get_sections_texts_as_str(['Objective'])</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>paper.get_sections_texts_as_str([])</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -867,15 +849,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.pytest_cache/README.md" />
     <entry file="file://$PROJECT_DIR$/articles/drug_saf_parsed.json" />
-    <entry file="file://$PROJECT_DIR$/drealib/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="36" selection-start-column="36" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grobid-client-python/LICENSE" />
     <entry file="file://$PROJECT_DIR$/trials/.ipynb/grobid-experience.ipynb" />
     <entry file="file://$PROJECT_DIR$/grobid-client-python/.gitignore" />
@@ -910,22 +884,8 @@
     <entry file="file://$PROJECT_DIR$/tests/jmir_parsed.json" />
     <entry file="file://$PROJECT_DIR$/buffer/Abdellaoui_et_al_2018_parsed.json" />
     <entry file="file://$PROJECT_DIR$/buffer/test.json" />
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="8" selection-start-column="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/articles/jmir_parsed.json" />
     <entry file="file://$PROJECT_DIR$/trials/.ipynb/test-extractdata.ipynb" />
-    <entry file="file://$PROJECT_DIR$/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laboratory_experimentations/experience-sumy.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -943,24 +903,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_advanced.py">
+    <entry file="file://$PROJECT_DIR$/Makefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/surya.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="-534">
-          <caret line="183" column="3" selection-start-line="183" selection-start-column="3" selection-end-line="183" selection-end-column="3" />
+    <entry file="file://$PROJECT_DIR$/.pytest_cache/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
         </state>
       </provider>
-      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/test_unit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
+        <state relative-caret-position="510">
           <caret line="34" column="11" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
           <folding>
             <element signature="e#25#53#0" expanded="true" />
@@ -968,10 +928,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/surya.log">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" selection-start-column="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drealib/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="15" selection-start-column="15" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_advanced.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/drealib/paper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1110">
-          <caret line="131" column="59" selection-start-line="131" selection-start-column="59" selection-end-line="131" selection-end-column="59" />
+        <state relative-caret-position="128">
+          <caret line="92" selection-start-line="92" selection-end-line="92" />
           <folding>
             <element signature="e#25#46#0" expanded="true" />
           </folding>

@@ -77,20 +77,22 @@ class Paper:
         """
         return self.references
 
-    def get_sections_texts_list(self, sections_names=None):  # "None" correspond to case when a dict has no 'heading'
+    def get_sections_texts_list(self, sections_selection=None):  # "None" for cases when section's dict has no 'heading'
         """
         This method get a list of texts corresponding to a given list of paper's sections
-        :param sections_names: A list of desired sections names
+        :param sections_selection: A list of desired sections names
         :return: A list of str instances corresponding to the paper's sections names contents
         """
-        paper = self.get_text()
+        paper_sections = self.get_text()
 
-        if sections_names is None or len(sections_names) == 0:
-            all_sections_names = list(map(lambda l: l.get('heading'), paper))
-            all_sections = list(filter(lambda l: l.get('heading') in all_sections_names, paper))
+        if sections_selection is None or len(sections_selection) == 0:
+            all_sections_names = list(map(lambda l: l.get('heading'), paper_sections))
+
+            # Filtering of sections handled with "None" value and corresponding to free article's texts
+            all_sections = list(filter(lambda l: l.get('heading') in all_sections_names, paper_sections))
             return list(map(lambda l: l.get('text'), all_sections))
         else:
-            sections_list = list(filter(lambda l: l.get('heading') in sections_names, paper))
+            sections_list = list(filter(lambda l: l.get('heading') in sections_selection, paper_sections))
             return list(map(lambda l: l.get('text'), sections_list))
 
     def get_sections_texts_as_str(self, sections_names=None):
@@ -152,7 +154,7 @@ def parse_paper(paper_filename):
         raise ValueError("No parsed paper")  # TODO: Ensure that the right exception type is "ValueError"
 
 
-def get_article_as_paper(parsed_paper):
+def get_article_as_paper(parsed_paper):  # TODO: Rename as "build_paper"
     """
     :param parsed_paper: article parsed using Science-Parse as python dictionary
     :return: A paper object containing article's texts and metadata
@@ -169,15 +171,15 @@ def get_article_as_paper(parsed_paper):
     return paper
 
 
-def summarize_paper(paper_object, sections_to_summarize=None, lang='english', sentences_count=10):
+def summarize_paper(paper_object, sections_selection=None, lang='english', sentences_count=10):
     """
     :param paper_object: An instance of class Paper
-    :param sections_to_summarize: List of section's names to summarize
+    :param sections_selection: List of section's to summarize
     :param lang: Language used to write the text to summarize
     :param sentences_count: Sentences count to consider for the outputted summary
     :return: A string containing article's summary
     """
-    paper_text = paper_object.get_sections_texts_as_str(sections_to_summarize)
+    paper_text = paper_object.get_sections_texts_as_str(sections_selection)
     parser = PlaintextParser.from_string(paper_text, Tokenizer(lang))
     summarizer = LsaSummarizer()
     summary_sentences = summarizer(parser.document, sentences_count)

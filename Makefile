@@ -4,6 +4,3 @@ init:
 
 test:
 	py.test tests
-
-.PHONY:
-	init test
