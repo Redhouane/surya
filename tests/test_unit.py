@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import drealib.paper_utils as drea
+import surya.paper_utils as drea
 
 from glob import glob
 import os

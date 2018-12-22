@@ -9,7 +9,7 @@ from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
 from sumy.summarizers.lsa import LsaSummarizer
 
-from drealib.paper import Paper
+from surya.paper import Paper
 
 # Directories for reading/writing files
 _ARTICLES_DIRECTORY = '../sample_articles/'
