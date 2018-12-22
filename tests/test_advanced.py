@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import drealib.paper as drea
+import drealib.paper_utils as drea
 
 # Parsing article
 
