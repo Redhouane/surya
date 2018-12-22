@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import surya.paper_utils as drea
+import surya.paper_utils as dr
 
 from glob import glob
 import os
@@ -14,8 +14,8 @@ class TestDrEA(unittest2.TestCase):  # TODO: Complete the setup for call unit te
         """
         Setting up an instance of class Paper
         """
-        paper_parsed = drea.parse_paper("jmir")
-        self.func = drea.get_article_as_paper(paper_parsed)
+        paper_parsed = dr.parse_paper("jmir")
+        self.func = dr.get_article_as_paper(paper_parsed)
 
     def test_science_parse_connection(self):
         """

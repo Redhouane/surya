@@ -27,11 +27,11 @@ def parse_paper(paper_filename):
     :param paper_filename: Name of article to parse available in "articles" directory
     :return: No value returned
     """
-    paper_to_parse = glob(os.path.join(_ARTICLES_DIRECTORY, paper_filename + ".pdf"))[0]
+    paper_to_parse_path = glob(os.path.join(_ARTICLES_DIRECTORY, paper_filename + ".pdf"))[0]
 
     logging.info("Papers Parsing...")
-    headers = {'Content-type': 'application/pdf', }
-    data = open(paper_to_parse, 'rb').read()
+    headers = {'Content-type': 'application/pdf'}
+    data = open(paper_to_parse_path, 'rb').read()
 
     try:
         return requests.post('http://localhost:8080/v1', headers=headers, data=data).json()
@@ -41,7 +41,23 @@ def parse_paper(paper_filename):
         raise ValueError("No parsed paper")  # TODO: Ensure that the right exception type is "ValueError"
 
 
-def get_article_as_paper(parsed_paper):  # TODO: Rename as "build_paper"
+def parse_papers_list(papers_names_list):
+    """
+    This function apply the parsing paper process to a list of papers
+    :param papers_names_list: Paper's names to parse
+    :return: A list of dictionaries corresponding to the parsed papers
+    """
+    if not papers_names_list:
+        logging.warning("No article selected")
+    else:
+        try:
+            return list(map(parse_paper, papers_names_list))
+        except IndexError:
+            # If an element in the given list do not exists
+            logging.exception("Please check the article's loaded. At least one of them since to not exists.")
+
+
+def build_paper(parsed_paper):
     """
     :param parsed_paper: article parsed using Science-Parse as python dictionary
     :return: A paper object containing article's texts and metadata
@@ -73,7 +89,7 @@ def summarize_paper(paper_object, sections_selection=None, lang='english', sente
 
     summary = ''
     for sentence in summary_sentences:
-        summary += str(sentence) + ' '  # TODO: Create a class 'utils.py' with useful methods such as 'multi_str_concat'
+        summary += str(sentence) + ' '
 
     return summary
 
