@@ -38,23 +38,24 @@ def parse_paper(paper_filename):
     except Exception:
         # At this step, any connection exception involves the same treatment
         logging.exception("Bad response from science parse tool")
-        raise ValueError("No parsed paper")  # TODO: Ensure that the right exception type is "ValueError"
+        raise ValueError("No parsed paper.")  # TODO: Ensure that the right exception type is "ValueError"
 
 
-def parse_papers_list(papers_names_list):
+def parse_papers_list(articles_names_list):
     """
-    This function apply the parsing paper process to a list of papers
-    :param papers_names_list: Paper's names to parse
-    :return: A list of dictionaries corresponding to the parsed papers
+    This function apply the parsing paper process to a list of articles
+    :param articles_names_list: The articles's names to parse
+    :return: A list of Paper instances corresponding to the parsed articles
     """
-    if not papers_names_list:
-        logging.warning("No article selected")
+    if not articles_names_list:
+        logging.warning("No article selected.")
     else:
         try:
-            return list(map(parse_paper, papers_names_list))
+            parsed_papers_list = list(map(parse_paper, articles_names_list))
+            return list(map(build_paper, parsed_papers_list))
         except IndexError:
             # If an element in the given list do not exists
-            logging.exception("Please check the article's loaded. At least one of them since to not exists.")
+            logging.exception("Please check the articles loaded list. At least one of them seems do not exists.")
 
 
 def build_paper(parsed_paper):
