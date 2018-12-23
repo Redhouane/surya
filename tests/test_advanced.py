@@ -4,10 +4,17 @@ import surya.paper_utils as dr
 
 # Parsing articles
 
+PAPERS_LIST = ["jmir", "drug_saf", "web_based_signal", "plos", "bmc", "jbi"]
+SECTIONS_LIST = ["Introduction", "Principal Findings"]
+
 try:
-    paper_parsed = dr.parse_papers_list(["jmir", "drug_saf", "web_based_signal", "plos", "bmc", "jbi"])
-    paper = dr.build_paper(paper_parsed[0])
-    summary = dr.summarize_paper(paper)
+    # Summarize a simple paper
+    parsed_papers = dr.parse_papers_list(PAPERS_LIST)
+    summary = dr.summarize_paper(parsed_papers[0])
     print(summary)
+
+    # Summarize a list of papers
+    sections_texts = dr.build_papers_sections_summary(PAPERS_LIST, SECTIONS_LIST)
+    print(sections_texts)
 except ValueError:
     print("No summary generated")

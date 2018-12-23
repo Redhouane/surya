@@ -11,6 +11,8 @@ from sumy.summarizers.lsa import LsaSummarizer
 
 from surya.paper import Paper
 
+LANG = 'english'
+
 # Directories for reading/writing files
 _ARTICLES_DIRECTORY = '../sample_articles/'
 
@@ -27,7 +29,7 @@ def parse_paper(paper_filename):
     :param paper_filename: Name of article to parse available in "articles" directory
     :return: No value returned
     """
-    paper_to_parse_path = glob(os.path.join(_ARTICLES_DIRECTORY, paper_filename + ".pdf"))[0]
+    paper_to_parse_path = glob(os.path.join(_ARTICLES_DIRECTORY, paper_filename + ".pdf")).pop()
 
     logging.info("Papers Parsing...")
     headers = {'Content-type': 'application/pdf'}
@@ -39,23 +41,6 @@ def parse_paper(paper_filename):
         # At this step, any connection exception involves the same treatment
         logging.exception("Bad response from science parse tool")
         raise ValueError("No parsed paper.")  # TODO: Ensure that the right exception type is "ValueError"
-
-
-def parse_papers_list(articles_names_list):
-    """
-    This function apply the parsing paper process to a list of articles
-    :param articles_names_list: The articles's names to parse
-    :return: A list of Paper instances corresponding to the parsed articles
-    """
-    if not articles_names_list:
-        logging.warning("No article selected.")
-    else:
-        try:
-            parsed_papers_list = list(map(parse_paper, articles_names_list))
-            return list(map(build_paper, parsed_papers_list))
-        except IndexError:
-            # If an element in the given list do not exists
-            logging.exception("Please check the articles loaded list. At least one of them seems do not exists.")
 
 
 def build_paper(parsed_paper):
@@ -75,22 +60,54 @@ def build_paper(parsed_paper):
     return paper
 
 
-def summarize_paper(paper_object, sections_selection=None, lang='english', sentences_count=10):
+def parse_papers_list(articles_names_list):
+    """
+    This function apply the parsing paper process to a list of articles
+    :param articles_names_list: The articles's names to parse
+    :return: A list of Paper instances corresponding to the parsed articles
+    """
+    if not articles_names_list:
+        logging.warning("No article selected.")
+    else:
+        try:
+            parsed_papers_list = list(map(parse_paper, articles_names_list))
+            return list(map(build_paper, parsed_papers_list))
+        except IndexError:
+            # If an element in the given list do not exists
+            logging.exception("Please check the articles loaded list. At least one of them seems do not exists.")
+
+
+def build_papers_sections_summary(papers_list, sections_to_summarize):
+    """
+    This function merge the texts corresponding to sections selected for generate a summary
+    :param papers_list: A list of papers instances
+    :param sections_to_summarize: A list of sections to summarize
+    :return: A str to pass to the the summarize process
+    """
+    sections_texts = list(
+        map(lambda paper: paper.get_sections_texts_str(sections_to_summarize), parse_papers_list(papers_list))
+    )
+
+    text = ' '.join(sections_texts)
+    parser = PlaintextParser.from_string(text, Tokenizer(LANG))
+    summarizer = LsaSummarizer()
+    summary = ' '.join(list(map(str, summarizer(parser.document, 5))))
+
+    return summary
+
+
+def summarize_paper(paper_object, sections_selection=None, sentences_count=10):
     """
     :param paper_object: An instance of class Paper
     :param sections_selection: List of section's to summarize
-    :param lang: Language used to write the text to summarize
     :param sentences_count: Sentences count to consider for the outputted summary
     :return: A string containing article's summary
     """
-    paper_text = paper_object.get_sections_texts_as_str(sections_selection)
-    parser = PlaintextParser.from_string(paper_text, Tokenizer(lang))
+    paper_text = paper_object.get_sections_texts_str(sections_selection)
+    parser = PlaintextParser.from_string(paper_text, Tokenizer(LANG))
     summarizer = LsaSummarizer()
     summary_sentences = summarizer(parser.document, sentences_count)
-
-    summary = ''
-    for sentence in summary_sentences:
-        summary += str(sentence) + ' '
+    summary = ' '.join(list(map(str, summary_sentences)))
 
     return summary
 

@@ -77,7 +77,7 @@ class Paper:
             sections_list = list(filter(lambda l: l.get('heading') in sections_selection, paper_sections))
             return list(map(lambda l: l.get('text'), sections_list))
 
-    def get_sections_texts_as_str(self, sections_names=None):
+    def get_sections_texts_str(self, sections_names=None):
         """
         This method get the text corresponding to a given list of paper's sections
         :param sections_names: A list of desired sections names

@@ -15,6 +15,7 @@ class TestDrEA(unittest2.TestCase):  # TODO: Complete the setup for call unit te
         Setting up an instance of class Paper
         """
         paper_parsed = dr.parse_paper("jmir")
+        # parsed_papers = dr.parse_papers_list(["jmir", "drug_saf", "web_based_signal", "plos", "bmc", "jbi"])
         self.func = dr.build_paper(paper_parsed)
 
     def test_science_parse_connection(self):
