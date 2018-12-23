@@ -4,13 +4,15 @@ import surya.paper_utils as dr
 
 # Parsing articles
 
-PAPERS_LIST = ["jmir", "drug_saf", "web_based_signal", "plos", "bmc", "jbi"]
-SECTIONS_LIST = ["Introduction", "Principal Findings"]
+# PAPERS_LIST = ["jmir", "drug_saf", "web_based_signal", "plos", "bmc", "jbi"]
+PAPERS_LIST = ["jmir"]
+# SECTIONS_LIST = ["Introduction", "Principal Findings"]
+SECTIONS_LIST = []
 
 try:
     # Summarize a simple paper
     parsed_papers = dr.parse_papers_list(PAPERS_LIST)
-    summary = dr.summarize_paper(parsed_papers[0])
+    summary = dr.build_paper_summary(parsed_papers[0])
     print(summary)
 
     # Summarize a list of papers

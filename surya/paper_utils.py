@@ -11,11 +11,11 @@ from sumy.summarizers.lsa import LsaSummarizer
 
 from surya.paper import Paper
 
-LANG = 'english'
+LANG = 'english'  # Predefined language for texts analyzed
+SENTENCES_COUNT = 5  # Number of key sentences used for generate summarizes
+_ARTICLES_DIRECTORY = '../sample_articles/'  # Directories for reading/writing files
 
-# Directories for reading/writing files
-_ARTICLES_DIRECTORY = '../sample_articles/'
-
+# Logging config
 logging.basicConfig(level=logging.INFO,
                     filename='surya.log',
                     filemode='a',
@@ -82,7 +82,7 @@ def build_papers_sections_summary(papers_list, sections_to_summarize):
     This function merge the texts corresponding to sections selected for generate a summary
     :param papers_list: A list of papers instances
     :param sections_to_summarize: A list of sections to summarize
-    :return: A str to pass to the the summarize process
+    :return: A str object corresponding to selected sections texts summary
     """
     sections_texts = list(
         map(lambda paper: paper.get_sections_texts_str(sections_to_summarize), parse_papers_list(papers_list))
@@ -91,26 +91,26 @@ def build_papers_sections_summary(papers_list, sections_to_summarize):
     text = ' '.join(sections_texts)
     parser = PlaintextParser.from_string(text, Tokenizer(LANG))
     summarizer = LsaSummarizer()
-    summary = ' '.join(list(map(str, summarizer(parser.document, 5))))
+    summary = ' '.join(list(map(str, summarizer(parser.document, SENTENCES_COUNT))))
 
     return summary
 
 
-def summarize_paper(paper_object, sections_selection=None, sentences_count=10):
+def build_paper_summary(paper_object, sections_selection=None):
     """
+    This function summarize texts corresponding to selected sections in a paper instance
     :param paper_object: An instance of class Paper
     :param sections_selection: List of section's to summarize
-    :param sentences_count: Sentences count to consider for the outputted summary
     :return: A string containing article's summary
     """
     paper_text = paper_object.get_sections_texts_str(sections_selection)
     parser = PlaintextParser.from_string(paper_text, Tokenizer(LANG))
     summarizer = LsaSummarizer()
-    summary_sentences = summarizer(parser.document, sentences_count)
+    summary_sentences = summarizer(parser.document, SENTENCES_COUNT)
     summary = ' '.join(list(map(str, summary_sentences)))
 
     return summary
 
 
 if __name__ == "__main__":
-    os.system("")
+    os.system("Surya package. Utils functions source.")

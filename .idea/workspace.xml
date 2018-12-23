@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0bb1a5fc-c7f5-4db6-bf24-4518ca0e8f15" name="Default" comment="Add of summarization of multiple papers">
+    <list default="true" id="0bb1a5fc-c7f5-4db6-bf24-4518ca0e8f15" name="Default" comment="Add of Summarize list of papers with sections selection">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/surya/paper.py" beforeDir="false" afterPath="$PROJECT_DIR$/surya/paper.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/surya/paper_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/surya/paper_utils.py" afterDir="false" />
@@ -15,11 +15,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/surya$test_advanced.coverage" NAME="test_advanced Coverage Results" MODIFIED="1545596137600" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/surya$test_advanced.coverage" NAME="test_advanced Coverage Results" MODIFIED="1545602820880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/surya$grobid_client.coverage" NAME="grobid-client Coverage Results" MODIFIED="1544312853364" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/grobid-client-python" />
     <SUITE FILE_PATH="coverage/surya$experience_sumy.coverage" NAME="experience-sumy Coverage Results" MODIFIED="1544380449641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/trials/.py" />
     <SUITE FILE_PATH="coverage/DrEA$test_advanced.coverage" NAME="test_advanced Coverage Results" MODIFIED="1541120827839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/surya$test_unit.coverage" NAME="test_unit Coverage Results" MODIFIED="1545596152615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/surya$test_unit.coverage" NAME="test_unit Coverage Results" MODIFIED="1545603562205" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
   </component>
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.5">
@@ -28,8 +28,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/surya/paper.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="251">
-                  <caret line="93" column="69" lean-forward="true" selection-start-line="93" selection-start-column="69" selection-end-line="93" selection-end-column="69" />
+                <state relative-caret-position="445">
+                  <caret line="74" column="67" lean-forward="true" selection-start-line="74" selection-start-column="67" selection-end-line="74" selection-end-column="67" />
                 </state>
               </provider>
             </entry>
@@ -37,8 +37,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/surya/paper_utils.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="175">
-                  <caret line="31" column="95" selection-start-line="31" selection-start-column="95" selection-end-line="31" selection-end-column="95" />
+                <state relative-caret-position="460">
+                  <caret line="71" column="12" lean-forward="true" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="12" />
                   <folding>
                     <element signature="e#25#46#0" expanded="true" />
                   </folding>
@@ -49,46 +49,29 @@
         </leaf>
       </split-first>
       <split-second>
-        <splitter split-orientation="vertical" split-proportion="0.3641347">
-          <split-first>
-            <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/tests/test_advanced.py">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="118">
-                      <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-first>
-          <split-second>
-            <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/tests/test_unit.py">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="30">
-                      <caret line="2" selection-start-line="2" selection-end-line="2" />
-                      <folding>
-                        <element signature="e#25#55#0" expanded="true" />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/tests/surya.log">
-                  <provider selected="true" editor-type-id="LogFileEditorProvider">
-                    <state relative-caret-position="-3638">
-                      <caret line="366" selection-start-line="366" selection-end-line="366" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-second>
-        </splitter>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/test_advanced.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="90">
+                  <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="77" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/tests/test_unit.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="477">
+                  <caret line="84" column="117" selection-start-line="84" selection-start-column="117" selection-end-line="84" selection-end-column="117" />
+                  <folding>
+                    <element signature="e#25#55#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
       </split-second>
     </splitter>
   </component>
@@ -156,11 +139,11 @@
         <option value="$PROJECT_DIR$/drealib/__init__.py" />
         <option value="$PROJECT_DIR$/drealib/paper.py" />
         <option value="$PROJECT_DIR$/drealib/paper_utils.py" />
-        <option value="$PROJECT_DIR$/tests/test_unit.py" />
-        <option value="$PROJECT_DIR$/tests/test_unit.py" />
+        <option value="$PROJECT_DIR$/surya/paper_utils.py" />
         <option value="$PROJECT_DIR$/surya/paper.py" />
         <option value="$PROJECT_DIR$/tests/test_advanced.py" />
-        <option value="$PROJECT_DIR$/surya/paper_utils.py" />
+        <option value="$PROJECT_DIR$/tests/test_unit.py" />
+        <option value="$PROJECT_DIR$/tests/test_unit.py" />
       </list>
     </option>
   </component>
@@ -181,12 +164,23 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="surya" type="b2602c69:ProjectViewProjectNode" />
               <item name="surya" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="surya" type="b2602c69:ProjectViewProjectNode" />
+              <item name="surya" type="462c0819:PsiDirectoryNode" />
+              <item name="laboratory_experimentations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="surya" type="b2602c69:ProjectViewProjectNode" />
+              <item name="surya" type="462c0819:PsiDirectoryNode" />
+              <item name="sample_articles" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="surya" type="b2602c69:ProjectViewProjectNode" />
@@ -202,7 +196,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -332,7 +325,8 @@
       <workItem from="1545424726308" duration="602000" />
       <workItem from="1545491869723" duration="14234000" />
       <workItem from="1545574333798" duration="1655000" />
-      <workItem from="1545580610005" duration="8827000" />
+      <workItem from="1545580610005" duration="9837000" />
+      <workItem from="1545597203090" duration="5733000" />
     </task>
     <task id="LOCAL-00001" summary="Add DrEA_head package for factoring code. Especially for functions &#10;and global variables used along sources.">
       <created>1531948973226</created>
@@ -579,11 +573,18 @@
       <option name="project" value="LOCAL" />
       <updated>1545521985140</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Add of Summarize list of papers with sections selection">
+      <created>1545596243417</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1545596243417</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106107000" />
+    <option name="totallyTimeSpent" value="112850000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -607,7 +608,7 @@
       <window_info anchor="bottom" id="Version Control" internal_type="SLIDING" order="3" type="SLIDING" weight="0.3298639" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32498044" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.49920446" visible="true" weight="0.37509787" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.49920446" visible="true" weight="0.3743148" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.35003915" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -678,7 +679,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Summary of our own article available. Enrichment of paper class with a &#10;_get_paper_text method for extracting article's text to summarize." />
     <MESSAGE value="Upgrade project's structure for better work space quality." />
     <MESSAGE value="Upgrade project's structure for better work space quality. &#10;Reorganization (part 1) test directory and setup.py." />
     <MESSAGE value="Upgrade project's structure for better work space quality. &#10;Reorganization (part 2) test directory and setup.py. The test's &#10;repository is clean." />
@@ -703,7 +703,8 @@
     <MESSAGE value="Rename the drealib package to surya" />
     <MESSAGE value="Add of a parsing function for multi articles input" />
     <MESSAGE value="Code corrections" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code corrections" />
+    <MESSAGE value="Add of Summarize list of papers with sections selection" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add of Summarize list of papers with sections selection" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -778,54 +779,53 @@
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>sections_texts</expression-string>
+        <expression-string>dr.parse_papers_list(['jmir']).pop().title</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>parse_papers_list(papers_list)</expression-string>
+        <expression-string>dr.parse_papers_list(['jmir']).pop()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>list(map(lambda p: p.get_sections_texts_str(SECTIONS_LIST), parsed_papers))</expression-string>
+        <expression-string>dr.parse_papers_list(['jmir'])</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>list(map(lambda p: p.get_text(), parsed_papers))</expression-string>
+        <expression-string>dr.parse_papers_list([self.func])</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>list(map(lambda p: p.get_text(), PAPERS_LIST))</expression-string>
+        <expression-string>len(dr.parse_papers_list([self.func]))</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>map(lambda p: p.get_text(), PAPERS_LIST)</expression-string>
+        <expression-string>[self.func]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>list(map(lambda paper: paper.get_text(), PAPERS_LIST))</expression-string>
+        <expression-string>list(self.func)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>parsed_papers[0].get_sections_texts_as_str([&quot;Background&quot;, &quot;Objective&quot;])</expression-string>
+        <expression-string>self.func</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>parsed_papers[0].get_sections_texts_list([&quot;Background&quot;, &quot;Objective&quot;])</expression-string>
+        <expression-string>dr.parse_papers_list(list(self.func))</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2018.1/python_stubs/-1089549890/builtins.py" />
     <entry file="file://$USER_HOME$/anaconda/envs/DrEA/lib/python3.6/site-packages/pyteaser-1.0-py3.6.egg/pyteaser.py" />
     <entry file="file://$PROJECT_DIR$/Sources/drea_load_parsed_paper.py" />
     <entry file="file://$PROJECT_DIR$/DrEA_head/DrEA_basic_operations.py" />
@@ -937,44 +937,47 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drealib/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/tests/test_unit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#25#55#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/surya.log">
       <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="-3638">
+        <state relative-caret-position="5490">
           <caret line="366" selection-start-line="366" selection-end-line="366" />
         </state>
       </provider>
       <provider editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_advanced.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/tests/.coverage">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/surya/paper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="93" column="69" lean-forward="true" selection-start-line="93" selection-start-column="69" selection-end-line="93" selection-end-column="69" />
+        <state relative-caret-position="445">
+          <caret line="74" column="67" lean-forward="true" selection-start-line="74" selection-start-column="67" selection-end-line="74" selection-end-column="67" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/surya/paper_utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="31" column="95" selection-start-line="31" selection-start-column="95" selection-end-line="31" selection-end-column="95" />
+        <state relative-caret-position="460">
+          <caret line="71" column="12" lean-forward="true" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="12" />
           <folding>
             <element signature="e#25#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_advanced.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_unit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="84" column="117" selection-start-line="84" selection-start-column="117" selection-end-line="84" selection-end-column="117" />
+          <folding>
+            <element signature="e#25#55#0" expanded="true" />
           </folding>
         </state>
       </provider>

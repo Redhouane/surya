@@ -63,7 +63,7 @@ class Paper:
         """
         This method get a list of texts corresponding to a given list of paper's sections
         :param sections_selection: A list of desired sections names
-        :return: A list of str instances corresponding to the paper's sections names contents
+        :return: A list of str instances corresponding to the paper's sections names selection contents
         """
         paper_sections = self.get_text()
 
@@ -117,4 +117,4 @@ class Paper:
 
 
 if __name__ == "__main__":
-    os.system("")
+    os.system("Surya package. Paper class source.")
