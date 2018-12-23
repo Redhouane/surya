@@ -77,6 +77,22 @@ def parse_papers_list(articles_names_list):
             logging.exception("Please check the articles loaded list. At least one of them seems do not exists.")
 
 
+def build_paper_summary(paper_object, sections_selection=None):
+    """
+    This function summarize texts corresponding to selected sections in a paper instance
+    :param paper_object: An instance of class Paper
+    :param sections_selection: List of section's to summarize
+    :return: A string containing article's summary
+    """
+    paper_text = paper_object.get_sections_texts_str(sections_selection)
+    parser = PlaintextParser.from_string(paper_text, Tokenizer(LANG))
+    summarizer = LsaSummarizer()
+    summary_sentences = summarizer(parser.document, SENTENCES_COUNT)
+    summary = ' '.join(list(map(str, summary_sentences)))
+
+    return summary
+
+
 def build_papers_sections_summary(papers_list, sections_to_summarize):
     """
     This function merge the texts corresponding to sections selected for generate a summary
@@ -92,22 +108,6 @@ def build_papers_sections_summary(papers_list, sections_to_summarize):
     parser = PlaintextParser.from_string(text, Tokenizer(LANG))
     summarizer = LsaSummarizer()
     summary = ' '.join(list(map(str, summarizer(parser.document, SENTENCES_COUNT))))
-
-    return summary
-
-
-def build_paper_summary(paper_object, sections_selection=None):
-    """
-    This function summarize texts corresponding to selected sections in a paper instance
-    :param paper_object: An instance of class Paper
-    :param sections_selection: List of section's to summarize
-    :return: A string containing article's summary
-    """
-    paper_text = paper_object.get_sections_texts_str(sections_selection)
-    parser = PlaintextParser.from_string(paper_text, Tokenizer(LANG))
-    summarizer = LsaSummarizer()
-    summary_sentences = summarizer(parser.document, SENTENCES_COUNT)
-    summary = ' '.join(list(map(str, summary_sentences)))
 
     return summary
 
