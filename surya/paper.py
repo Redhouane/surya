@@ -61,9 +61,9 @@ class Paper:
 
     def get_sections_texts_list(self, sections_selection=None):  # "None" for cases when section's dict has no 'heading'
         """
-        This method get a list of texts corresponding to a given list of paper's sections
+        This method get a list of texts corresponding to paper's sections content
         :param sections_selection: A list of desired sections names
-        :return: A list of str instances corresponding to the paper's sections names selection contents
+        :return: A list of str corresponding to the paper's sections selection contents
         """
         paper_sections = self.get_text()
 

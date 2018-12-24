@@ -12,7 +12,7 @@ from sumy.summarizers.lsa import LsaSummarizer
 from surya.paper import Paper
 
 LANG = 'english'  # Predefined language for texts analyzed
-SENTENCES_COUNT = 5  # Number of key sentences used for generate summarizes
+SENTENCES_COUNT = 7  # Number of key sentences used for generate summarizes
 _ARTICLES_DIRECTORY = '../sample_articles/'  # Directories for reading/writing files
 
 # Logging config
