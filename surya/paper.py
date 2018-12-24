@@ -59,6 +59,13 @@ class Paper:
         """
         return self.references
 
+    def get_sections_names(self):
+        """
+        This method allow to getting names of sections from the paper
+        :return: A str list of sections names
+        """
+        return list(map(lambda l: l.get('heading'), self.get_text()))
+
     def get_sections_texts_list(self, sections_selection=None):  # "None" for cases when section's dict has no 'heading'
         """
         This method get a list of texts corresponding to paper's sections content
@@ -68,7 +75,7 @@ class Paper:
         paper_sections = self.get_text()
 
         if sections_selection is None or len(sections_selection) == 0:
-            all_sections_names = list(map(lambda l: l.get('heading'), paper_sections))
+            all_sections_names = self.get_sections_names()
 
             # Filtering of sections handled with "None" value and corresponding to free article's texts
             all_sections = list(filter(lambda l: l.get('heading') in all_sections_names, paper_sections))
