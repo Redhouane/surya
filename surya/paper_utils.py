@@ -9,18 +9,11 @@ from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
 from sumy.summarizers.lsa import LsaSummarizer
 
+from surya import ARTICLES_DIRECTORY
 from surya.paper import Paper
 
 LANG = 'english'  # Predefined language for texts analyzed
 SENTENCES_COUNT = 7  # Number of key sentences used for generate summarizes
-_ARTICLES_DIRECTORY = '../sample_articles/'  # Directories for reading/writing files
-
-# Logging config
-logging.basicConfig(level=logging.INFO,
-                    filename='surya.log',
-                    filemode='a',
-                    datefmt='%d-%m-%Y %H:%M:%S',
-                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
 
 def parse_paper(paper_filename):
@@ -29,7 +22,7 @@ def parse_paper(paper_filename):
     :param paper_filename: Name of article to parse available in "articles" directory
     :return: No value returned
     """
-    paper_to_parse_path = glob(os.path.join(_ARTICLES_DIRECTORY, paper_filename + ".pdf")).pop()
+    paper_to_parse_path = glob(os.path.join(ARTICLES_DIRECTORY, paper_filename + ".pdf")).pop()
 
     logging.info("Papers Parsing...")
     headers = {'Content-type': 'application/pdf'}
@@ -67,7 +60,7 @@ def parse_papers_list(articles_names_list):
     :return: A list of Paper instances corresponding to the parsed articles
     """
     if not articles_names_list:
-        logging.warning("No article selected.")
+        logging.info("No article selected.")
     else:
         try:
             parsed_papers_list = list(map(parse_paper, articles_names_list))

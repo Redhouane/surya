@@ -1,14 +1,15 @@
 # -*- coding: utf-8 -*-
 
-import surya.paper_utils as dr
-
 from glob import glob
 import os
 import requests
 import unittest2
 
+import surya.paper_utils as dr
+from surya import ARTICLES_DIRECTORY
 
-class TestDrEA(unittest2.TestCase):  # TODO: Complete the setup for call unit tests from Makefile
+
+class TestDrEA(unittest2.TestCase):
 
     def setUp(self):
         """
@@ -22,7 +23,7 @@ class TestDrEA(unittest2.TestCase):  # TODO: Complete the setup for call unit te
         Testing connexion to SP API
         :return: True if the SP's service status code response is equal to 200
         """
-        paper_to_parse = glob(os.path.join('../sample_articles/', "jmir" + ".pdf")).pop()
+        paper_to_parse = glob(os.path.join(ARTICLES_DIRECTORY, "jmir" + ".pdf")).pop()
         headers = {'Content-type': 'application/pdf', }
         data = open(paper_to_parse, 'rb').read()
         response = requests.post('http://localhost:8080/v1', headers=headers, data=data)
