@@ -22,6 +22,7 @@ def parse_paper(paper_filename):
     :param paper_filename: Name of article to parse available in "articles" directory
     :return: No value returned
     """
+
     paper_to_parse_path = glob(os.path.join(ARTICLES_DIRECTORY, paper_filename + ".pdf")).pop()
 
     logging.info("Papers Parsing...")
@@ -41,6 +42,7 @@ def build_paper(parsed_paper):
     :param parsed_paper: article parsed using Science-Parse as python dictionary
     :return: A paper object containing article's texts and metadata
     """
+
     paper = Paper()
 
     paper.title = parsed_paper["title"]
@@ -59,6 +61,7 @@ def parse_papers_list(articles_names_list):
     :param articles_names_list: The articles's names to parse
     :return: A list of Paper instances corresponding to the parsed articles
     """
+
     if not articles_names_list:
         logging.info("No article selected.")
     else:
@@ -77,6 +80,7 @@ def build_paper_summary(paper_object, sections_selection=None):
     :param sections_selection: List of section's to summarize
     :return: A string containing article's summary
     """
+
     paper_text = paper_object.get_sections_texts_str(sections_selection)
     parser = PlaintextParser.from_string(paper_text, Tokenizer(LANG))
     summarizer = LsaSummarizer()
@@ -93,6 +97,7 @@ def build_papers_sections_summary(papers_list, sections_to_summarize):
     :param sections_to_summarize: A list of sections to summarize
     :return: A str object corresponding to selected sections texts summary
     """
+
     sections_texts = list(
         map(lambda paper: paper.get_sections_texts_str(sections_to_summarize), parse_papers_list(papers_list))
     )
