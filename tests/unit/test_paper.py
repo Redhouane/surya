@@ -15,6 +15,7 @@ class TestDrEA(unittest2.TestCase):
         """
         Setting up an instance of class Paper
         """
+
         paper_parsed = dr.parse_paper("jmir")
         self.func = dr.build_paper(paper_parsed)
 
@@ -23,6 +24,7 @@ class TestDrEA(unittest2.TestCase):
         Testing connexion to SP API
         :return: True if the SP's service status code response is equal to 200
         """
+
         paper_to_parse = glob(os.path.join(ARTICLES_DIRECTORY, "jmir" + ".pdf")).pop()
         headers = {'Content-type': 'application/pdf', }
         data = open(paper_to_parse, 'rb').read()
@@ -34,6 +36,7 @@ class TestDrEA(unittest2.TestCase):
         Testing if the parsing step returned an empty dictionary
         :return: True if the parsed paper is not empty
         """
+
         assert bool(self.func)
 
     def test_empty_values_parsed_paper(self):
@@ -41,6 +44,7 @@ class TestDrEA(unittest2.TestCase):
         Testing article parsing result - empty attribute case
         :return: True if all paper attribute was correctly informed
         """
+
         self.assertNotEqual(self.func.title, "")
         self.assertNotEqual(self.func.year, "")
         self.assertNotEqual(self.func.abstract, "")
@@ -53,6 +57,7 @@ class TestDrEA(unittest2.TestCase):
         Testing the sections selection from a paper instance
         :return: True if the selection of all sections correspond to the number of sections in the original article
         """
+
         self.assertEqual(len(self.func.get_text()), len(self.func.get_sections_texts_list([])))
 
     def test_paper_sections_extraction(self):
@@ -60,6 +65,7 @@ class TestDrEA(unittest2.TestCase):
         Testing the exact sections selection from a paper instance
         :return: True if the selected section correspond to the right text
         """
+
         paper_methods_section = 'A summary of the approach presented in this study is provided in Figure 1.'
         paper_objective_section = 'Our objective was to evaluate a topic model approach to identify messages ' \
                                   'describing noncompliant behaviors regarding medications. Topics correspond to ' \
@@ -76,6 +82,7 @@ class TestDrEA(unittest2.TestCase):
         Testing the result of parsing empty papers list
         :return: True if the result is an empty list
         """
+
         self.assertIsNone(dr.parse_papers_list([]))
 
     def test_parse_unique_paper_list(self):
@@ -83,6 +90,7 @@ class TestDrEA(unittest2.TestCase):
         Testing the result of parsing a list with one paper
         :return: True if the result is a list with one paper instance
         """
+
         self.assertEqual(len(dr.parse_papers_list(["jmir", "drug_saf", "web_based_signal", "plos", "bmc", "jbi"])), 6)
 
     def test_summarizing_text(self):
@@ -90,6 +98,7 @@ class TestDrEA(unittest2.TestCase):
         Testing a known paper's text summary
         :return: True if the jmir article's summary is equal to the one expected
         """
+
         self.assertEqual(1, 1)
 
 
