@@ -85,10 +85,10 @@ class TestDrEA(unittest2.TestCase):
 
         self.assertIsNone(dr.parse_papers_list([]))
 
-    def test_parse_unique_paper_list(self):
+    def test_parse_n_papers_list(self):
         """
-        Testing the result of parsing a list with one paper
-        :return: True if the result is a list with one paper instance
+        Testing the result of parsing a list with n papers
+        :return: True if the result is a list with n paper instance
         """
 
         self.assertEqual(len(dr.parse_papers_list(["jmir", "drug_saf", "web_based_signal", "plos", "bmc", "jbi"])), 6)

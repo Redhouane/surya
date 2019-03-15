@@ -4,6 +4,7 @@ from glob import glob
 import logging
 import os
 import requests
+from requests.exceptions import ConnectionError
 
 from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
@@ -29,12 +30,13 @@ def parse_paper(paper_filename):
     headers = {'Content-type': 'application/pdf'}
     data = open(paper_to_parse_path, 'rb').read()
 
-    try:
-        return requests.post('http://localhost:8080/v1', headers=headers, data=data).json()
-    except Exception:
-        # At this step, any connection exception involves the same treatment
-        logging.exception("Bad response from science parse tool")
-        raise ValueError("No parsed paper.")  # TODO: Ensure that the right exception type is "ValueError"
+    with requests.Session() as session:
+        try:
+            return session.post('http://localhost:8080/v1', headers=headers, data=data).json()
+        except Exception:
+            # At this step, any connection exception involves the same treatment
+            logging.exception("Bad response from science parse tool")
+            raise ConnectionError("No parsed paper.")
 
 
 def build_paper(parsed_paper):

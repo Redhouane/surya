@@ -15,7 +15,7 @@ ARTICLES_DIRECTORY = '../tests/fixtures/'  # Directories for reading/writing fil
 
 # Logging config
 logging.basicConfig(level=logging.INFO,
-                    filename='../surya.log',
+                    filename='../logs/surya.log',
                     filemode='a',
                     datefmt='%d-%m-%Y %H:%M:%S',
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
