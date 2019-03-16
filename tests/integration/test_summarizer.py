@@ -9,16 +9,15 @@ SECTIONS_LIST = []
 
 try:
     # Summarize a simple paper
-    parsed_papers = dr.parse_papers_list(SINGLE_PAPER_LIST)
+    parsed_papers = dr.parse_papers_list(MULTIPLE_PAPERS_LIST)
+
     # Test text_cleaner :
-    n = parsed_papers[0].get_sections_names()
-    t = paper_cleaner.clean_section_text(
-        parsed_papers[0].get_sections_texts_str(['Document-Term Matrix Weighting']))
-    summary = dr.build_papers_sections_summary(SINGLE_PAPER_LIST, SECTIONS_LIST)
+    paper = parsed_papers[0]
+    text_to_clean = paper.get_sections_texts_str(['Document-Term Matrix Weighting'])
+    cleaned_section_text = paper_cleaner.clean_section_text(text_to_clean)
+
+    summary = dr.build_papers_sections_summary(MULTIPLE_PAPERS_LIST, SECTIONS_LIST)
     print(summary)
 
-    # Summarize a list of papers
-    # sections_texts = dr.build_papers_sections_summary(PAPERS_LIST, SECTIONS_LIST)
-    # print(sections_texts)
 except ValueError:
     print('No summary generated')

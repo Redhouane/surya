@@ -13,7 +13,7 @@ def clean_section_title(section_title):
     return re.sub(r'^(\d[.\-\d\s]*)', '', section_title).lower()
 
 
-def clean_section_text(section_text):
+def clean_section_text(section_text):  # TODO: This cleaning regex need to be fixed
     """
     Clean text from Journal of Medical Internet Research footers
     :param section_text:
