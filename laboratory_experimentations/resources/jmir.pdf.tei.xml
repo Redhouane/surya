@@ -1,0 +1,1468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 /opt/grobid/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<encodingDesc>
+			<appInfo>
+				<application version="0.5.2" ident="GROBID" when="2018-12-09T00:35+0000">
+					<ref target="https://github.com/kermitt2/grobid">GROBID - A machine learning software for extracting information from scholarly documents</ref>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Detection of Cases of Noncompliance to Drug Treatment in Patient Forum Posts: Topic Model Approach</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Redhouane</forename><surname>Abdellaoui</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Unité de Mixte de Recherche</orgName>
+								<address>
+									<addrLine>1138 Team 22</addrLine>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution" key="instit1">Institut National de la Santé et de la Recherche Médicale</orgName>
+								<orgName type="institution" key="instit2">Université Pierre et Marie Curie</orgName>
+								<address>
+									<settlement>Paris</settlement>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><roleName>MSc;</roleName><forename type="first">Pierre</forename><surname>Foulquié</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Innovation (Kap Code)</orgName>
+								<orgName type="institution">Kappa Santé</orgName>
+								<address>
+									<settlement>Paris</settlement>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><roleName>MSc;</roleName><forename type="first">Nathalie</forename><surname>Texier</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Innovation (Kap Code)</orgName>
+								<orgName type="institution">Kappa Santé</orgName>
+								<address>
+									<settlement>Paris</settlement>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><roleName>PharmD;</roleName><forename type="first">Carole</forename><surname>Faviez</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Innovation (Kap Code)</orgName>
+								<orgName type="institution">Kappa Santé</orgName>
+								<address>
+									<settlement>Paris</settlement>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><roleName>MSc;</roleName><forename type="first">Anita</forename><surname>Burgun</surname></persName>
+							<affiliation key="aff0">
+								<orgName type="institution">Unité de Mixte de Recherche</orgName>
+								<address>
+									<addrLine>1138 Team 22</addrLine>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<orgName type="institution" key="instit1">Institut National de la Santé et de la Recherche Médicale</orgName>
+								<orgName type="institution" key="instit2">Université Pierre et Marie Curie</orgName>
+								<address>
+									<settlement>Paris</settlement>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff3">
+								<orgName type="department">Medical Informatics</orgName>
+								<orgName type="laboratory">Institut National de la Santé et de la Recherche Médicale / Université Pierre et Marie Curie</orgName>
+								<orgName type="institution" key="instit1">Hôpital Européen Georges-Pompidou</orgName>
+								<orgName type="institution" key="instit2">Assistance Publique-Hôpitaux de Paris</orgName>
+								<address>
+									<addrLine>15 Rue de l&apos;École de Médecine Paris</addrLine>
+									<postCode>75006</postCode>
+									<settlement>Paris</settlement>
+									<country>France, France</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName xmlns="http://www.tei-c.org/ns/1.0"><roleName>PhD;</roleName><forename type="first">Stéphane</forename><surname>Schück</surname></persName>
+							<affiliation key="aff2">
+								<orgName type="department">Innovation (Kap Code)</orgName>
+								<orgName type="institution">Kappa Santé</orgName>
+								<address>
+									<settlement>Paris</settlement>
+									<country key="FR">France</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Detection of Cases of Noncompliance to Drug Treatment in Patient Forum Posts: Topic Model Approach</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<idno type="DOI">10.2196/jmir.9222</idno>
+					<note>Original Paper Corresponding Author: Redhouane Abdellaoui, MSc Unité de Mixte de Recherche 1138 Team 22</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<abstract>
+				<p>Background: Medication nonadherence is a major impediment to the management of many health conditions. A better understanding of the factors underlying noncompliance to treatment may help health professionals to address it. Patients use peer-to-peer virtual communities and social media to share their experiences regarding their treatments and diseases. Using topic models makes it possible to model themes present in a collection of posts, thus to identify cases of noncompliance.</p>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Introduction</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Background</head><p>A report published by the World Health Organization (WHO) in 2003 highlighted that noncompliance (or nonadherence) to long-term treatment was a worldwide problem detrimental to the overall effectiveness of the health system <ref type="bibr" target="#b0">[1]</ref>. Compliance is defined in this report as the degree of correspondence between a patient's behavior (taking medications, following hygiene rules, and diet) and the recommendations made by a health care professional (HCP). Noncompliance with these recommendations has an impact on patients' quality of life (QoL), outcomes, and health costs.</p><p>The WHO identified several causes of nonadherence to therapies, including the characteristics of the health system, the patient's disease, and the course of treatment. For patients with depression, observance is linked to the frequency of administration of a drug and to concomitant therapy. For patients suffering from cancer, the fear of adverse effects (AEs) related to the treatment has negative impact on adherence. For diabetic patients, adherence may vary with age, sex, and the relationship with the physician. Several meta-analyses showed that current methods of improving medication adherence for chronic diseases were mostly complex and not very effective <ref type="bibr" target="#b1">[2,</ref><ref type="bibr" target="#b2">3]</ref>. The Cochrane group concluded that (1) means to measure adherence more systematically and objectively and (2) innovations to assist patients to follow medication prescriptions for long-term medical disorders were major points to be considered in that field. Considering social media as platforms where patients can discuss about their treatments and share testimonies, they could be a new data source to measure adherence to treatment.</p><p>The use of social media allows large groups of people to create and share information, opinions, and experiences about health conditions and medications through discussions <ref type="bibr" target="#b3">[4]</ref>. Social media provide pharmacovigilance experts with a relevant source of information <ref type="bibr" target="#b4">[5]</ref>. The example of benfluorex <ref type="bibr" target="#b5">[6]</ref> illustrated how social media could be valuable sources for experts. Methods to identify messages with adverse events mentions have been developed (eg, <ref type="bibr" target="#b6">[7]</ref>).</p><p>Social media holds a lot of promise in improving communication and patient engagement <ref type="bibr" target="#b7">[8]</ref>. Horvath et al <ref type="bibr" target="#b8">[9]</ref> and Taggart et al <ref type="bibr" target="#b9">[10]</ref> showed that information sharing and socializing with others were the criteria most often cited when HIV patients describe an ideal social network. Wang et al <ref type="bibr" target="#b10">[11]</ref> modeled the discussions and interests of users of a forum for pregnant women using a topic model and showed that the women were sharing their experiences, fears, and concerns about medications. Stellefson et al <ref type="bibr" target="#b11">[12]</ref> reviewed Web 2.0 interventions proposing a program of self-management to patients older than 50 years for their chronic disease. Patients highlighted the benefit of interacting with other patients. For example, sharing information through social networks enabled patients to communicate better with HCPs. Patients often use social media to discuss drug side effects and adherence to therapies. Mao et al <ref type="bibr" target="#b12">[13]</ref> studied the messages from breast cancer patients treated by aromatase inhibitors. A total of 18.17% (4589/25,256) of the posts mentioned at least one adverse effect, and almost 12.8% (110/862) of the individuals mentioned discontinuing aromatase inhibitors. Chary et al <ref type="bibr" target="#b13">[14]</ref> studied correlations between geographic distribution of prescription opioid misuse estimated from social media and the National Survey on Drug Usage and Health (NSDUH). They concluded that mentions of drug misuse on Twitter correlated strongly with the NSDUH estimates of opioid misuse.</p><p>Social media may even impact treatment adherence. In the study by Horvath et al <ref type="bibr" target="#b14">[15]</ref>, the results of a Web-based survey for HIV patients showed that 52.6% (164/312) of the participants were considered noncompliant. The meta-analysis published by Taggart et al <ref type="bibr" target="#b9">[10]</ref> identified 2 studies on HIV populations that demonstrated a link between the use of social media and the improvement of compliance to treatment among users. Moreover, Mao et al <ref type="bibr" target="#b12">[13]</ref> showed that breast cancer patients offer practical strategies to deal with drug side effects and provide support to each other. For example, 28.10% (7097/25,256) of the posts mentioned some method for addressing their aromatase inhibitor-related arthralgia, including exercising and pharmaceuticals, whether prescribed or over the counter.</p><p>Analysis of a huge number of narratives requires automated text mining techniques <ref type="bibr" target="#b4">[5]</ref>. These techniques have been used to extract information from electronic health records. For example, Topaz et al <ref type="bibr" target="#b15">[16]</ref> mined clinical narratives to identify heart failure patients who did not comply with their treatment. As for health records, detection of nonadherence behaviors in social media also requires text mining techniques.</p><p>Topic models could be used to discover hidden semantic structures in large sets of messages from social media. They could provide deeper exploration of nonadherence behaviors. This exploration is based on patient testimonies of their own decisions about drugs in real life.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Objective</head><p>Our objective was to evaluate a topic model approach to identify messages describing noncompliant behaviors regarding medications. Topics correspond to clusters of words that represent the themes addressed by the patients. The distributions of these themes in a corpus of messages are expected to enable the targeted extraction of posts corresponding to noncompliance behaviors. We focused on two noncompliant behaviors: (1) dose change and (2) treatment cessation.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Prior Work</head><p>Topic modeling is a text mining method designed for exploring the main topics that occur in a set of documents. With topic models, words that often occur together in text are grouped into different topics. On the basis of these topics, topic models provide a tool for unsupervised classification of massive collections of documents. Latent Dirichlet allocation (LDA) was developed by Blei et al as "...a generative probabilistic model for collections of discrete data such as text corpora..." <ref type="bibr" target="#b16">[17]</ref>.</p><p>Topic modeling algorithms have been used to analyze the thematic composition of text corpora extracted from social media in a variety of domains such as politics <ref type="bibr" target="#b17">[18]</ref>. Several authors explored tweets content using LDA to identify health topics, including tobacco use <ref type="bibr" target="#b18">[19]</ref>, seasonal influenza and allergies <ref type="bibr" target="#b14">[15]</ref>, and childhood obesity <ref type="bibr" target="#b19">[20]</ref>. Sullivan et al analyzed users' comments from amazon to build a scoring system for food supplements <ref type="bibr" target="#b20">[21]</ref>.</p><p>Patient forums have been also explored using LDA. Yang et al <ref type="bibr" target="#b6">[7]</ref> analyzed 1500 messages from patient forums to detect adverse drug reactions. The distributions of the themes obtained by applying the LDA model to this corpus made it possible to use similarity measurements for the annotated corpus compared with new messages. The authors proposed a message classifier based on these measurements. Noticeably, all the studies described above used messages in English.</p><p>With the objective of analyzing patients' QoL in breast cancer, Tapi Nzali et al <ref type="bibr" target="#b21">[22]</ref> investigated posts from Facebook groups and a public French breast cancer forum using LDA modeling. They analyzed messages in French.</p><p>Several algorithms may be applied to use topic models. The original version of LDA modeling proposed by Blei et al <ref type="bibr" target="#b16">[17]</ref> has been widely used (eg, <ref type="bibr" target="#b6">[7,</ref><ref type="bibr" target="#b18">19,</ref><ref type="bibr" target="#b19">20,</ref><ref type="bibr" target="#b21">22,</ref><ref type="bibr" target="#b22">23]</ref>). Paul and Dredze developed extensions of the LDA model <ref type="bibr" target="#b14">[15,</ref><ref type="bibr" target="#b23">24,</ref><ref type="bibr" target="#b24">25]</ref>. To establish their Ailment Topic Aspect Model (ATAM), they added several components to associate a term with a theme (eg, a disease), or consider it as not relevant. Then, based on 144 million tweets, they estimated general themes and disease-specific themes such as influenza, cancer, and dental problems. The semantic coherence of the topics obtained by ATAM was better for 61% (11/18) of the estimated topics compared with the LDA <ref type="bibr" target="#b24">[25]</ref>.</p><p>In this study, we investigate the use of LDA to analyze the themes in patient posts and identify noncompliance cases. To the best of our knowledge, this is the first study aiming at identifying forum posts related to nonadherence behaviors.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Methods</head><p>A summary of the approach presented in this study is provided in <ref type="figure" target="#fig_0">Figure 1</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Materials</head><p>The data was extracted from the Detec't database <ref type="bibr" target="#b25">[26]</ref>, a database developed by Kappa Santé <ref type="bibr" target="#b26">[27]</ref> that collects messages from several French forums using a Web crawler. Detec't extracts messages from forums based on a named entity recognition module using a drug lexicon made by Kappa Santé and a fuzzy matching algorithm. The lexicon was based on Racine Pharma and the Anatomical Therapeutic Chemical (ATC) classification system <ref type="bibr" target="#b27">[28]</ref>. Racine Pharma is an extensive source of drug names that covers all medications available on the French market, including brand names and active ingredients. Racine Pharma entries are mapped to the ATC.</p><p>More precisely, we extracted two corpora from Detec't: the first one corresponding to the messages related to escitalopram, an antidepressant drug, the other one related to aripiprazole, an antipsychotic drug. Rationale for choosing these drugs is that nonadherence cases are more likely to be found in chronic diseases and is a major concern in psychiatric disease management <ref type="bibr" target="#b28">[29]</ref>. Moreover, these drugs belong to two different therapeutic classes: escitalopram is in a class of antidepressants called selective serotonin reuptake inhibitors; aripiprazole belongs to the so-called atypical second generation antipsychotics and acts as a partial dopamine agonist.</p><p>All messages extracted from Detec't database in this study were posted from 2004 to 2013 on three of the most popular French forums (doctissimo, atoute, and santé médecine). The metadata accompanying each message that form the corpus were as follows: (1) an identifier, (2) the date of publication on the forum, and (3) the forum from which the message was extracted. Messages were extracted based on the respective brand names: Seroplex and Abilify of the drugs. Posts were selected based on the presence of the drug name in the message.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Methods Used</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Preliminary Data Processing</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Preprocessing</head><p>The aim of the preprocessing step is the data cleaning to reduce noise and incoherence <ref type="bibr" target="#b29">[30]</ref>. Preprocessing was done in six steps:</p><p>1. Considering that the R software (The R Project for Statistical Computing, Vienna) discriminates between lowercase and uppercase words, all messages were converted to lower case text. 2. The punctuation and stop words were removed. 3. We removed all instances of the drug name that was used to build the corpus (eg, seroplex). As it was present in each message, it was overrepresented and does not carry any further information. 4. Spaces were removed whenever needed to create tokens. 5. The stemming of words was carried out using Porter's algorithm <ref type="bibr" target="#b30">[31,</ref><ref type="bibr" target="#b31">32]</ref>. 6. We decided to keep unigrams and bigrams. This made it possible to retain frequent contiguous sequences of two items, such as effets secondaires (AEs).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Standardization of Dosage Mentions</head><p>As variations in representing dosage in posts are possible (eg, milligram or mg), we replaced it by a standard expression in the messages: we identified dosage mentions (eg, 10 mg) by searching each sequence of numbers followed by a dosage unit. Then, we replaced the dosage mention by a neutral string of characters dosemilligrams.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Model Estimation</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Document-Term Matrix Weighting</head><p>The document-term matrix (DTM) describes the frequency of terms that occur in the collection of posts: rows correspond to posts (documents), and columns correspond to terms. If a term occurs in a particular post, then the matrix entry corresponding to that row and column is 1, if not it is 0. The sparsity corresponds to the frequency of zero-valued elements in the matrix.</p><p>A maximum sparsity threshold, above which the token was removed, was determined empirically. The total sparsity of the matrix was calculated for an interval of sparsity thresholds applied to the columns. These values ranged from 99.95% to 80% and decremented by 0.025%. We included tokens corresponding to a DTM sparsity of at least 97%. Then, to avoid overrepresentation of frequent tokens, we applied a weighting to our DTM based on the term-frequency-inversedocument-frequency approach <ref type="bibr" target="#b33">[33]</ref>. One DTM was generated for each corpus (escitalopram and aripiprazole, respectively) and used as input of the topic modeling.</p><p>To remove the tokens that corresponded to spelling errors or abbreviations and consider only words frequently used by patients, we removed infrequent tokens based on DTM sparsity. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>XSL • FO</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>RenderX</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Latent Dirichlet Allocation Modeling</head><p>In this study, we decided to work with LDA algorithm. The model was described as follows by Blei and Lafferty <ref type="bibr" target="#b34">[34]</ref>:</p><p>In LDA, the observed data are the words of each document and the hidden variables represent the latent topical structure, i.e., the topics themselves and how each document exhibits them...The interaction between the observed documents and hidden topic structure is manifest in the probabilistic generative process associated with LDA.</p><p>A document is a mixture of topics; that is, it corresponds to a probability distribution over all topics in the corpus. In other terms, when a patient writes a message, she or he decides to talk about a certain number of topics. When she or he talks about a topic in a message, she or he takes words with a certain probability from the set of terms that correspond to that topic. Assuming that model, each message contains several topics among all the identified topics, and the probability distribution shows how prominent the identified topics are in this message.</p><p>From a technical standpoint, rationale for choosing LDA was threefold:</p><p>• Compared with other types of topic modeling (latent semantic analysis, LSA; nonnegative matrix factorization, NMF; or singular value decomposition applied in the context of LSA), LDA methods are more suited in domains where data is in semantic units, such as words.</p><p>• LDA provides better interpretability of topics than other types of topic modeling (such as NMF).</p><p>• LDA also provides a better semantic coherence of estimated topics than LSA <ref type="bibr" target="#b35">[35]</ref>.</p><p>More precisely, we applied topic modeling with LDA algorithm developed by Blei et al <ref type="bibr" target="#b16">[17,</ref><ref type="bibr" target="#b34">34]</ref>. The LDA model was estimated using the maximum a posteriori (MAP) algorithm described by Taddy <ref type="bibr" target="#b36">[36,</ref><ref type="bibr" target="#b37">37]</ref>. MAP algorithm is a variant of expectation-maximization (EM) algorithm with a lower calculation cost and more stable results than the algorithms commonly used for estimates (Gibbs sampling, variational EM). At each iteration, instead of approximating the maximization of marginal likelihood, a combined estimate of the parameters is calculated by block-diagonalization of the Hessian matrix. This leads to an exact estimate of the distribution of topics, rather than an approximation. The number of topics was selected using the log Bayes factor <ref type="bibr" target="#b36">[36]</ref>. Log Bayes factor is a ratio of likelihood used for model comparisons. By computing it against a one-topic model for several numbers of topics, it allows to select the most appropriate number. The output is twofold: (1) the probabilities of appearance associated with vocabulary terms in each of the topics and (2) the distribution thereof in the messages.</p><p>With the aim of optimizing interpretability and semantic coherence of topics, we considered a message significantly associated to a topic when at least 25% of the tokens it contained were associated to this topic. The 25% threshold was set empirically.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Evaluation</head><p>The aim of the evaluation step was to assess the number of messages correctly identified by our approach. Manual evaluation was performed in two steps:</p><p>1. We reviewed manually all messages related to the topics of interest (dosage variation and treatment interruption) in the two corpora (Escitalopram and Aripiprazole </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Software</head><p>Analyses were performed using the R software. For the preprocessing of the corpus, the packages tm <ref type="bibr" target="#b39">[39]</ref>, SnowballC, and slam were used. Topic models were estimated using the following packages: topicmodels <ref type="bibr" target="#b40">[40]</ref> and MAPTPX. The tokens that appeared least frequently in the corpora were removed <ref type="table">(Table 2)</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Results</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Datasets Characteristics</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Dosage Variations and Treatment Discontinuation</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Model Estimation</head><p>The log Bayes factor topic selection method returned a total of 13 topics for the escitalopram corpus, as shown in <ref type="figure" target="#fig_1">Figure 2</ref>. The same approach led us to identify 11 topics for the aripiprazole corpus.</p><p>We For the aripiprazole data, we obtained a total of 1778 messages mentioning the drug and distributed among 11 topics. The 396 remaining messages were below the threshold for association between message terms and topics. The average number of topics per message was 1.31 and the median 1.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Topics Interpretation</head><p>As a topic must be interpretable with the first terms obtained (ranked by their probability of appearance) <ref type="bibr" target="#b34">[34]</ref>, topics found were labeled manually based on the first 15 words.  </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Escitalopram Topics</head><p>The list of topics and the distribution of messages in topics regarding escitalopram are displayed in Multimedia Appendix 1. This result is expressed as frequencies and proportions of messages (in relation to the 3649 escitalopram messages) associated with each theme. A message is associated with a topic if it contains at least 25% of terms for which the corresponding latent variability describes an association with the topic in question.</p><p>We noticed the emergence of a class containing messages describing user's experiences with the drug in a general way (topic 7) and how it affects their condition (topic 6). Topics 3 and 8 related to the day-to-day feeling of patients and the activities they have. Topic 2 was linked to the drug prescription by HCPs and topic 5 to panic attacks and anxiety. Topics 9, 10, and 12 focused on messages about AEs experienced or feared by users, along with the drug's effects overall. Topic 13 was related to the duration of the treatment.</p><p>Topics 1 was labeled as general themes. It describes themes associated with discussions between individuals and corresponds to poorly informative vocabulary. Such a collection of words provided no information of interest for our study. Nevertheless, it was widely used in messages, which explains the relatively high proportion of messages associated to this topic.</p><p>Messages about problems with treatment discontinuation and dosage variations were respectively included in topics 4 and 11. The intersection of the two noncompliance topics corresponded to 7 messages.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Aripiprazole Topics</head><p>The topics obtained by reproducing the modeling steps with the aripiprazole corpus are described in Multimedia Appendix 1.</p><p>Among the topics estimated for the aripiprazole corpus, we found the description of the patient's experience (topic 4) of his or her treatment. Three topics described the effects thereof (topics 3, 4, and 8), and one related to its duration (topic 9). Two topics focused on the patients' relationships with HCPs (topic 5) and other individuals (topic 6). Topic 7 described treatment interruption. Dosage variations were described in topic 1. The intersection of the two noncompliance topics (7 and 1) corresponded to 6 messages. As for escitalopram, two topics were composed of noninformative words (general themes).</p><p>Multimedia Appendix 2 shows the identified topics in the two corpora.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Evaluation of the Approach</head><p>IAA rate was measured on 20% (169/844) of the messages identified by the noncompliance topics using Cohen kappa coefficient. We obtained a kappa of 0.90 (152/169).  We calculated the ratio of messages corresponding to a case of noncompliance associated with each topic of interest. The results are displayed in <ref type="table" target="#tab_4">Tables 3 and 4</ref>. Globally, the precision score for noncompliance was 32.6% (272/844). We obtained the lowest score (23.4%, 62/265) for the aripiprazole discontinuation topic and the highest score (46.3%, 100/216) for escitalopram discontinuation.</p><p>The analysis of 20% (345/1723 for aripiprazole, 650/3246 for escitalopram) of the messages related to other topics than noncompliance revealed only four messages describing a nonadherence behavior and not detected by our approach. The four false negative messages were all about stopping aripiprazole. Regarding the different subsets, we obtained a 94% (62/66) recall score for the aripiprazole cessation topic and 100% for the other ones. Globally, the estimated recall score was 98.5% (272/276).</p><p>We present below a detailed analysis of the results for the aripiprazole corpus.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Dosage Variations</head><p>Topics modeling identified 176 messages as dosage variations messages. Manual review revealed that only 56 (31.8%, 56/176) messages contained a true noncompliance declaration (2.6% of the 2164 posts initially in the corpus).</p><p>Among the 120 remaining messages, 68 (56.7%, 68/120) were discussions between patients comparing their dosages for aripiprazole. A total of 13 messages (10.8%, 13/120) contained information regarding the dosages of other prescribed drugs in addition to aripiprazole. The most cited drugs were amisulpride and olanzapine. Eight posts (6.7%, 8/120) were questions about aripiprazole's dosages, seven messages (5.8%, 7/120) evoked dosages modification, six posts (5.0%, 6/120) reported a dosage modification in agreement with the physician, and four messages (3.3%, 4/120) were advices. Eight messages (6.7%, 8/120) did not contain dosage mentions but only variation words such as increase or decrease, usually accompanying dosage references.</p><p>The remaining six posts (5.0%, 6/120) mentioned variations that were planned or could occur in the future. For example:</p><p>[...] take 5 mg also for the moment the psy wants to increase the dose to 10 mg at the next appointment <ref type="bibr">[...]</ref> In all the noncompliance cases (56 cases), the patient decreased the dose because of adverse drug reactions (ADRs). The most frequent ADRs mentioned in these posts were insomnia, asthenia, and libido problems.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Treatment Cessation</head><p>We identified 62 messages corresponding to noncompliance behaviors out of the 265 posts related to the treatment cessation topic (23.4%, 62/265). In other terms, 2.86% (62/2164) of the 2164 posts in the corpus are messages from patients taking aripiprazole who decided to stop their treatment.</p><p>Among the 203 remaining posts, thirteen posts (6.4%, 13/203) corresponded to the interruption of aripiprazole but were not cases of noncompliance: either aripiprazole was stopped to start another treatment, or the treatment cessation was decided by the physician.</p><p>A total of 89 posts (43.9%, 89/203) were written by patients who were prescribed this treatment in the past.</p><p>In 55 messages (27.1%, 55/203), the patient mentioned that she or he was reluctant to continue the treatment, mainly (74.6%, 151/203) because of ADRs. The most cited symptoms were insomnia, tiredness, libido problems, and nausea.</p><p>In 23 (11.3%, 23/203) posts, the patient was given more than one drug, and the post described the interruption of one of the other drugs (eg, in fourteen cases it was olanzapine that was stopped).</p><p>Eighteen posts were assigned erroneously to the treatment cessation topic because they contained terms like stop, although not reporting discontinuation of aripiprazole. These included 11 messages (5.4%, 11/203), where interruption was not related to any health topic such as in "[...] I'm stopped, like frozen, <ref type="bibr">[...]</ref>," five messages corresponding to cessation of alcohol, narcotics, or smoking (and not aripiprazole; 2.5%, 5/203), and two posts (&lt;1%, 1/203) where the patient stopped her or his diet or other activities.</p><p>The five remaining messages (2.5%, 5/203) were requests for advices mentioning a possible treatment cessation.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Discussion</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Principal Findings</head><p>Our study shows that topic models are useful to identify subsets of messages reporting noncompliance behaviors.</p><p>The topic models approach detected cases of noncompliance behaviors with averages recall and precision scores of 98.5% (272/276) and 32.6% (272/844), respectively. We concluded that the topic modeling presented in our study was a valuable sensitive method to detect noncompliance. However, it lacks specificity. We identified several situations leading to false positives: (1) two experiencers in the same message (eg, Peter takes 100 mg, whereas John takes 200 mg); (2) events in different time slots (eg, the patient reports that the doctor wants to increase or decrease the dose at the next appointment); and (3) the action concerns something else than the drug (eg, another medication and smoking cessation). Moreover, in several false positives, cessation or modification was prescribed by the physician.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Clinical Significance</head><p>We focused on escitalopram and aripiprazole used to treat depression and psychotic conditions, respectively.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Escitalopram</head><p>Almost one million individuals (2% of the overall population) initiated an antidepressant in France in 2011 <ref type="bibr" target="#b41">[41]</ref>. Patients' adherence to antidepressant therapy must be evaluated. The reasons behind patient nonadherence to antidepressants include patient factors (eg, concerns about side effects and fears of addiction), as well as poor follow-up by the clinician and lack of sufficient patient education <ref type="bibr" target="#b42">[42]</ref>. Better understanding of the patients' concerns about these medications can be achieved by exploring the messages in social media. We retrieved 2691 messages about escitalopram, among which 154 (5.71%, 154/2691) were noncompliance messages <ref type="table" target="#tab_4">(Table 3)</ref>. AEs were the most commonly cited reason for discontinuation and dose reduction. The more common side effects for escitalopram included nausea, weakness, dizziness, sleeping disorders, and sexual problems.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Aripiprazole</head><p>In a recently published review <ref type="bibr" target="#b43">[43]</ref>, a positive attitude toward medication at baseline in combination with good psychosocial function was the best predictor of objectively measured mean adherence over a 12-month period in patients with schizophrenia. AEs such as patient-reported cognitive impairment resulting from antipsychotic medication were predictors of nonadherence. Common side effects of aripiprazole also include weight gain, nausea, vomiting, changes in appetite, dizziness, drowsiness, feeling tired, and insomnia, among others.</p><p>In our corpus, patients reported that such AEs were reasons for stopping the treatment or changing the dose. Almost 7% (6.86%, 122/1778) of the posts in the aripiprazole corpus corresponded to noncompliance behaviors. All decisions to change the dose by the patient corresponded to decreasing the dose because of AEs. This result suggests that text mining methods must extract ADR information along with noncompliance annotation.</p><p>We calculated the rate of messages describing an effective noncompliance behavior. These rates were measured on messages corresponding to topics identified on the aripiprazole corpus. This evaluation resulted in 31.8% (56/176) for dosage variations and 23.4% (62/265) for treatment discontinuation.</p><p>Using topic models seems to be insufficient for identifying noncompliance cases on social media without a manual review step. However, this lexical approach produced only four false negatives and enabled us to reduce the corpus by focusing on messages that had a high probability to contain descriptions of targeted noncompliance behaviors.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Limitations</head><p>Our study focused on two drugs from two distinct classes. Both drugs are used to treat psychiatric disorders. A review currently including 50 clinical studies and 9476 participants taking antipsychotic drugs revealed an overall attrition from the included studies of 49% <ref type="bibr" target="#b44">[44]</ref>. Consequently, our results regarding the noncompliance rate and the reasons for not being compliant cannot be extrapolated to other patient profiles. Further studies on other therapeutic classes must be conducted.</p><p>Manual review was required to distinguish between true and false positives in each dataset. The vocabulary used to describe dosage modifications or treatment interruptions in messages is commonly employed for characterizing other kinds of general variations or cessations (diet, smoking, etc). Topic models demonstrated their ability to identify potential noncompliance messages (average recall 98.5%, 272/276). Syntactic and semantic methods could be developed to recognize the experiencers, the temporal features, and the object concerned by the action in the sentences. Such methods could be applied to the datasets identified by the topic models to reduce the number of false positives and improve the precision score.</p><p>Another limitation of our work is the empirical determination of the thresholds used in our method. The thresholds concern the reduction in the size of the DTM and the significance of the association of messages to topics:</p><p>1. The choice of a sparsity threshold under 97% for DTM does not guarantee the best compromise between the calculation cost and the preservation of information for all the corpora we used. 2. The threshold for association between message words and topics, which was set at 25%, led to 23.23% (1354/5813) of messages not related to any topic.</p><p>Such empirical approach in the application of these methods is frequently reported in the literature; for example, Prier et al <ref type="bibr" target="#b18">[19]</ref> set a suitable number of topics for their corpus by testing thresholds set every 50 topics.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Comparison With Other Work</head><p>Our study, to our knowledge, is the first one aiming at analyzing noncompliance behaviors from social media messages.</p><p>Most of the studies <ref type="bibr" target="#b17">[18,</ref><ref type="bibr" target="#b20">21,</ref><ref type="bibr" target="#b21">22,</ref><ref type="bibr" target="#b24">25]</ref> used topic models to automatically label sets of tweets. Only 2 studies <ref type="bibr" target="#b6">[7,</ref><ref type="bibr" target="#b21">22]</ref> focused on medical themes and messages from Web forums. Both used the same LDA model. Tapi Nzali et al <ref type="bibr" target="#b21">[22]</ref> used the same R package <ref type="bibr" target="#b40">[40]</ref>. However, their study design was different: they evaluated the correspondence between identified topics and QoL questionnaires, whereas our study aimed at detecting nonadherence behaviors.</p><p>Yang et al reported higher precision rates in their study <ref type="bibr" target="#b6">[7]</ref>. Nevertheless, the aim of their study was detection of ADRs, not noncompliance practices.</p><p>Our approach could benefit from a more sophisticated model. The Structural Topic Model, developed by Wang et al <ref type="bibr" target="#b10">[11]</ref>, enables the modeling of correlations between topics and transitions made within messages. The additional components would enable the identification of relations between noncompliant practices and information, such as ADRs. We could therefore determine potential causes of nonadherence to treatment for each kind of drug.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conclusions</head><p>Topic distributions in messages are a way to classify posts and detect noncompliance behaviors. The topic modeling approach achieved very high recall (98.5%, 272/276). Manual review of the messages in the noncompliance topics showed that almost 6.17% (276/4469) of the posts written by patients taking aripiprazole or escitalopram revealed noncompliance to treatment (half of them stopping their treatment). These findings indicate that social media mining may contribute to better understand noncompliance attitudes.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Conflicts of Interest</head><p>None declared.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Multimedia Appendix 1</head><p>Exhaustive description of identified topics for each medication.</p><p>[XLSX File (Microsoft Excel File), 12KB -jmir_v20i3e85_app1.xlsx ]</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Multimedia Appendix 2</head><p>Topics found in each corpus ranked by the number of messages.</p><p>[XLSX File (Microsoft Excel File), 31KB -jmir_v20i3e85_app2.xlsx ]</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Figure 1 .</head><label>1</label><figDesc>Figure 1. Summary diagram.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Figure 2 .</head><label>2</label><figDesc>Figure 2. Number of topics selected for Escitalopram using the log Bayes factor.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1" validated="true"><head>Table 1 shows the number of messages in each corpus.</head><label>1</label><figDesc></figDesc><table>The preliminary preprocessing of escitalopram corpus returned 
+a DTM of 3650 messages and 155,883 tokens (unigrams and 
+bigrams). Setting the sparsity threshold at 99.35% 
+(3626.275/3650), we obtained a DTM of 3649 messages and 
+1497 tokens. One message was removed because the terms it 
+contained were particularly misspelled. 
+
+The processing of the aripiprazole corpus yielded a DTM of 
+2164 messages and 81,371 tokens. On the basis of a sparsity 
+threshold of 99.25% (2147.77/2164), we obtained a DTM of 
+2164 messages and 1062 terms. 
+
+</table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_2" validated="false"><head>purposes) Abdellaoui et al JOURNAL OF MEDICAL INTERNET RESEARCH XSL • FO RenderX and topics, which was set at 25%. The average number of topics per message was 1.22 and the median 1.</head><label></label><figDesc>obtained a total of 2691 messages evoking escitalopram and belonging to 13 topics. The 958 remaining messages were below the threshold regarding the association between terms</figDesc><table>J Med Internet Res 2018 | vol. 20 | iss. 3 | e85 | p.5 
+http://www.jmir.org/2018/3/e85/ 
+(page number not for citation </table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_3" validated="true"><head>Table 1 . Corpora description.</head><label>1</label><figDesc></figDesc><table>Date of publication 
+Number of messages containing the drug name, n 
+Therapeutic class 
+Drug 
+
+2004 to 2013 
+3650 
+Antidepressant 
+Escitalopram 
+
+2005 to 2013 
+2164 
+Antipsychotic 
+Aripiprazole 
+
+Table 2. Description of the document-term matrix (DTM) dissemination thresholds. 
+
+Sparsity after 
+
+processing, n (%) 
+
+Term frequency after 
+
+processing, n 
+
+Sparsity threshold 
+
+per token, n (%) 
+
+Sparsity before 
+
+processing, n (%) 
+
+Term frequency before 
+
+processing, n 
+
+Drug 
+
+151,097 (96.93) 
+1497 
+3626.275 (99.35) 
+155,774 (99.93) 
+155,883 
+Escitalopram 
+
+78,922 (96.99) 
+1062 
+2147.77 (99.25) 
+81,281 (99.89) 
+81,371 
+Aripiprazole 
+
+</table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_4" validated="true"><head>Table 3 . Annotations of the escitalopram corpus.</head><label>3</label><figDesc></figDesc><table>Precision, % 
+Number of correctly classified messages, n 
+Number of messages, n 
+Identified behavior 
+
+28.9 
+54 
+187 
+Dosage variations 
+
+46.3 
+100 
+216 
+Treatment cessation 
+
+</table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_5" validated="true"><head>Table 4 . Annotations of the aripiprazole corpus.</head><label>4</label><figDesc></figDesc><table>Precision, % 
+Number of correctly classified messages, n 
+Number of messages, n 
+Identified behavior 
+
+31.8 
+56 
+176 
+Dosage variations 
+
+23.4 
+62 
+265 
+Treatment cessation 
+
+</table></figure>
+
+			<note place="foot">J Med Internet Res 2018 | vol. 20 | iss. 3 | e85 | p.2 http://www.jmir.org/2018/3/e85/ (page number not for citation purposes)</note>
+
+			<note place="foot">J Med Internet Res 2018 | vol. 20 | iss. 3 | e85 | p.3 http://www.jmir.org/2018/3/e85/ (page number not for citation purposes)</note>
+
+			<note place="foot">J Med Internet Res 2018 | vol. 20 | iss. 3 | e85 | p.6 http://www.jmir.org/2018/3/e85/ (page number not for citation purposes)</note>
+
+			<note place="foot">J Med Internet Res 2018 | vol. 20 | iss. 3 | e85 | p.7 http://www.jmir.org/2018/3/e85/ (page number not for citation purposes)</note>
+
+			<note place="foot">J Med Internet Res 2018 | vol. 20 | iss. 3 | e85 | p.8 http://www.jmir.org/2018/3/e85/ (page number not for citation purposes)</note>
+
+			<note place="foot">J Med Internet Res 2018 | vol. 20 | iss. 3 | e85 | p.9 http://www.jmir.org/2018/3/e85/ (page number not for citation purposes)</note>
+
+			<note place="foot">J Med Internet Res 2018 | vol. 20 | iss. 3 | e85 | p.10 http://www.jmir.org/2018/3/e85/ (page number not for citation purposes)</note>
+
+			<note place="foot">J Med Internet Res 2018 | vol. 20 | iss. 3 | e85 | p.11 http://www.jmir.org/2018/3/e85/ (page number not for citation purposes)</note>
+
+			<note place="foot">J Med Internet Res 2018 | vol. 20 | iss. 3 | e85 | p.12 http://www.jmir.org/2018/3/e85/ (page number not for citation purposes)</note>
+		</body>
+		<back>
+			<div type="annex">
+			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m" type="main">World Health Organization. Adherence to Long-term Therapies: Evidence for Action</title>
+		<imprint>
+			<date type="published" when="2003" />
+			<pubPlace>Geneva: WHO</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Interventions for helping patients to follow prescriptions for medications</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><forename type="middle">B</forename><surname>Haynes</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><surname>Mcdonald</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><forename type="middle">X</forename><surname>Garg</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">P</forename><surname>Montague</surname></persName>
+		</author>
+		<idno type="doi">CD000011.[doi:10.1002/14651858.CD000011</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Cochrane Database Syst Rev</title>
+		<imprint>
+			<biblScope unit="volume">2002</biblScope>
+			<biblScope unit="issue">2</biblScope>
+		</imprint>
+	</monogr>
+	<note>Medline: 12076376</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Interventions for enhancing medication adherence</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Nieuwlaat</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">N</forename><surname>Wilczynski</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">T</forename><surname>Navarro</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">N</forename><surname>Hobson</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Jeffery</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Keepanasseril</surname></persName>
+		</author>
+		<idno type="doi">doi:10.1002/14651858.CD000011.pub4</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Cochrane Database Syst Rev</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page">11</biblScope>
+			<date type="published" when="2014" />
+		</imprint>
+	</monogr>
+	<note>Medline: 25412402</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Fox</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Duggan</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><surname>Pewinternet</surname></persName>
+		</author>
+		<idno>2018-02-27</idno>
+		<ptr target="http://www.pewinternet.org/2013/01/15/health-online-2013/" />
+	</analytic>
+	<monogr>
+		<title level="j">Health Online</title>
+		<imprint>
+			<date type="published" when="2013-01-15" />
+		</imprint>
+	</monogr>
+	<note>WebCite Cache ID 6xXiCgyLK</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Adverse drug reaction identification and extraction in social media: a scoping review</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><surname>Lardon</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Abdellaoui</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">F</forename><surname>Bellet</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><surname>Asfari</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><surname>Souvignet</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">N</forename><surname>Texier</surname></persName>
+		</author>
+		<idno type="doi">doi:10.2196/jmir.4304</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J Med Internet Res</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="issue">7</biblScope>
+			<biblScope unit="page">171</biblScope>
+			<date type="published" when="2015-07-10" />
+		</imprint>
+	</monogr>
+	<note>FREE Full text. Medline: 26163365</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Analysis of patients&apos; narratives posted on social media websites on benfluorex&apos;s (Mediator® ) withdrawal in France</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Abou Taam</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><surname>Rossard</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">L</forename><surname>Cantaloube</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">N</forename><surname>Bouscaren</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">G</forename><surname>Roche</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">L</forename><surname>Pochard</surname></persName>
+		</author>
+		<idno type="doi">doi:10.1111/jcpt.12103</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J Clin Pharm Ther</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="53" to="55" />
+			<date type="published" when="2014-02" />
+		</imprint>
+	</monogr>
+	<note>Medline: 24304185</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Filtering big data from social media--Building an early warning system for adverse drug reactions</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Kiang</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">W</forename><surname>Shang</surname></persName>
+		</author>
+		<idno type="doi">doi:10.1016/j.jbi.2015.01.011</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J Biomed Inform</title>
+		<imprint>
+			<biblScope unit="volume">54</biblScope>
+			<biblScope unit="page" from="230" to="240" />
+			<date type="published" when="2015-04" />
+		</imprint>
+	</monogr>
+	<note>FREE Full text. Medline: 25688695</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Empowering patients through social media: the benefits and challenges</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Househ</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">E</forename><surname>Borycki</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Kushniruk</surname></persName>
+		</author>
+		<idno type="doi">doi:10.1177/1460458213476969</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Health Informatics J</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="50" to="58" />
+			<date type="published" when="2014-03" />
+		</imprint>
+	</monogr>
+	<note>Medline: 24550564</note>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Technology use and reasons to participate in social networking health websites among people living with HIV in the US</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><forename type="middle">J</forename><surname>Horvath</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">G</forename><forename type="middle">P</forename><surname>Danilenko</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><forename type="middle">L</forename><surname>Williams</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><surname>Simoni</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><forename type="middle">R</forename><surname>Amico</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><forename type="middle">M</forename><surname>Oakes</surname></persName>
+		</author>
+		<idno type="doi">doi:10.1007/s10461-012-0164-7</idno>
+	</analytic>
+	<monogr>
+		<title level="j">AIDS Behav</title>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="900" to="910" />
+			<date type="published" when="2012-05" />
+		</imprint>
+	</monogr>
+	<note>FREE Full text. Medline: 22350832</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Social media and HIV: a systematic review of uses of social media in HIV communication</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">T</forename><surname>Taggart</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><forename type="middle">E</forename><surname>Grewe</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><forename type="middle">F</forename><surname>Conserve</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><surname>Gliwa</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">I</forename><forename type="middle">M</forename><surname>Roman</surname></persName>
+		</author>
+		<idno type="doi">doi:10.2196/jmir.4387</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J Med Internet Res</title>
+		<imprint>
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page">248</biblScope>
+			<date type="published" when="2015-11-02" />
+		</imprint>
+	</monogr>
+	<note>FREE Full text. Medline: 26525289</note>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<analytic>
+		<title level="a" type="main">On mining latent topics from healthcare chat logs</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">T</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Z</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><surname>Gan</surname></persName>
+		</author>
+		<idno type="doi">doi:10.1016/j.jbi.2016.04.008</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J Biomed Inform</title>
+		<imprint>
+			<biblScope unit="volume">61</biblScope>
+			<biblScope unit="page" from="247" to="259" />
+			<date type="published" when="2016-06" />
+		</imprint>
+	</monogr>
+	<note>FREE Full text. Medline: 27132766</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<analytic>
+		<title level="a" type="main">Web 2.0 chronic disease self-management for older adults: a systematic review</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Stellefson</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">B</forename><surname>Chaney</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><forename type="middle">E</forename><surname>Barry</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">E</forename><surname>Chavarria</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">B</forename><surname>Tennant</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><surname>Walsh-Childers</surname></persName>
+		</author>
+		<idno type="doi">doi:10.2196/jmir.2439</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J Med Internet Res</title>
+		<imprint>
+			<biblScope unit="volume">15</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page">35</biblScope>
+			<date type="published" when="2013-02" />
+		</imprint>
+	</monogr>
+	<note>FREE Full text. Medline: 23410671</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Online discussion of drug side effects and discontinuation among breast cancer survivors</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><forename type="middle">J</forename><surname>Mao</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Chung</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Benton</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Hill</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">L</forename><surname>Ungar</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><forename type="middle">E</forename><surname>Leonard</surname></persName>
+		</author>
+		<idno type="doi">doi:10.1002/pds.3365</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Pharmacoepidemiol Drug Saf</title>
+		<imprint>
+			<biblScope unit="volume">22</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="256" to="262" />
+			<date type="published" when="2013-03" />
+		</imprint>
+	</monogr>
+	<note>FREE Full text. Medline: 23322591</note>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Epidemiology from tweets: estimating misuse of prescription opioids in the USA from social media</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Chary</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">N</forename><surname>Genes</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Giraud</forename><forename type="middle">-</forename><surname>Carrier</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><surname>Hanson</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><surname>Nelson</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">L</forename><forename type="middle">S</forename><surname>Manini</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><forename type="middle">F</forename></persName>
+		</author>
+		<idno type="doi">doi:10.1007/s13181-017-0625-5</idno>
+	</analytic>
+	<monogr>
+		<title level="j">J Med Toxicol</title>
+		<imprint>
+			<biblScope unit="volume">13</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="278" to="286" />
+			<date type="published" when="2017-12" />
+		</imprint>
+	</monogr>
+	<note>Medline: 28831738</note>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<monogr>
+		<title level="m" type="main">A model for mining public health topics from Twitter</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Paul</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Dredze</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><surname>Semanticscholar</surname></persName>
+		</author>
+		<idno>2018-02-21</idno>
+		<ptr target="https://pdfs.semanticscholar.org/41cb/ae26fe87307e6878e87b0a08056206a5c4c1.pdf" />
+		<imprint>
+			<date type="published" when="2011" />
+		</imprint>
+	</monogr>
+	<note>WebCite Cache ID 6xPFXCK8k</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Mining clinicians&apos; electronic documentation to identify heart failure patients with ineffective self-management: a pilot text-mining study</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Topaz</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><surname>Radhakrishnan</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">V</forename><surname>Lei</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">L</forename><surname>Zhou</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Stud Health Technol Inform</title>
+		<imprint>
+			<biblScope unit="volume">225</biblScope>
+			<biblScope unit="page">27332377</biblScope>
+			<date type="published" when="2016" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<analytic>
+		<title level="a" type="main">Latent dirichlet allocation</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><forename type="middle">M</forename><surname>Blei</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><forename type="middle">Y</forename><surname>Ng</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><forename type="middle">I</forename><surname>Jordan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Mach Learn Res</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="993" to="1022" />
+			<date type="published" when="2003" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Identifying topics in microblogs using Wikipedia</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Yıldırım</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Üsküdarlı</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Özgür</surname></persName>
+		</author>
+		<idno type="doi">doi:10.1371/journal.pone.0151885</idno>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS One</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page">151885</biblScope>
+			<date type="published" when="2016-03-18" />
+		</imprint>
+	</monogr>
+	<note>FREE Full text. Medline: 26991442</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Identifying health-related topics on Twitter</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><forename type="middle">W</forename><surname>Prier</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><forename type="middle">S</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Giraud</forename><forename type="middle">-</forename><surname>Carrier</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><surname>Hanson</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><forename type="middle">L</forename></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Social Computing, Behavioral-Cultural Modeling and Prediction. SBP 2011</title>
+		<editor>Salerno J, Yang SJ, Nau D, Chai SK</editor>
+		<meeting><address><addrLine>Berlin, Heidelberg</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer-Verlag</publisher>
+			<date type="published" when="2011" />
+			<biblScope unit="volume">6589</biblScope>
+			<biblScope unit="page" from="18" to="25" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">What are we &apos;tweeting&apos; about obesity? Mapping tweets with Topic Modeling and Geographic Information System</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><forename type="middle">D</forename><surname>Ghosh</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Guha</surname></persName>
+		</author>
+		<idno type="doi">doi:10.1080/15230406.2013.776210</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Cartogr Geogr Inf Sci</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="90" to="102" />
+			<date type="published" when="2013" />
+		</imprint>
+	</monogr>
+	<note>FREE Full text. Medline: 25126022</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<analytic>
+		<title level="a" type="main">Finding potentially unsafe nutritional supplements from user reviews with topic modeling</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Sullivan</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Sarker</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><surname>O&amp;apos;connor</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Goodin</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Karlsrud</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">G</forename><surname>Gonzalez</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Pac Symp Biocomput</title>
+		<imprint>
+			<biblScope unit="volume">21</biblScope>
+			<biblScope unit="page" from="528" to="539" />
+			<date type="published" when="2016" />
+		</imprint>
+	</monogr>
+	<note>FREE Full text. Medline: 26776215</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<analytic>
+		<title level="a" type="main">What patients can tell us: topic analysis for social media on breast cancer</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Tapi</forename><surname>Nzali</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><forename type="middle">D</forename><surname>Bringay</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Lavergne</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><surname>Mollevi</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><surname>Opitz</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">T</forename></persName>
+		</author>
+		<idno type="doi">doi:10.2196/medinform.7779</idno>
+	</analytic>
+	<monogr>
+		<title level="j">JMIR Med Inform</title>
+		<imprint>
+			<biblScope unit="volume">5</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page">23</biblScope>
+			<date type="published" when="2017-07-31" />
+		</imprint>
+	</monogr>
+	<note>FREE Full text. Medline: 28760725</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<analytic>
+		<title level="a" type="main">Identifying topics in microblogs using Wikipedia</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Yıldırım</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Üsküdarlı</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Özgür</surname></persName>
+		</author>
+		<idno type="doi">doi:10.1371/journal.pone.0151885</idno>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS One</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page">151885</biblScope>
+			<date type="published" when="2016" />
+		</imprint>
+	</monogr>
+	<note>FREE Full text. Medline: 26991442</note>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<analytic>
+		<title level="a" type="main">You Are What You Tweet: Analyzing Twitter for Public Health</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><forename type="middle">J</forename><surname>Paul</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Dredze</surname></persName>
+		</author>
+		<ptr target="http://www.aaai.org/ocs/index.php/ICWSM/ICWSM11/paper/view/2880" />
+	</analytic>
+	<monogr>
+		<title level="m">Fifth International AAAI Conference on Weblogs and Social Media</title>
+		<meeting><address><addrLine>Barcelona, Spain URL</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2011-07-17" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<analytic>
+		<title level="a" type="main">Discovering health topics in social media using topic models</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><forename type="middle">J</forename><surname>Paul</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Dredze</surname></persName>
+		</author>
+		<idno type="doi">doi:10.1371/journal.pone.0103408</idno>
+	</analytic>
+	<monogr>
+		<title level="j">PLoS One</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">8</biblScope>
+			<biblScope unit="page">103408</biblScope>
+			<date type="published" when="2014-08-01" />
+		</imprint>
+	</monogr>
+	<note>FREE Full text. Medline: 25084530</note>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<monogr>
+		<title level="m" type="main">Filtering entities to optimize identification of adverse drug reaction from social media: how can the number of words between entities in the messages help?</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Abdellaoui</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Schück</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">N</forename><surname>Texier</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Burgun</surname></persName>
+		</author>
+		<idno type="doi">doi:10.2196/publichealth.6577</idno>
+		<imprint>
+			<date type="published" when="2017-06-22" />
+			<publisher>JMIR Public Health Surveill</publisher>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page">36</biblScope>
+		</imprint>
+	</monogr>
+	<note>FREE Full text. Medline: 28642212</note>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<monogr>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">Kappa</forename><surname>Santé</surname></persName>
+		</author>
+		<idno>2018-02-21</idno>
+		<ptr target="https://www.kappasante.com" />
+		<imprint/>
+	</monogr>
+	<note>WebCite Cache ID 6xPFzNeah</note>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<analytic>
+		<title level="a" type="main">The adverse drug reactions from patient reports in social media project: five major challenges to overcome to operationalize analysis and efficiently support pharmacovigilance process</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><surname>Bousquet</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">B</forename><surname>Dahamna</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Guillemin-Lanne</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><forename type="middle">J</forename><surname>Darmoni</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><surname>Faviez</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><surname>Huot</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">JMIR Res Protoc</title>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page">179</biblScope>
+			<date type="published" when="2017-09-21" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Frequency of and reasons for medication non-fulfillment and non-persistence among American adults with chronic disease in 2008</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><forename type="middle">A</forename><surname>Mchorney</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><forename type="middle">V</forename><surname>Spain</surname></persName>
+		</author>
+		<idno type="doi">doi:10.1111/j.1369-7625.2010.00619.x]</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Health Expect</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="307" to="320" />
+			<date type="published" when="2011-09" />
+		</imprint>
+	</monogr>
+	<note>FREE Full text. Medline: 20860775</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<analytic>
+		<title level="a" type="main">Clinical data mining: a review</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><surname>Iavindrasana</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">G</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Depeursinge</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><surname>Müller</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><surname>Meyer</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Geissbuhler</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Yearb Med Inform</title>
+		<imprint>
+			<biblScope unit="page" from="121" to="133" />
+			<date type="published" when="2009" />
+		</imprint>
+	</monogr>
+	<note>Medline: 19855885</note>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<monogr>
+		<title level="m" type="main">An algorithm for suffix stripping</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><forename type="middle">F</forename><surname>Porter</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><surname>Cs</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><surname>Toronto</surname></persName>
+		</author>
+		<ptr target="https://www.cs.toronto.edu/~frank/csc2501/Readings/R2_Porter/Porter-1980.pdf" />
+		<imprint>
+			<date type="published" when="1980" />
+		</imprint>
+	</monogr>
+	<note>accessed 2018-02-21. WebCite Cache ID 6xPGZzLyA</note>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<analytic>
+		<title level="a" type="main">Light Stemming Approaches for the French, Portuguese, German Hungarian Languages</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><surname>Savoy</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the</title>
+		<meeting>the</meeting>
+		<imprint>
+			<publisher>ACM</publisher>
+			<date type="published" when="2006-04" />
+			<biblScope unit="page" from="23" to="27" />
+		</imprint>
+	</monogr>
+	<note>SAC</note>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<monogr>
+		<title/>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">France</forename><forename type="middle">P</forename><surname>Dijon</surname></persName>
+		</author>
+		<imprint>
+			<biblScope unit="page" from="1031" to="1035" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<monogr>
+		<title level="m" type="main">Introduction to Modern Information Retrieval</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">G</forename><surname>Salton</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><forename type="middle">J</forename><surname>Mcgill</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1986" />
+			<publisher>McGraw-Hill, Inc</publisher>
+			<pubPlace>New York</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<monogr>
+		<title level="m" type="main">Topic models URL</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><forename type="middle">M</forename><surname>Blei</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><forename type="middle">D</forename><surname>Lafferty</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><surname>Cs Columbia</surname></persName>
+		</author>
+		<idno>2018-02-21</idno>
+		<ptr target="http://www.cs.columbia.edu/~blei/papers/BleiLafferty2009.pdf" />
+		<imprint>
+			<date type="published" when="2009" />
+		</imprint>
+	</monogr>
+	<note>WebCite Cache ID 6xPHPCaI4</note>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<analytic>
+		<title level="a" type="main">Exploring topic coherence over many models and many topics</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><surname>Stevens</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">P</forename><surname>Kegelmeyer</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><surname>Andrzejewski</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><surname>Buttler</surname></persName>
+		</author>
+		<idno>at: EMNLP-CoNLL &apos;12</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 2012 Joint Conference on Empirical Methods in Natural Language Processing and Computational Natural Language Learning</title>
+		<meeting>the 2012 Joint Conference on Empirical Methods in Natural Language Processing and Computational Natural Language Learning</meeting>
+		<imprint>
+			<publisher>Jeju Island</publisher>
+			<date type="published" when="2012-07-12" />
+			<biblScope unit="page" from="952" to="961" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<analytic>
+		<title level="a" type="main">On Estimation and Selection for Topic Models</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><forename type="middle">A</forename><surname>Taddy</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 15th International Conference on Artificial Intelligence and Statistics</title>
+		<meeting>the 15th International Conference on Artificial Intelligence and Statistics</meeting>
+		<imprint>
+			<publisher>AISTATS</publisher>
+			<date type="published" when="2012" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<analytic>
+		<title level="a" type="main">LDAvis: A method for visualizing and interpreting topics</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><surname>Sievert</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><forename type="middle">E</forename><surname>Shirley</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the Workshop on Interactive Language Learning, Visualization, and Interfaces</title>
+		<meeting>the Workshop on Interactive Language Learning, Visualization, and Interfaces<address><addrLine>Baltimore, Maryland, USA</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2014-06-27" />
+			<biblScope unit="page" from="63" to="70" />
+		</imprint>
+	</monogr>
+	<note>Workshop on Interactive Language Learning, Visualization, and Interfaces</note>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<analytic>
+		<title level="a" type="main">A coefficient of agreement for nominal scales</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><surname>Cohen</surname></persName>
+		</author>
+		<idno type="doi">doi:10.1177/001316446002000104</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Educ Psychol Meas</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="37" to="46" />
+			<date type="published" when="1960-04-01" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<analytic>
+		<title level="a" type="main">Text mining infrastructure in R</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">I</forename><surname>Feinerer</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><surname>Hornik</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><surname>Meyer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Stat Softw</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<date type="published" when="2008" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Topicmodels: an R package for fitting topic models</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">B</forename><surname>Grün</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><surname>Hornik</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">J Stat Softw</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="issue">13</biblScope>
+			<biblScope unit="page" from="1" to="30" />
+			<date type="published" when="2011-05-09" />
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Cohort of one million patients initiating antidepressant treatment in France: 12-month follow-up</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><forename type="middle">P</forename><surname>Fagot</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Cuerq</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Samson</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Fagot-Campagna</surname></persName>
+		</author>
+		<idno type="doi">doi:10.1111/ijcp.12850</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Int J Clin Pract</title>
+		<imprint>
+			<biblScope unit="volume">70</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="744" to="751" />
+			<date type="published" when="2016-09" />
+		</imprint>
+	</monogr>
+	<note>Medline: 27484351</note>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<analytic>
+		<title level="a" type="main">Antidepressant adherence: are patients taking their medications?</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">R</forename><forename type="middle">A</forename><surname>Sansone</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">L</forename><forename type="middle">A</forename><surname>Sansone</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Innov Clin Neurosci</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">5-6</biblScope>
+			<biblScope unit="page" from="41" to="46" />
+			<date type="published" when="2012-05" />
+		</imprint>
+	</monogr>
+	<note>FREE Full text. Medline: 22808448</note>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<analytic>
+		<title level="a" type="main">Why do psychiatric patients stop antipsychotic medication? A systematic review of reasons for nonadherence to medication in patients with serious mental illness</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">D</forename><forename type="middle">I</forename><surname>Velligan</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">M</forename><surname>Sajatovic</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">A</forename><surname>Hatch</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">P</forename><surname>Kramata</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">J</forename><forename type="middle">P</forename><surname>Docherty</surname></persName>
+		</author>
+		<idno type="doi">doi:10.2147/PPA.S124658</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Patient Prefer Adherence</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page" from="449" to="468" />
+			<date type="published" when="2017" />
+		</imprint>
+	</monogr>
+	<note>FREE Full text. Medline: 28424542</note>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<monogr>
+		<title level="m" type="main">Olanzapine versus other atypical antipsychotics for schizophrenia. Cochrane Database Syst Rev</title>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">K</forename><surname>Komossa</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">C</forename><surname>Rummel-Kluge</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">H</forename><surname>Hunger</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">F</forename><surname>Schmid</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">S</forename><surname>Schwarz</surname></persName>
+		</author>
+		<author>
+			<persName xmlns="http://www.tei-c.org/ns/1.0"><forename type="first">L</forename><surname>Duggan</surname></persName>
+		</author>
+		<idno type="doi">doi:10.1002/14651858.CD006654.pub2</idno>
+		<imprint>
+			<date type="published" when="2010-03" />
+			<biblScope unit="volume">17</biblScope>
+			<biblScope unit="page">6654</biblScope>
+		</imprint>
+	</monogr>
+	<note>FREE Full text. Medline: 20238348</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>
