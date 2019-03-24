@@ -5,7 +5,7 @@ import os
 import requests
 import unittest2
 
-import surya.paper_utils as dr
+import surya.paper_utils as surya
 from surya import ARTICLES_DIRECTORY
 
 
@@ -16,8 +16,8 @@ class TestDrEA(unittest2.TestCase):
         Setting up an instance of class Paper
         """
 
-        paper_parsed = dr.parse_paper("jmir")
-        self.func = dr.build_paper(paper_parsed)
+        paper_parsed = surya.call_science_parse("jmir")
+        self.func = surya.build_paper_from_sp(paper_parsed)
 
     def test_science_parse_connection(self):
         """
@@ -83,7 +83,7 @@ class TestDrEA(unittest2.TestCase):
         :return: True if the result is an empty list
         """
 
-        self.assertIsNone(dr.parse_papers_list([]))
+        self.assertIsNone(surya.parse_papers_list([]))
 
     def test_parse_n_papers_list(self):
         """
@@ -91,7 +91,9 @@ class TestDrEA(unittest2.TestCase):
         :return: True if the result is a list with n paper instance
         """
 
-        self.assertEqual(len(dr.parse_papers_list(["jmir", "drug_saf", "web_based_signal", "plos", "bmc", "jbi"])), 6)
+        self.assertEqual(
+            len(surya.parse_papers_list(["jmir", "drug_saf", "web_based_signal", "plos", "bmc", "jbi"])), 6
+        )
 
     def test_summarizing_text(self):
         """

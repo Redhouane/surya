@@ -17,7 +17,7 @@ LANG = 'english'  # Predefined language for texts analyzed
 SENTENCES_COUNT = 7  # Number of key sentences used for generate summarizes
 
 
-def parse_paper(paper_filename):
+def call_science_parse(paper_filename: str) -> dict:
     """
     This function call Science-Parse API for parsing an article
     :param paper_filename: Name of article to parse available in "articles" directory
@@ -39,7 +39,7 @@ def parse_paper(paper_filename):
             raise ConnectionError("No parsed paper.")
 
 
-def build_paper(parsed_paper):
+def build_paper_from_sp(parsed_paper: dict) -> Paper:
     """
     :param parsed_paper: article parsed using Science-Parse as python dictionary
     :return: A paper object containing article's texts and metadata
@@ -57,7 +57,7 @@ def build_paper(parsed_paper):
     return paper
 
 
-def parse_papers_list(articles_names_list):
+def parse_papers_list(articles_names_list: list) -> list:
     """
     This function apply the parsing paper process to a list of articles
     :param articles_names_list: The articles's names to parse
@@ -68,14 +68,14 @@ def parse_papers_list(articles_names_list):
         logging.info("No article selected.")
     else:
         try:
-            parsed_papers_list = list(map(parse_paper, articles_names_list))
-            return list(map(build_paper, parsed_papers_list))
+            parsed_papers_list = list(map(call_science_parse, articles_names_list))
+            return list(map(build_paper_from_sp, parsed_papers_list))
         except IndexError:
             # If an element in the given list do not exists
             logging.exception("Please check the articles loaded list. At least one of them seems do not exists.")
 
 
-def build_paper_summary(paper_object, sections_selection=None):
+def build_summary_from_paper(paper_object: Paper, sections_selection=None) -> str:
     """
     This function summarize texts corresponding to selected sections in a paper instance
     :param paper_object: An instance of class Paper
@@ -92,9 +92,9 @@ def build_paper_summary(paper_object, sections_selection=None):
     return summary
 
 
-def build_papers_sections_summary(papers_list, sections_to_summarize):
+def build_summary_from_papers_list(papers_list: list, sections_to_summarize: list) -> str:
     """
-    This function merge the texts corresponding to sections selected for generate a summary
+    This function merge the texts corresponding to sections selected for generate a summary from different papers
     :param papers_list: A list of papers instances
     :param sections_to_summarize: A list of sections to summarize
     :return: A str object corresponding to selected sections texts summary

@@ -1,4 +1,5 @@
 requests
+numpy
 setuptools
 sumy
 unittest2

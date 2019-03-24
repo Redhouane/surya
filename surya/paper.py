@@ -16,52 +16,52 @@ class Paper:
         self.authors = ""
         self.references = ""
 
-    def get_title(self):
+    def get_title(self) -> str:
         """
-        This method get the paper's title.
-        :return: A str instance corresponding to the paper's title.
+        Get the paper's title.
+        :return: The paper's title.
         """
 
         return self.title
 
-    def get_year(self):
+    def get_year(self) -> str:
         """
-        This method get the paper's year.
-        :return: A int instance corresponding to the paper's year.
+        Get the paper's year.
+        :return: The paper's year.
         """
 
         return self.year
 
-    def get_abstract(self):
+    def get_abstract(self) -> str:
         """
-        This method get the paper's abstract.
-        :return: A str instance corresponding to the paper's abstract.
+        Get the paper's abstract.
+        :return: The paper's abstract.
         """
 
         return self.abstract
 
-    def get_text(self):
+    def get_text(self) -> list:
         """
-        This method get the paper's text.
-        :return: A list of dicts instances corresponding to the paper's text.
+        Get the paper's text.
+        :return: A list of dicts corresponding to the paper's text.
         Each dict contains a section (associated to the "heading" key) and the section content (with the "text" key).
         """
 
         return self.text
 
-    def get_authors(self):
+    def get_authors(self) -> list:
         """
-        This method get the paper's authors
-        :return: A list of dicts instances corresponding to the paper's authors.
+        Get the paper's authors
+        :return: A list of dicts corresponding to the paper's authors.
         Each dict contains author (with the "name" key) and affiliation as a list (with the "affiliations" key).
         """
 
         return self.authors
 
-    def get_references(self):
+    def get_references(self) -> list:
         """
-        This method get the paper's references
-        :return: A list of dicts instances corresponding to the paper's references.
+        Get the paper's references
+        :return: A list of dicts corresponding to the paper's references.
         Each dict contains reference's title (associated to the "title" key), authors as a list (with the "authors"
         key), journal's name (associated to the "venue" key) and reference's year as integer (associated to the "year"
         key).
@@ -69,17 +69,31 @@ class Paper:
 
         return self.references
 
-    def get_sections_names(self):
+    def get_paper_citation_infos(self) -> dict:
         """
-        This method allow to getting names of sections from the paper
+        Get information related to a paper (title, fst author, year and journal
+        :return: a dictionary with these information
+        """
+
+        infos_dict = {
+            'title': self.get_title(),
+            'first_author': self.get_authors()[0]['name'],
+            'year': self.get_year(),
+            'journal': 'Coming Soon'  # TODO: Find a way to parse the journal's name
+        }
+        return infos_dict
+
+    def get_sections_names(self) -> list:
+        """
+        Get section's names from the paper
         :return: A str list of sections names
         """
 
         return list(map(lambda l: l.get('heading'), self.get_text()))
 
-    def get_sections_texts_list(self, sections_selection=None):  # "None" for cases when section's dict has no 'heading'
+    def get_sections_texts_list(self, sections_selection=None) -> list:  # "None" if section's dict has no 'heading'
         """
-        This method get a list of texts corresponding to paper's sections content
+        Get a list of texts corresponding to paper's sections content
         :param sections_selection: A list of desired sections names
         :return: A list of str corresponding to the paper's sections selection contents
         """
@@ -96,9 +110,9 @@ class Paper:
             sections_list = list(filter(lambda l: l.get('heading') in sections_selection, paper_sections))
             return list(map(lambda l: l.get('text'), sections_list))
 
-    def get_sections_texts_str(self, sections_names=None):
+    def get_sections_texts_str(self, sections_names=None) -> str:
         """
-        This method get the text corresponding to a given list of paper's sections
+        Get the text corresponding to a given list of paper's sections
         :param sections_names: A list of desired sections names
         :return: A str instance corresponding to the concatenated paper's sections names contents
         """
@@ -114,18 +128,18 @@ class Paper:
 
         return ''  # TODO: Add a pattern recognition based on a regex
 
-    def get_keywords(self):
+    def get_keywords(self) -> list:
         """
-        This method get the paper's keywords
-        :return: A list instance corresponding to the paper's keywords
+        Get the paper's related keywords
+        :return: A list corresponding to the paper's keywords
         """
 
         return list(filter(lambda l: l.get('heading') == "KEYWORDS", self.get_text())).pop().get('text').split(';')
 
-    def get_abbreviations(self):
+    def get_abbreviations(self) -> dict:
         """
-        This method get the paper's abbreviations
-        :return: A json instance corresponding to the paper's abbreviations
+        Get the paper's abbreviations
+        :return: A dict corresponding to the paper's abbreviations
         """
 
         return list(filter(lambda l: l.get('heading') == "Abbreviations", self.get_text())).pop()
