@@ -58,7 +58,7 @@ class TestDrEA(unittest2.TestCase):
         :return: True if the selection of all sections correspond to the number of sections in the original article
         """
 
-        self.assertEqual(len(self.func.get_text()), len(self.func.get_sections_texts_list([])))
+        self.assertEqual(len(self.func.get_sections_texts()), len(self.func.get_sections_texts_list([])))
 
     def test_paper_sections_extraction(self):
         """
@@ -101,7 +101,7 @@ class TestDrEA(unittest2.TestCase):
         :return: True if the jmir article's summary is equal to the one expected
         """
 
-        self.assertEqual(1, 1)
+        self.assertEqual(1, 1)  # TODO: Add a real assertion for testing summaries generation
 
 
 if __name__ == '__main__':

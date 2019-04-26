@@ -5,7 +5,7 @@ import os
 
 class Paper:
     """
-    The purpose of this Paper class is to collect the information related to an article (Texts, Metadata, Title etc..).
+    The Paper class collects the information related to an article (Texts, Metadata, Title).
     """
 
     def __init__(self):
@@ -40,28 +40,28 @@ class Paper:
 
         return self.abstract
 
-    def get_text(self) -> list:
+    def get_sections_texts(self) -> str:
         """
-        Get the paper's text.
-        :return: A list of dicts corresponding to the paper's text.
-        Each dict contains a section (associated to the "heading" key) and the section content (with the "text" key).
+        Get the paper's texts by section.
+        :return: A list of json strings (as dicts) corresponding to the paper's texts.
+        Each dict contains a section (associated to the "heading" key) and the section content (with the "text" value).
         """
 
         return self.text
 
-    def get_authors(self) -> list:
+    def get_authors(self) -> str:
         """
         Get the paper's authors
-        :return: A list of dicts corresponding to the paper's authors.
-        Each dict contains author (with the "name" key) and affiliation as a list (with the "affiliations" key).
+        :return: A list of json strings (as dicts) corresponding to the paper's authors.
+        Each dict contains author (with the "name" key) and affiliation as a list (with the "affiliations" value).
         """
 
         return self.authors
 
-    def get_references(self) -> list:
+    def get_references(self) -> str:
         """
         Get the paper's references
-        :return: A list of dicts corresponding to the paper's references.
+        :return: A list of json strings (as dicts) corresponding to the paper's references.
         Each dict contains reference's title (associated to the "title" key), authors as a list (with the "authors"
         key), journal's name (associated to the "venue" key) and reference's year as integer (associated to the "year"
         key).
@@ -77,7 +77,7 @@ class Paper:
 
         infos_dict = {
             'title': self.get_title(),
-            'first_author': self.get_authors()[0]['name'],
+            'first_author': dict(self.get_authors()[0])['name'],
             'year': self.get_year(),
             'journal': 'Coming Soon'  # TODO: Find a way to parse the journal's name
         }
@@ -89,7 +89,7 @@ class Paper:
         :return: A str list of sections names
         """
 
-        return list(map(lambda l: l.get('heading'), self.get_text()))
+        return list(map(lambda l: l.get('heading'), self.get_sections_texts()))
 
     def get_sections_texts_list(self, sections_selection=None) -> list:  # "None" if section's dict has no 'heading'
         """
@@ -98,7 +98,7 @@ class Paper:
         :return: A list of str corresponding to the paper's sections selection contents
         """
 
-        paper_sections = self.get_text()
+        paper_sections = self.get_sections_texts()
 
         if sections_selection is None or len(sections_selection) == 0:
             all_sections_names = self.get_sections_names()
@@ -134,7 +134,9 @@ class Paper:
         :return: A list corresponding to the paper's keywords
         """
 
-        return list(filter(lambda l: l.get('heading') == "KEYWORDS", self.get_text())).pop().get('text').split(';')
+        return list(
+            filter(lambda l: l.get('heading') == "KEYWORDS", self.get_sections_texts())
+        ).pop().get('text').split(';')
 
     def get_abbreviations(self) -> dict:
         """
@@ -142,7 +144,7 @@ class Paper:
         :return: A dict corresponding to the paper's abbreviations
         """
 
-        return list(filter(lambda l: l.get('heading') == "Abbreviations", self.get_text())).pop()
+        return list(filter(lambda l: l.get('heading') == "Abbreviations", self.get_sections_texts())).pop()
 
     @staticmethod
     def get_coi():  # coi is an acronym for "Conflicts of Interest"
