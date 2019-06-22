@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bb1a5fc-c7f5-4db6-bf24-4518ca0e8f15" name="Default" comment="Minor refacto">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/surya.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/surya.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/surya/paper.py" beforeDir="false" afterPath="$PROJECT_DIR$/surya/paper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/unit/test_paper.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/test_paper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,8 +41,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/surya/paper.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-120">
-                  <caret line="55" column="112" selection-start-line="55" selection-start-column="112" selection-end-line="55" selection-end-column="112" />
+                <state relative-caret-position="15">
+                  <caret line="25" selection-start-line="25" selection-end-line="25" />
                 </state>
               </provider>
             </entry>
@@ -74,8 +77,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/tests/unit/test_paper.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="165">
-                      <caret line="11" column="12" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="14" />
+                    <state relative-caret-position="210">
+                      <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
                       <folding>
                         <element signature="e#25#46#0" expanded="true" />
                       </folding>
@@ -90,17 +93,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/tests/integration/test_summarizer.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="135">
-                      <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/Makefile">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="90">
-                      <caret line="6" selection-start-line="6" selection-end-line="6" />
+                    <state relative-caret-position="147">
+                      <caret line="13" selection-start-line="13" selection-end-line="13" />
                     </state>
                   </provider>
                 </entry>
@@ -195,10 +189,10 @@
     <option name="path" value="$PROJECT_DIR$/Makefile" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="154" />
-    <option name="y" value="57" />
-    <option name="width" value="2249" />
-    <option name="height" value="1278" />
+    <option name="x" value="1920" />
+    <option name="y" value="435" />
+    <option name="width" value="1920" />
+    <option name="height" value="1053" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -248,7 +242,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Makefile" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -277,7 +271,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test_paper">
+  <component name="RunManager" selected="Python.test_summarizer">
     <configuration name="test_paper" type="PythonConfigurationType" factoryName="Python">
       <module name="surya" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -388,6 +382,8 @@
       <workItem from="1556078023352" duration="60000" />
       <workItem from="1556223798665" duration="1655000" />
       <workItem from="1556311299941" duration="3224000" />
+      <workItem from="1561208160503" duration="986000" />
+      <workItem from="1561209164947" duration="82000" />
     </task>
     <task id="LOCAL-00001" summary="Add DrEA_head package for factoring code. Especially for functions &#10;and global variables used along sources.">
       <created>1531948973226</created>
@@ -708,7 +704,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185001000" />
+    <option name="totallyTimeSpent" value="186069000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -720,20 +716,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="2560" height="1413" extended-state="6" />
+    <frame x="1920" y="435" width="1920" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.14478917" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.14781217" />
       <window_info anchor="bottom" id="Python Console" order="0" sideWeight="0.49980307" weight="0.36128527" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.1918559" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.27699018" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50079554" side_tool="true" weight="0.26468286" />
       <window_info anchor="bottom" id="Version Control" internal_type="SLIDING" order="3" type="SLIDING" weight="0.32967892" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32498044" />
-      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49920446" visible="true" weight="0.28034455" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.35003915" />
+      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49920446" weight="0.28034455" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.348964" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" weight="0.32792792" />
@@ -877,7 +873,8 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/surya$test_paper.coverage" NAME="test_paper Coverage Results" MODIFIED="1556314000783" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/surya$test_summarizer.coverage" NAME="test_summarizer Coverage Results" MODIFIED="1561209134467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/surya$test_paper.coverage" NAME="test_paper Coverage Results" MODIFIED="1561208947861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
@@ -989,8 +986,6 @@ paper.get_paper_infos()</expression-string>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/trials/.ipynb/drea_extract_data-checkpoint.ipynb" />
-    <entry file="file://$PROJECT_DIR$/trials/.py/tests-pyteaser.py" />
     <entry file="file://$PROJECT_DIR$/laboratory_experimentations/experience-pytextrank.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="855">
@@ -1027,13 +1022,7 @@ paper.get_paper_infos()</expression-string>
     <entry file="file://$PROJECT_DIR$/buffer/test.json" />
     <entry file="file://$PROJECT_DIR$/articles/jmir_parsed.json" />
     <entry file="file://$PROJECT_DIR$/trials/.ipynb/test-extractdata.ipynb" />
-    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/python_stubs/966020380/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="3023" column="6" selection-start-line="3023" selection-start-column="6" selection-end-line="3023" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/python_stubs/966020380/builtins.py" />
     <entry file="file://$PROJECT_DIR$/.pytest_cache/README.md" />
     <entry file="file://$PROJECT_DIR$/drealib/__init__.py" />
     <entry file="file://$PROJECT_DIR$/tests/.coverage" />
@@ -1070,13 +1059,7 @@ paper.get_paper_infos()</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/drea/lib/python3.7/site-packages/urllib3/connection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="170" selection-start-line="170" selection-end-line="170" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/drea/lib/python3.7/site-packages/urllib3/connection.py" />
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1108,13 +1091,7 @@ paper.get_paper_infos()</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/drea/lib/python3.7/logging/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="796" lean-forward="true" selection-start-line="796" selection-end-line="796" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/drea/lib/python3.7/logging/__init__.py" />
     <entry file="file://$PROJECT_DIR$/laboratory_experimentations/resources/jmir.pdf.tei.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-225" />
@@ -1131,11 +1108,11 @@ paper.get_paper_infos()</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
+    <entry file="file://$PROJECT_DIR$/logs/surya.log" />
+    <entry file="file://$PROJECT_DIR$/requirements.txt" />
+    <entry file="file://$PROJECT_DIR$/Pipfile.lock">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
+        <state relative-caret-position="-1800" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Makefile">
@@ -1145,30 +1122,10 @@ paper.get_paper_infos()</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/integration/test_summarizer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/surya.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/surya/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/unit/test_paper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="12" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="14" />
-          <folding>
-            <element signature="e#25#46#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1189,10 +1146,30 @@ paper.get_paper_infos()</expression-string>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Pipfile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/unit/test_paper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+          <folding>
+            <element signature="e#25#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/integration/test_summarizer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/surya/paper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-120">
-          <caret line="55" column="112" selection-start-line="55" selection-start-column="112" selection-end-line="55" selection-end-column="112" />
+        <state relative-caret-position="15">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
