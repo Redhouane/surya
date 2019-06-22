@@ -9,7 +9,7 @@ import surya.paper_utils as surya
 from surya import ARTICLES_DIRECTORY
 
 
-class TestDrEA(unittest2.TestCase):
+class TestPaper(unittest2.TestCase):
 
     def setUp(self):
         """
@@ -95,13 +95,22 @@ class TestDrEA(unittest2.TestCase):
             len(surya.parse_papers_list(["jmir", "drug_saf", "web_based_signal", "plos", "bmc", "jbi"])), 6
         )
 
-    def test_summarizing_text(self):
-        """
-        Testing a known paper's text summary
-        :return: True if the jmir article's summary is equal to the one expected
-        """
+    def test_citation_info_retrieval(self):
 
-        self.assertEqual(1, 1)  # TODO: Add a real assertion for testing summaries generation
+        extracted_citation = self.func.get_paper_citation_infos()
+        expected_citation = {
+            'title': 'Detection of Cases of Noncompliance to Drug Treatment in Patient Forum Posts: '
+                     'Topic Model Approach',
+            'first_author': 'Redhouane Abdellaoui',
+            'year': 2018,
+            'journal': 'Coming Soon'
+        }
+
+        self.assertTrue(extracted_citation == expected_citation)
+
+    def test_sections_names_and_texts(self):
+        self.assertEqual(len(self.func.get_sections_names()), 36)
+        self.assertEqual(len(self.func.get_sections_texts_list()), 36)
 
 
 if __name__ == '__main__':

@@ -89,7 +89,7 @@ class Paper:
         :return: A str list of sections names
         """
 
-        return list(map(lambda l: l.get('heading'), self.get_sections_texts()))
+        return list(map(lambda texts_list: texts_list.get('heading'), self.get_sections_texts()))
 
     def get_sections_texts_list(self, sections_selection=None) -> list:  # "None" if section's dict has no 'heading'
         """

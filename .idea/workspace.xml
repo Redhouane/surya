@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0bb1a5fc-c7f5-4db6-bf24-4518ca0e8f15" name="Default" comment="Minor refacto">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/surya.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/surya.iml" afterDir="false" />
+    <list default="true" id="0bb1a5fc-c7f5-4db6-bf24-4518ca0e8f15" name="Default" comment="Setup of pipenv for dependency management">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/surya/paper.py" beforeDir="false" afterPath="$PROJECT_DIR$/surya/paper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/test_paper.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/test_paper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/test_paper_utils.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,20 +27,20 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/surya/__init__.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
-                  <caret line="21" selection-start-line="21" selection-end-line="21" />
+                <state relative-caret-position="255">
+                  <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/surya/paper.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="15">
-                  <caret line="25" selection-start-line="25" selection-end-line="25" />
+                <state relative-caret-position="461">
+                  <caret line="119" column="52" selection-start-line="119" selection-start-column="29" selection-end-line="119" selection-end-column="52" />
                 </state>
               </provider>
             </entry>
@@ -50,8 +48,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/surya/paper_utils.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="23" selection-start-column="23" selection-end-column="23" />
+                <state relative-caret-position="202">
+                  <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
                   <folding>
                     <element signature="e#25#46#0" expanded="true" />
                   </folding>
@@ -63,7 +61,7 @@
             <entry file="file://$PROJECT_DIR$/surya/paper_cleaner.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state>
-                  <caret column="23" selection-start-column="23" selection-end-column="23" />
+                  <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
                 </state>
               </provider>
             </entry>
@@ -77,8 +75,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/tests/unit/test_paper.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="210">
-                      <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+                    <state relative-caret-position="57">
+                      <caret line="11" column="11" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="15" />
                       <folding>
                         <element signature="e#25#46#0" expanded="true" />
                       </folding>
@@ -93,7 +91,7 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/tests/integration/test_summarizer.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="147">
+                    <state relative-caret-position="132">
                       <caret line="13" selection-start-line="13" selection-end-line="13" />
                     </state>
                   </provider>
@@ -122,6 +120,7 @@
       <find>pyteaser</find>
       <find>several me</find>
       <find>client</find>
+      <find>glo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -170,18 +169,18 @@
         <option value="$PROJECT_DIR$/tests/integration/__init__.py" />
         <option value="$PROJECT_DIR$/tests/unit/__init__.py" />
         <option value="$PROJECT_DIR$/tests/unit/test_text_cleaner.py" />
-        <option value="$PROJECT_DIR$/tests/unit/test_paper_utils.py" />
         <option value="$PROJECT_DIR$/surya/text_cleaner.py" />
         <option value="$PROJECT_DIR$/tests/integration/advanced.py" />
         <option value="$PROJECT_DIR$/tests/integration/test_advanced.py" />
-        <option value="$PROJECT_DIR$/surya/__init__.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/Makefile" />
-        <option value="$PROJECT_DIR$/surya/paper_utils.py" />
         <option value="$PROJECT_DIR$/tests/integration/test_summarizer.py" />
         <option value="$PROJECT_DIR$/surya/paper_cleaner.py" />
-        <option value="$PROJECT_DIR$/tests/unit/test_paper.py" />
+        <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/surya/paper.py" />
+        <option value="$PROJECT_DIR$/tests/unit/test_paper.py" />
+        <option value="$PROJECT_DIR$/surya/paper_utils.py" />
+        <option value="$PROJECT_DIR$/tests/unit/test_paper_utils.py" />
+        <option value="$PROJECT_DIR$/surya/__init__.py" />
       </list>
     </option>
   </component>
@@ -212,7 +211,29 @@
             <path>
               <item name="surya" type="b2602c69:ProjectViewProjectNode" />
               <item name="surya" type="462c0819:PsiDirectoryNode" />
+              <item name="logs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="surya" type="b2602c69:ProjectViewProjectNode" />
               <item name="surya" type="462c0819:PsiDirectoryNode" />
+              <item name="surya" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="surya" type="b2602c69:ProjectViewProjectNode" />
+              <item name="surya" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="surya" type="b2602c69:ProjectViewProjectNode" />
+              <item name="surya" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="integration" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="surya" type="b2602c69:ProjectViewProjectNode" />
+              <item name="surya" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="unit" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -242,7 +263,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Makefile" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -271,7 +292,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test_summarizer">
+  <component name="RunManager" selected="Python.test_paper">
+    <configuration name="test" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="test" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
     <configuration name="test_paper" type="PythonConfigurationType" factoryName="Python">
       <module name="surya" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -316,10 +343,50 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests for tests.unit.test_paper" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="surya" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/unit" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.unit.test_paper&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for tests.unit.test_paper" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="surya" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/unit" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.unit.test_paper&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Makefile.test" />
       <item itemvalue="Python.test_summarizer" />
       <item itemvalue="Python.test_paper" />
+      <item itemvalue="Python tests.Unittests for tests.unit.test_paper" />
+      <item itemvalue="Python tests.Unittests for tests.unit.test_paper" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Unittests for tests.unit.test_paper" />
+        <item itemvalue="Python tests.Unittests for tests.unit.test_paper" />
+        <item itemvalue="Makefile.test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -384,6 +451,11 @@
       <workItem from="1556311299941" duration="3224000" />
       <workItem from="1561208160503" duration="986000" />
       <workItem from="1561209164947" duration="82000" />
+      <workItem from="1561212881916" duration="728000" />
+      <workItem from="1561237488203" duration="187000" />
+      <workItem from="1561237689937" duration="152000" />
+      <workItem from="1561237856949" duration="663000" />
+      <workItem from="1561238532122" duration="3036000" />
     </task>
     <task id="LOCAL-00001" summary="Add DrEA_head package for factoring code. Especially for functions &#10;and global variables used along sources.">
       <created>1531948973226</created>
@@ -700,11 +772,38 @@
       <option name="project" value="LOCAL" />
       <updated>1552778537753</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Setup of pipenv for dependency management">
+      <created>1561212993290</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1561212993291</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="Unittests_for_test_paper_utils_TestSurya - 2019.06.23 at 00h 00m 26s.xml">
+      <configuration name="Unittests for test_paper_utils.TestSurya" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_paper_utils_TestSurya - 2019.06.23 at 00h 01m 40s.xml">
+      <configuration name="Unittests for test_paper_utils.TestSurya" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_paper_utils_TestPaperUtils - 2019.06.23 at 00h 03m 34s.xml">
+      <configuration name="Unittests for test_paper_utils.TestPaperUtils" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_paper_utils_TestPaperUtils - 2019.06.23 at 00h 05m 26s.xml">
+      <configuration name="Unittests for test_paper_utils.TestPaperUtils" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_paper_utils_TestPaperUtils - 2019.06.23 at 00h 08m 49s.xml">
+      <configuration name="Unittests for test_paper_utils.TestPaperUtils" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_paper_utils_TestPaperUtils - 2019.06.23 at 00h 09m 11s.xml">
+      <configuration name="Unittests for test_paper_utils.TestPaperUtils" configurationId="tests" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="186069000" />
+    <option name="totallyTimeSpent" value="190835000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -721,14 +820,14 @@
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.14781217" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.15421557" />
       <window_info anchor="bottom" id="Python Console" order="0" sideWeight="0.49980307" weight="0.36128527" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.27699018" />
-      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50079554" side_tool="true" weight="0.26468286" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.27529925" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5010672" side_tool="true" weight="0.26390404" />
       <window_info anchor="bottom" id="Version Control" internal_type="SLIDING" order="3" type="SLIDING" weight="0.32967892" />
       <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" weight="0.32498044" />
-      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49920446" weight="0.28034455" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.32497275" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.49893278" visible="true" weight="0.28026173" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.348964" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -744,6 +843,7 @@
       <window_info anchor="right" id="R Packages" order="4" />
       <window_info anchor="right" id="Database" order="5" />
       <window_info anchor="right" id="SciView" order="6" />
+      <window_info anchor="right" id="make" order="7" />
     </layout>
     <layout-to-restore>
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -827,7 +927,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Readme.md corrections" />
     <MESSAGE value="WIP - Replace PyTeaser summerization by LSA summarization from sumy package." />
     <MESSAGE value="Fix the API call, replace &quot;pyteaser&quot; by &quot;sumy&quot; and add of logging" />
     <MESSAGE value="Logging into surya.log file" />
@@ -852,7 +951,8 @@
     <MESSAGE value="Add a connection to spv by using a session object and enrich the Makefile for setting up and shutting down the spv docker container" />
     <MESSAGE value="Result of an experimentation of the GROBID parser" />
     <MESSAGE value="WIP - cleaning texts from footers WIP" />
-    <option name="LAST_COMMIT_MESSAGE" value="WIP - cleaning texts from footers WIP" />
+    <MESSAGE value="Setup of pipenv for dependency management" />
+    <option name="LAST_COMMIT_MESSAGE" value="Setup of pipenv for dependency management" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -873,8 +973,10 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/surya$test_summarizer.coverage" NAME="test_summarizer Coverage Results" MODIFIED="1561209134467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/surya$test_paper.coverage" NAME="test_paper Coverage Results" MODIFIED="1561208947861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/surya$Unittests_for_test_paper_utils_TestPaperUtils.coverage" NAME="Unittests for test_paper_utils.TestPaperUtils Coverage Results" MODIFIED="1561241351548" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/unit" />
+    <SUITE FILE_PATH="coverage/surya$Unittests_for_test_paper_utils_TestSurya.coverage" NAME="Unittests for test_paper_utils.TestSurya Coverage Results" MODIFIED="1561240900797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/unit" />
+    <SUITE FILE_PATH="coverage/surya$test_summarizer.coverage" NAME="test_summarizer Coverage Results" MODIFIED="1561237599995" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/surya$test_paper.coverage" NAME="test_paper Coverage Results" MODIFIED="1561241581840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
@@ -939,6 +1041,16 @@ paper.get_paper_infos()</expression-string>
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
+        <expression-string>self.func</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>citation</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>dict(self.func.get_authors()[0]).get(&quot;name&quot;)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
@@ -970,16 +1082,6 @@ paper.get_paper_infos()</expression-string>
       </expression>
       <expression>
         <expression-string>self.func.get_authors()[0]</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>self.func.get_authors()</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>type(self.func.get_text()[0])</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -1067,13 +1169,6 @@ paper.get_paper_infos()</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/unit/test_paper_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/unit/test_text_cleaner.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -1108,68 +1203,89 @@ paper.get_paper_infos()</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logs/surya.log" />
     <entry file="file://$PROJECT_DIR$/requirements.txt" />
     <entry file="file://$PROJECT_DIR$/Pipfile.lock">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1800" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+    <entry file="file://$PROJECT_DIR$/Pipfile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/surya.log">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="-327">
+          <caret line="31" column="53" lean-forward="true" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="165">
+          <caret line="11" column="49" lean-forward="true" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/surya/__init__.py">
+    <entry file="file://$PROJECT_DIR$/tests/integration/test_summarizer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/surya/paper_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="23" selection-start-column="23" selection-end-column="23" />
-          <folding>
-            <element signature="e#25#46#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="132">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/surya/paper_cleaner.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="23" selection-start-column="23" selection-end-column="23" />
+          <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pipfile">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/surya/paper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="119" column="52" selection-start-line="119" selection-start-column="29" selection-end-line="119" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/unit/test_paper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+          <folding>
+            <element signature="e#25#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/surya/paper_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
           <folding>
             <element signature="e#25#46#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/integration/test_summarizer.py">
+    <entry file="file://$PROJECT_DIR$/tests/unit/test_paper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="57">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="15" />
+          <folding>
+            <element signature="e#25#46#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/surya/paper.py">
+    <entry file="file://$PROJECT_DIR$/surya/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="255">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
         </state>
       </provider>
     </entry>
