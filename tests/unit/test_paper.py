@@ -96,9 +96,13 @@ class TestPaper(unittest2.TestCase):
         )
 
     def test_citation_info_retrieval(self):
+        """
+        Testing the retrieval of data that constitute citation
+        :return: True if the extracted citation data corresponds to the expected citation data
+        """
 
-        extracted_citation = self.func.get_paper_citation_infos()
-        expected_citation = {
+        extracted_citation_data = self.func.get_paper_citation_infos()
+        expected_citation_data = {
             'title': 'Detection of Cases of Noncompliance to Drug Treatment in Patient Forum Posts: '
                      'Topic Model Approach',
             'first_author': 'Redhouane Abdellaoui',
@@ -106,9 +110,14 @@ class TestPaper(unittest2.TestCase):
             'journal': 'Coming Soon'
         }
 
-        self.assertTrue(extracted_citation == expected_citation)
+        self.assertTrue(extracted_citation_data == expected_citation_data)
 
     def test_sections_names_and_texts(self):
+        """
+        Testing if we did retrieve all sections and corresponding texts
+        :return: True if the all sections and texts were extracted
+        """
+
         self.assertEqual(len(self.func.get_sections_names()), 36)
         self.assertEqual(len(self.func.get_sections_texts_list()), 36)
 

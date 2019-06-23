@@ -12,10 +12,11 @@ This package consists of the following components:
 import logging
 
 ARTICLES_DIRECTORY = '../tests/fixtures/'  # Directories for reading/writing files
+LOGS_FILE = '../logs/surya.log'  # Directories for reading/writing logs
 
 # Logging config
 logging.basicConfig(level=logging.INFO,
-                    filename='../logs/surya.log',
+                    filename=LOGS_FILE,
                     filemode='a',
                     datefmt='%d-%m-%Y %H:%M:%S',
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')

@@ -94,7 +94,7 @@ def build_summary_from_paper(paper_object: Paper, sections_selection=None) -> st
 
 def build_summary_from_papers_list(papers_list: list, sections_to_summarize: list) -> str:
     """
-    This function merge the texts corresponding to sections selected for generate a summary from different papers
+    Merge the texts corresponding to sections selected for generate a summary from different papers
     :param papers_list: A list of papers instances
     :param sections_to_summarize: A list of sections to summarize
     :return: A str object corresponding to selected sections texts summary
