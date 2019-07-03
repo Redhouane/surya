@@ -17,18 +17,21 @@ LANG = 'english'  # Predefined language for texts analyzed
 SENTENCES_COUNT = 7  # Number of key sentences used for generate summarizes
 
 
-def call_science_parse(paper_filename: str) -> dict:
+def call_science_parse(articles_filename: str, articles_path: str = ARTICLES_DIRECTORY) -> dict:
     """
     This function call Science-Parse API for parsing an article
-    :param paper_filename: Name of article to parse available in "articles" directory
+    :param articles_filename: Name of article to parse available in "articles" directory
+    :param articles_path: Location to folder from where articles will be load
     :return: No value returned
     """
 
-    paper_to_parse_path = glob(os.path.join(ARTICLES_DIRECTORY, paper_filename + ".pdf")).pop()
+    papers_to_parse_paths = glob(os.path.join(articles_path, articles_filename + ".pdf"))
+    assert papers_to_parse_paths,\
+        "The specified folder do not contains pdf articles"
 
     logging.info("Papers Parsing...")
     headers = {'Content-type': 'application/pdf'}
-    data = open(paper_to_parse_path, 'rb').read()
+    data = open(papers_to_parse_paths.pop(), 'rb').read()
 
     with requests.Session() as session:
         try:
@@ -67,7 +70,7 @@ def parse_papers_list(articles_names_list: list) -> list:
     if not articles_names_list:
         logging.info("No article selected.")
     else:
-        try:
+        try:  # TODO: Specify the folder from which to read articles in the map below
             parsed_papers_list = list(map(call_science_parse, articles_names_list))
             return list(map(build_paper_from_sp, parsed_papers_list))
         except IndexError:

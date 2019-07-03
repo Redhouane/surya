@@ -11,8 +11,10 @@ This package consists of the following components:
 
 import logging
 
-ARTICLES_DIRECTORY = '../tests/fixtures/'  # Directories for reading/writing files
-LOGS_FILE = '../logs/surya.log'  # Directories for reading/writing logs
+# Directories for reading/writing files
+ARTICLES_DIRECTORY = '../fixtures/'
+# Directories for reading/writing logs
+LOGS_FILE = '../../logs/surya.log'
 
 # Logging config
 logging.basicConfig(level=logging.INFO,
