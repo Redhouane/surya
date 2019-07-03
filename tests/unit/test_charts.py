@@ -2,7 +2,6 @@
 
 import unittest2
 
-from surya import ARTICLES_DIRECTORY
 import surya.paper_charts as surya_charts
 import surya.paper_utils as surya_utils
 
