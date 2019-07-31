@@ -1,26 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0bb1a5fc-c7f5-4db6-bf24-4518ca0e8f15" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/build/lib/surya/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/lib/surya/paper.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/lib/surya/paper_charts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/lib/surya/paper_cleaner.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/lib/surya/paper_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/surya-1.0.0-py3-none-any.whl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/surya-1.0.0.tar.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/surya-s3-pypi.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/surya.egg-info/PKG-INFO" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/surya.egg-info/SOURCES.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/surya.egg-info/dependency_links.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/surya.egg-info/top_level.txt" afterDir="false" />
+    <list default="true" id="0bb1a5fc-c7f5-4db6-bf24-4518ca0e8f15" name="Default" comment="Add of components and command lines to create a surya package downloadable from a private index on S3">
+      <change afterPath="$PROJECT_DIR$/.bumpversion.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/surya/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/surya/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/unit/test_paper.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/test_paper.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -344,7 +329,7 @@
       <workItem from="1564320119256" duration="1508000" />
       <workItem from="1564431553755" duration="1942000" />
       <workItem from="1564494525465" duration="939000" />
-      <workItem from="1564576211117" duration="4025000" />
+      <workItem from="1564576211117" duration="6093000" />
     </task>
     <task id="LOCAL-00001" summary="Add DrEA_head package for factoring code. Especially for functions &#10;and global variables used along sources.">
       <created>1531948973226</created>
@@ -682,7 +667,14 @@
       <option name="project" value="LOCAL" />
       <updated>1561304278710</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Add of components and command lines to create a surya package downloadable from a private index on S3">
+      <created>1564582558792</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1564582558792</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TodoView">
@@ -735,7 +727,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Logging into surya.log file" />
     <MESSAGE value="Refacto of surya code. Renaming function and generate summary from parsed dictionaries, not even from json files." />
     <MESSAGE value="Refacto of project's structure" />
     <MESSAGE value="Prepare a test for summary generation" />
@@ -760,7 +751,8 @@
     <MESSAGE value="Setup of pipenv for dependency management" />
     <MESSAGE value="Minor Refacto" />
     <MESSAGE value="Add of a count for papers per year and a class test for the charts data extraction" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add of a count for papers per year and a class test for the charts data extraction" />
+    <MESSAGE value="Add of components and command lines to create a surya package downloadable from a private index on S3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add of components and command lines to create a surya package downloadable from a private index on S3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -5,6 +5,7 @@ verify_ssl = true
 
 [dev-packages]
 s3pypi = "*"
+bumpversion = "*"
 
 [packages]
 requests = "*"
