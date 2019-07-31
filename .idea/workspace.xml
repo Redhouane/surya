@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/surya/paper_utils.py" line="26" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bb1a5fc-c7f5-4db6-bf24-4518ca0e8f15" name="Default" comment="Add of a count for papers per year and a class test for the charts data extraction">
-      <change afterPath="$PROJECT_DIR$/tests/unit/test_charts.py" afterDir="false" />
+    <list default="true" id="0bb1a5fc-c7f5-4db6-bf24-4518ca0e8f15" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/build/lib/surya/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/lib/surya/paper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/lib/surya/paper_charts.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/lib/surya/paper_cleaner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/lib/surya/paper_utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/surya-1.0.0-py3-none-any.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/surya-1.0.0.tar.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/surya-s3-pypi.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/surya.egg-info/PKG-INFO" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/surya.egg-info/SOURCES.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/surya.egg-info/dependency_links.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/surya.egg-info/top_level.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/surya/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/surya/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/surya/paper_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/surya/paper_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/fixtures/jbi.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tests/fixtures/jbi.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/fixtures/plos.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tests/fixtures/plos.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/unit/test_charts_data.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/unit/test_paper.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/test_paper.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,69 +37,6 @@
     <SUITE FILE_PATH="coverage/surya$test_unit.coverage" NAME="test_paper Coverage Results" MODIFIED="1545701048893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/surya$test_summarizer.coverage" NAME="test_summarizer Coverage Results" MODIFIED="1553383451594" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
   </component>
-  <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/surya/__init__.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/surya/paper_utils.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="405">
-                  <caret line="27" selection-start-line="27" selection-end-line="27" />
-                  <folding>
-                    <element signature="e#25#46#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/tests/unit/test_paper.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
-                  <caret line="18" selection-start-line="18" selection-end-line="18" />
-                  <folding>
-                    <element signature="e#25#46#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tests/unit/test_charts.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="60">
-                  <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tests/integration/test_summarizer.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="23" selection-start-column="23" selection-end-column="23" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -101,139 +45,16 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>my_paper</find>
-      <find>references</find>
-      <find>Summarize</find>
-      <find>summariz</find>
-      <find>pyteaser</find>
-      <find>several me</find>
-      <find>client</find>
-      <find>glo</find>
-      <find>log</find>
-      <find>logs</find>
-      <find>glob(os.path.join(ARTICLES_DIRECTORY, paper_filename + &quot;.pdf&quot;)).pop()</find>
-      <find>glob</find>
-      <find>ARTICLES_DIRECTORY</find>
-    </findStrings>
-    <replaceStrings>
-      <replace />
-    </replaceStrings>
-  </component>
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/DrEA_head/DrEA_context.py" />
-        <option value="$PROJECT_DIR$/DrEA_head/context.py" />
-        <option value="$PROJECT_DIR$/Sources/drea_parse_paper.py" />
-        <option value="$PROJECT_DIR$/Sources/drea_summerize_text.py" />
-        <option value="$PROJECT_DIR$/Sources/setup.py" />
-        <option value="$PROJECT_DIR$/drea_parse_paper.py" />
-        <option value="$PROJECT_DIR$/drealib/context.py" />
-        <option value="$PROJECT_DIR$/tests/notebooks/test-extractdata.ipynb" />
-        <option value="$PROJECT_DIR$/tests/notebooks/test_basic.py" />
-        <option value="$PROJECT_DIR$/tests/notebooks/tests-pytextrank.py" />
-        <option value="$PROJECT_DIR$/tests/notebooks/tests-pyteaser.py" />
-        <option value="$PROJECT_DIR$/trials/.py/tests-pyteaser.py" />
-        <option value="$PROJECT_DIR$/trials/.py/tests-pytextrank.py" />
-        <option value="$PROJECT_DIR$/trials/.py/tests-translation.py" />
-        <option value="$PROJECT_DIR$/tests/test_basic.py" />
-        <option value="$PROJECT_DIR$/trials/.py/tests-unittest2.py" />
-        <option value="$PROJECT_DIR$/trials/.ipynb/grobid-experience.ipynb" />
-        <option value="$PROJECT_DIR$/grobid-client-python/test-grobid.py" />
-        <option value="$PROJECT_DIR$/tests/test-grobid.py" />
-        <option value="$PROJECT_DIR$/grobid-client-python/grobid-client.py" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/buffer/document.txt" />
-        <option value="$PROJECT_DIR$/trials/.py/experience-sumy.py" />
-        <option value="$PROJECT_DIR$/drealib/__init__.py" />
-        <option value="$PROJECT_DIR$/drealib/paper.py" />
-        <option value="$PROJECT_DIR$/drealib/paper_utils.py" />
-        <option value="$PROJECT_DIR$/tests/test_advanced.py" />
-        <option value="$PROJECT_DIR$/tests/test_unit.py" />
-        <option value="$PROJECT_DIR$/tests/test_unit.py" />
-        <option value="$PROJECT_DIR$/tests/integration/__init__.py" />
-        <option value="$PROJECT_DIR$/tests/unit/__init__.py" />
-        <option value="$PROJECT_DIR$/surya/text_cleaner.py" />
-        <option value="$PROJECT_DIR$/tests/integration/advanced.py" />
-        <option value="$PROJECT_DIR$/tests/integration/test_advanced.py" />
-        <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/surya/paper_cleaner.py" />
-        <option value="$PROJECT_DIR$/Makefile" />
-        <option value="$PROJECT_DIR$/surya/paper.py" />
-        <option value="$PROJECT_DIR$/tests/unit/test_paper_utils.py" />
-        <option value="$PROJECT_DIR$/surya/paper_charts.py" />
-        <option value="$PROJECT_DIR$/tests/unit/test_text_cleaner.py" />
-        <option value="$PROJECT_DIR$/tests/unit/test_charts_data.py" />
-        <option value="$PROJECT_DIR$/setup.py" />
-        <option value="$PROJECT_DIR$/surya/paper_utils.py" />
-        <option value="$PROJECT_DIR$/tests/unit/test_p.py" />
-        <option value="$PROJECT_DIR$/tests/unit/test_paper_class.py" />
-        <option value="$PROJECT_DIR$/tests/integration/test_summarizer.py" />
-        <option value="$PROJECT_DIR$/tests/integration/test_summy.py" />
-        <option value="$PROJECT_DIR$/tests/unit/test_paper.py" />
-        <option value="$PROJECT_DIR$/tests/unit/test_charts.py" />
-        <option value="$PROJECT_DIR$/surya/__init__.py" />
-      </list>
-    </option>
-  </component>
   <component name="Make.Settings">
     <option name="path" value="$PROJECT_DIR$/Makefile" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2880" />
-    <option name="y" value="435" />
-    <option name="width" value="960" />
-    <option name="height" value="1053" />
-  </component>
+  <component name="ProjectId" id="1ObFRyIdlbWLiaMydUjyZrSQxNK" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="surya" type="b2602c69:ProjectViewProjectNode" />
-              <item name="surya" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="surya" type="b2602c69:ProjectViewProjectNode" />
-              <item name="surya" type="462c0819:PsiDirectoryNode" />
-              <item name="surya" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="surya" type="b2602c69:ProjectViewProjectNode" />
-              <item name="surya" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="surya" type="b2602c69:ProjectViewProjectNode" />
-              <item name="surya" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="integration" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="surya" type="b2602c69:ProjectViewProjectNode" />
-              <item name="surya" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="unit" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
@@ -259,18 +80,18 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/laboratory_experimentations/resources" />
+      <recent name="$PROJECT_DIR$/logs" />
+      <recent name="$PROJECT_DIR$/articles" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/tests" />
       <recent name="$PROJECT_DIR$/tests/integration" />
       <recent name="$PROJECT_DIR$/tests/unit" />
       <recent name="$PROJECT_DIR$/surya" />
       <recent name="$PROJECT_DIR$/trials" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/laboratory_experimentations/resources" />
-      <recent name="$PROJECT_DIR$/logs" />
-      <recent name="$PROJECT_DIR$/articles" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -285,7 +106,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test_summarizer">
+  <component name="RunManager" selected="Python tests.Unittests for test_charts.TestPaperCharts">
     <configuration name="test_paper" type="PythonConfigurationType" factoryName="Python">
       <module name="surya" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -423,6 +244,7 @@
     <list>
       <item itemvalue="Python.test_summarizer" />
       <item itemvalue="Python.test_paper" />
+      <item itemvalue="Python tests.Unittests for tests.unit.test_paper" />
       <item itemvalue="Python tests.Unittests for test_charts.TestPaperCharts" />
       <item itemvalue="Python tests.Unittests for test_charts.TestPaperCharts.test_papers_per_years_chart" />
       <item itemvalue="Python tests.Unittests for tests.unit.test_p.TestPaper" />
@@ -510,6 +332,19 @@
       <workItem from="1561291153057" duration="11831000" />
       <workItem from="1562099695766" duration="5181000" />
       <workItem from="1562183270773" duration="5437000" />
+      <workItem from="1562189618323" duration="171000" />
+      <workItem from="1562532184091" duration="319000" />
+      <workItem from="1563393517105" duration="840000" />
+      <workItem from="1563396765378" duration="1278000" />
+      <workItem from="1563572500410" duration="625000" />
+      <workItem from="1563825383086" duration="824000" />
+      <workItem from="1564238394382" duration="2696000" />
+      <workItem from="1564261188603" duration="5595000" />
+      <workItem from="1564305932918" duration="824000" />
+      <workItem from="1564320119256" duration="1508000" />
+      <workItem from="1564431553755" duration="1942000" />
+      <workItem from="1564494525465" duration="939000" />
+      <workItem from="1564576211117" duration="4025000" />
     </task>
     <task id="LOCAL-00001" summary="Add DrEA_head package for factoring code. Especially for functions &#10;and global variables used along sources.">
       <created>1531948973226</created>
@@ -850,41 +685,6 @@
     <option name="localTasksCounter" value="49" />
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="Unittests_for_test_p_TestPaper - 2019.07.03 at 23h 09m 32s.xml">
-      <configuration name="Unittests for test_p.TestPaper" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_p_TestPaper - 2019.07.03 at 23h 10m 08s.xml">
-      <configuration name="Unittests for test_p.TestPaper" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_paper_class_TestPaper - 2019.07.03 at 23h 12m 14s.xml">
-      <configuration name="Unittests for test_paper_class.TestPaper" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_charts_TestPaperCharts - 2019.07.03 at 23h 15m 16s.xml">
-      <configuration name="Unittests for test_charts.TestPaperCharts" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_paper_TestPaper - 2019.07.03 at 23h 15m 30s.xml">
-      <configuration name="Unittests for test_paper.TestPaper" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_paper_TestPaper - 2019.07.03 at 23h 16m 42s.xml">
-      <configuration name="Unittests for test_paper.TestPaper" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_paper_TestPaper - 2019.07.03 at 23h 16m 57s.xml">
-      <configuration name="Unittests for test_paper.TestPaper" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_paper_TestPaper - 2019.07.03 at 23h 17m 34s.xml">
-      <configuration name="Unittests for test_paper.TestPaper" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_paper_TestPaper - 2019.07.03 at 23h 17m 57s.xml">
-      <configuration name="Unittests for test_paper.TestPaper" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_charts_TestPaperCharts - 2019.07.03 at 23h 18m 06s.xml">
-      <configuration name="Unittests for test_charts.TestPaperCharts" configurationId="tests" />
-    </history-entry>
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="213368000" />
-  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -893,65 +693,6 @@
       <are-packages-shown value="true" />
       <is-autoscroll-to-source value="true" />
     </todo-panel>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="1920" y="435" width="1920" height="1053" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="2" weight="0.15581644" />
-      <window_info anchor="bottom" id="Python Console" order="0" sideWeight="0.49980307" weight="0.36128527" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.27371866" />
-      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50160086" side_tool="true" weight="0.28026173" />
-      <window_info anchor="bottom" id="Version Control" internal_type="SLIDING" order="3" type="SLIDING" weight="0.3293348" />
-      <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" weight="0.32497275" />
-      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49839914" weight="0.28026173" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.348964" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" weight="0.32792792" />
-      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" weight="0.32732967" />
-      <window_info anchor="bottom" id="Messages" order="14" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="R Graphics" order="3" />
-      <window_info anchor="right" id="R Packages" order="4" />
-      <window_info anchor="right" id="Database" order="5" />
-      <window_info anchor="right" id="SciView" order="6" />
-      <window_info anchor="right" id="make" order="7" />
-    </layout>
-    <layout-to-restore>
-      <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.14200477" />
-      <window_info anchor="bottom" id="Python Console" order="0" sideWeight="0.49980307" weight="0.36128527" />
-      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.21691464" />
-      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50079554" side_tool="true" weight="0.26468286" />
-      <window_info anchor="bottom" id="Version Control" internal_type="SLIDING" order="3" type="SLIDING" weight="0.32967892" />
-      <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" weight="0.32498044" />
-      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49920446" weight="0.24980423" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.35003915" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" weight="0.32792792" />
-      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" weight="0.32732967" />
-      <window_info anchor="bottom" id="Messages" order="14" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="R Graphics" order="3" />
-      <window_info anchor="right" id="R Packages" order="4" />
-      <window_info anchor="right" id="Database" order="5" />
-      <window_info anchor="right" id="SciView" order="6" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -972,20 +713,7 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
+              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
@@ -1046,20 +774,20 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/surya$Unittests_for_test_text_cleaner_TestPaperCharts.coverage" NAME="Unittests for test_text_cleaner.TestPaperCharts Coverage Results" MODIFIED="1562103711068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/unit" />
-    <SUITE FILE_PATH="coverage/surya$Unittests_for_test_text_cleaner_TestPaperCharts_test_papers_per_years_chart.coverage" NAME="Unittests for test_text_cleaner.TestPaperCharts.test_papers_per_years_chart Coverage Results" MODIFIED="1562103718158" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/unit" />
+    <SUITE FILE_PATH="coverage/surya$Unittests_for_test_paper_TestPaper.coverage" NAME="Unittests for test_paper.TestPaper Coverage Results" MODIFIED="1564269111100" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/unit" />
     <SUITE FILE_PATH="coverage/surya$Unittests_for_test_charts_TestPaperCharts_test_papers_per_years_chart.coverage" NAME="Unittests for test_charts.TestPaperCharts.test_papers_per_years_chart Coverage Results" MODIFIED="1562187289527" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/unit" />
-    <SUITE FILE_PATH="coverage/surya$Unittests_for_test_paper_utils_TestSurya.coverage" NAME="Unittests for test_paper_utils.TestSurya Coverage Results" MODIFIED="1561240900797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/unit" />
+    <SUITE FILE_PATH="coverage/surya$test_paper.coverage" NAME="test_paper Coverage Results" MODIFIED="1562188265672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/surya$Unittests_for_test_p_TestPaper.coverage" NAME="Unittests for test_p.TestPaper Coverage Results" MODIFIED="1562188201939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/unit" />
     <SUITE FILE_PATH="coverage/surya$Unittests_for_test_paper_class_TestPaper.coverage" NAME="Unittests for test_paper_class.TestPaper Coverage Results" MODIFIED="1562188328446" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/unit" />
+    <SUITE FILE_PATH="coverage/surya$Unittests_for_test_charts_data_TestPaperCharts.coverage" NAME="Unittests for test_charts_data.TestPaperCharts Coverage Results" MODIFIED="1562184866542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/unit" />
+    <SUITE FILE_PATH="coverage/surya$Unittests_for_test_paper_utils_TestSurya.coverage" NAME="Unittests for test_paper_utils.TestSurya Coverage Results" MODIFIED="1561240900797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/unit" />
+    <SUITE FILE_PATH="coverage/surya$Unittests_in_test_charts_data_py.coverage" NAME="Unittests in test_charts_data.py Coverage Results" MODIFIED="1562184722807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/unit" />
+    <SUITE FILE_PATH="coverage/surya$Unittests_for_test_paper_utils_TestPaperUtils.coverage" NAME="Unittests for test_paper_utils.TestPaperUtils Coverage Results" MODIFIED="1561241351548" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/unit" />
+    <SUITE FILE_PATH="coverage/surya$Unittests_for_test_text_cleaner_TestPaperCharts.coverage" NAME="Unittests for test_text_cleaner.TestPaperCharts Coverage Results" MODIFIED="1562103711068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/unit" />
     <SUITE FILE_PATH="coverage/surya$test_summarizer.coverage" NAME="test_summarizer Coverage Results" MODIFIED="1562188808713" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/integration" />
     <SUITE FILE_PATH="coverage/surya$Unittests_for_test_charts_data_TestPaperCharts_test_papers_per_years_chart.coverage" NAME="Unittests for test_charts_data.TestPaperCharts.test_papers_per_years_chart Coverage Results" MODIFIED="1562183762498" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/unit" />
-    <SUITE FILE_PATH="coverage/surya$test_paper.coverage" NAME="test_paper Coverage Results" MODIFIED="1562188265672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/surya$Unittests_for_test_paper_utils_TestPaperUtils.coverage" NAME="Unittests for test_paper_utils.TestPaperUtils Coverage Results" MODIFIED="1561241351548" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/unit" />
-    <SUITE FILE_PATH="coverage/surya$Unittests_for_test_charts_TestPaperCharts.coverage" NAME="Unittests for test_charts.TestPaperCharts Coverage Results" MODIFIED="1562188794956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/unit" />
-    <SUITE FILE_PATH="coverage/surya$Unittests_in_test_charts_data_py.coverage" NAME="Unittests in test_charts_data.py Coverage Results" MODIFIED="1562184722807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/unit" />
-    <SUITE FILE_PATH="coverage/surya$Unittests_for_test_p_TestPaper.coverage" NAME="Unittests for test_p.TestPaper Coverage Results" MODIFIED="1562188201939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/unit" />
-    <SUITE FILE_PATH="coverage/surya$Unittests_for_test_charts_data_TestPaperCharts.coverage" NAME="Unittests for test_charts_data.TestPaperCharts Coverage Results" MODIFIED="1562184866542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/unit" />
-    <SUITE FILE_PATH="coverage/surya$Unittests_for_test_paper_TestPaper.coverage" NAME="Unittests for test_paper.TestPaper Coverage Results" MODIFIED="1562188777726" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/unit" />
+    <SUITE FILE_PATH="coverage/surya$Unittests_for_test_charts_TestPaperCharts.coverage" NAME="Unittests for test_charts.TestPaperCharts Coverage Results" MODIFIED="1564269137268" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/unit" />
+    <SUITE FILE_PATH="coverage/surya$Unittests_for_test_text_cleaner_TestPaperCharts_test_papers_per_years_chart.coverage" NAME="Unittests for test_text_cleaner.TestPaperCharts.test_papers_per_years_chart Coverage Results" MODIFIED="1562103718158" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/unit" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
@@ -1126,6 +854,11 @@ paper.get_paper_infos()</expression-string>
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
+        <expression-string>str(result_dict)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>self.func</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
@@ -1165,232 +898,6 @@ paper.get_paper_infos()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>glob(&quot;*&quot;)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/trials/.ipynb/grobid-experience.ipynb" />
-    <entry file="file://$PROJECT_DIR$/grobid-client-python/.gitignore" />
-    <entry file="file://$PROJECT_DIR$/grobid-client-python/client.py" />
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="710">
-          <caret line="1740" selection-start-line="1740" selection-end-line="1740" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test-grobid.py" />
-    <entry file="file://$PROJECT_DIR$/grobid-client-python/grobid-client.py" />
-    <entry file="file://$PROJECT_DIR$/buffer/document.txt" />
-    <entry file="file://$PROJECT_DIR$/tests/jmir_parsed.json" />
-    <entry file="file://$PROJECT_DIR$/buffer/Abdellaoui_et_al_2018_parsed.json" />
-    <entry file="file://$PROJECT_DIR$/buffer/test.json" />
-    <entry file="file://$PROJECT_DIR$/articles/jmir_parsed.json" />
-    <entry file="file://$PROJECT_DIR$/trials/.ipynb/test-extractdata.ipynb" />
-    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/python_stubs/966020380/builtins.py" />
-    <entry file="file://$PROJECT_DIR$/.pytest_cache/README.md" />
-    <entry file="file://$PROJECT_DIR$/drealib/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/tests/.coverage" />
-    <entry file="file://$PROJECT_DIR$/tests/surya.log" />
-    <entry file="file://$PROJECT_DIR$/tests/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/laboratory_experimentations/experience-sumy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="e#25#75#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laboratory_experimentations/experience-translation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/drea/lib/python3.7/site-packages/urllib3/connection.py" />
-    <entry file="file://$PROJECT_DIR$/surya.log" />
-    <entry file="file://$PROJECT_DIR$/laboratory_experimentations/regex_clean_section_text.txt" />
-    <entry file="file://$PROJECT_DIR$/laboratory_experimentations/resources/.gitignore" />
-    <entry file="file://$USER_HOME$/anaconda3/envs/drea/lib/python3.7/logging/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/laboratory_experimentations/resources/jmir.pdf.tei.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-225" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laboratory_experimentations/resources/clean_section_notes.txt" />
-    <entry file="file://$PROJECT_DIR$/requirements.txt" />
-    <entry file="file://$PROJECT_DIR$/Pipfile.lock">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1800" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/surya/paper_cleaner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/surya/paper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/surya/paper_charts.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-          <folding>
-            <element signature="e#25#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/unit/test_charts_data.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/surya.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="-1046">
-          <caret line="611" column="43" selection-start-line="611" selection-start-column="43" selection-end-line="611" selection-end-column="43" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="-327">
-          <caret line="31" column="53" lean-forward="true" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pipfile">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/integration/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/unit/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SECOND">
-          <first_editor relative-caret-position="420">
-            <caret line="28" column="36" lean-forward="true" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/unit/test_p.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1905">
-          <caret line="127" selection-start-line="127" selection-end-line="127" />
-          <folding>
-            <element signature="e#25#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/unit/test_p.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" lean-forward="true" selection-end-line="127" />
-          <folding>
-            <element signature="e#25#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/integration/test_summarizer.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/unit/test_text_cleaner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/unit/test_charts.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/integration/test_summarizer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="23" selection-start-column="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/surya/paper_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#25#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/surya/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/unit/test_paper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#25#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>

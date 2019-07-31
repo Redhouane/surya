@@ -27,7 +27,7 @@ class TestPaper(unittest2.TestCase):
 
         paper_to_parse = glob(os.path.join(ARTICLES_DIRECTORY, "jmir" + ".pdf")).pop()
         headers = {'Content-type': 'application/pdf', }
-        data = open(paper_to_parse, 'rb').read()
+        data = open(paper_to_parse, 'rb').read()  # TODO: File open but never close. Use a with keyword.
         response = requests.post('http://localhost:8080/v1', headers=headers, data=data)
         self.assertEqual(response.status_code, 200)
 

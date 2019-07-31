@@ -1,0 +1,11 @@
+README.md
+setup.py
+surya/__init__.py
+surya/paper.py
+surya/paper_charts.py
+surya/paper_cleaner.py
+surya/paper_utils.py
+surya.egg-info/PKG-INFO
+surya.egg-info/SOURCES.txt
+surya.egg-info/dependency_links.txt
+surya.egg-info/top_level.txt
